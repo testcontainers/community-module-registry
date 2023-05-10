@@ -1,0 +1,15 @@
+name: "Deploy"
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy
+        run: |
+          curl -X POST -d {} ${{ secrets.WEBHOOK_URL }}
