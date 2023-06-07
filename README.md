@@ -27,6 +27,8 @@ description: |
 ---
 ```
 
+Current categories: `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `web`.
+
 2. Add module logo `[module-name]-mark.svg` to `assets` directory. The logo should be:
 * a square SVG version of the module logo with no additional background
 * prefer 30x30 for consistency
