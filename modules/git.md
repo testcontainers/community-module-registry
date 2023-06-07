@@ -1,7 +1,7 @@
 ---
 title: Plain Git Server
 categories:
-  - git
+  - other
 docs:
   - id: java
     url: https://github.com/sparsick/testcontainers-git
