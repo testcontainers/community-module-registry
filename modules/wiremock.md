@@ -10,31 +10,12 @@ docs:
     isThirdParty: true
     example: |
       ```java
-        import org.junit.jupiter.api.*;
-        import org.testcontainers.junit.jupiter.*;
-        import org.wiremock.integrations.testcontainers.testsupport.http.*;
-
-        import static org.assertj.core.api.Assertions.assertThat;
-
-        @Testcontainers
-        class WireMockContainerJunit5Test {
-
-            @Container
-            WireMockContainer wiremockServer = new WireMockContainer("2.35.0")
-                    .withMapping("hello", WireMockContainerJunit5Test.class, "hello-world.json");
-
-            @Test
-            void helloWorld() throws Exception {
-                String url = wiremockServer.getUrl("/hello");
-                HttpResponse response = new TestHttpClient().get(url);
-                assertThat(response.getBody())
-                        .as("Wrong response body")
-                        .contains("Hello, world!");
-            }
-        }
+      WireMockContainer wiremockServer = new WireMockContainer("2.35.0")
+                .withMapping("hello", WireMockContainerJunit5Test.class, "hello-world.json");
+      wiremockServer.start();                
       ```
 description: |
-    This module allows provisioning the WireMock server as a standalone container within your unit test,
+    This module allows provisioning the WireMock server as a standalone container within your tests,
     based on [WireMock Docker](https://github.com/wiremock/wiremock-docker).
 
     WireMock is a popular open-source tool for API mock testing with over 5 million downloads per month.
