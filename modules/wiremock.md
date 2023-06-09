@@ -3,7 +3,6 @@ title: WireMock
 categories:
   - cloud
   - web
-  - other
 docs:
   - id: java
     url: https://github.com/wiremock/wiremock-testcontainers-java
