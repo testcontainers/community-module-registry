@@ -18,19 +18,19 @@ docs:
     isThirdParty: true
     example: |
       ```golang
-        ctx := context.Background()
-        container, err := RunContainer(ctx,
-          WithImage("wiremock/wiremock:2.35.0-1"),
-          WithMappingFile("hello", filepath.Join("testdata", "hello-world.json")),
-        )
-        if err != nil {
-          t.Fatal(err)
-        }
-        t.Cleanup(func() {
-          if err := container.Terminate(ctx); err != nil {
-          t.Fatalf("failed to terminate container: %s", err)
-          }
-        })
+       ctx := context.Background()
+       container, err := RunContainer(ctx,
+         WithImage("wiremock/wiremock:2.35.0-1"),
+         WithMappingFile("hello", filepath.Join("testdata", "hello-world.json")),
+       )
+       if err != nil {
+         t.Fatal(err)
+       }
+       t.Cleanup(func() {
+         if err := container.Terminate(ctx); err != nil {
+         t.Fatalf("failed to terminate container: %s", err)
+         }
+       })
       ```
   - id: python
     url: https://wiremock.readthedocs.io/en/latest/testcontainers/
