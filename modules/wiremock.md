@@ -13,7 +13,7 @@ docs:
                 .withMapping("hello", WireMockContainerJunit5Test.class, "hello-world.json");
       wiremockServer.start();                
       ```
-  - id: golang
+  - id: go
     url: https://github.com/wiremock/wiremock-testcontainers-go
     isThirdParty: true
     example: |
