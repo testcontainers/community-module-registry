@@ -27,7 +27,12 @@ description: |
 ---
 ```
 
-Current categories: `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `web`.
+Format notes:
+
+- Current ID field values: `java`, `go`, `dotnet`, `nodejs`, `python`, `rust`, `haskell`, `ruby`
+- Current categories: `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `web`.
+- The descripttion field supports Markdown
+- The example fields for each technology stack are injected into Markdown, and should use its language specification
 
 2. Add module logo `[module-name]-mark.svg` to `assets` directory. The logo should be:
 * a square SVG version of the module logo with no additional background
