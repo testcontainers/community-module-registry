@@ -1,5 +1,6 @@
 ---
 title: WireMock
+isOfficial: true
 categories:
   - cloud
   - web
