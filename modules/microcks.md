@@ -8,7 +8,7 @@ docs:
     url: https://github.com/microcks/microcks-testcontainers-java
     example: |
       ```java
-      var microcks = new MicrocksContainer(DockerImageName.parse("quay.io/microcks/microcks-uber:nightly"));
+      var microcks = new MicrocksContainer(DockerImageName.parse("quay.io/microcks/microcks-uber:1.8.0"));
       microcks.start();
       ```
   - id: nodejs
