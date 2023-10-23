@@ -14,6 +14,23 @@ docs:
                 .withMapping("hello", WireMockContainerJunit5Test.class, "hello-world.json");
       wiremockServer.start();                
       ```
+  - id: NodeJs
+    url: https://github.com/wiremock/wiremock-testcontainers-node
+    isThirdPart: true
+    example: |
+      ```js
+      import { WireMockContainer } from "wiremock-testcontainers-node";
+      const container = await new WireMockContainer()
+        .withMapping("./mapping.json")
+        .withExposedPorts(8080)
+        .start();
+      const { output, exitCode } = await container.exec([
+        "curl",
+        "http://localhost:8080/hello",
+      ]);
+      console.log(output);
+      await container.stop();
+      ```
   - id: go
     url: https://github.com/wiremock/wiremock-testcontainers-go
     isThirdParty: true
