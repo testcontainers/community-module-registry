@@ -8,7 +8,7 @@ docs:
     isThirdParty: true
     example: |
       ```java
-      var dapr = new DaprContainer();
+      var dapr = new DaprContainer("daprio/daprd:1.12.0");
       dapr.start();
       ```
 description: |
