@@ -1,5 +1,6 @@
 ---
 title: Dapr
+isOfficial: true
 categories:
   - cloud
 docs:
