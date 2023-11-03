@@ -24,12 +24,6 @@ docs:
         .withMapping("./mapping.json")
         .withExposedPorts(8080)
         .start();
-      const { output, exitCode } = await container.exec([
-        "curl",
-        "http://localhost:8080/hello",
-      ]);
-      console.log(output);
-      await container.stop();
       ```
   - id: go
     url: https://github.com/wiremock/wiremock-testcontainers-go
