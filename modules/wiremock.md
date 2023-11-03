@@ -14,7 +14,7 @@ docs:
                 .withMapping("hello", WireMockContainerJunit5Test.class, "hello-world.json");
       wiremockServer.start();                
       ```
-  - id: NodeJs
+  - id: nodejs
     url: https://github.com/wiremock/wiremock-testcontainers-node
     isThirdPart: true
     example: |
