@@ -15,7 +15,7 @@ docs:
     url: https://github.com/microcks/microcks-testcontainers-go
     example: |
       ```go
-      microcksContainer, err := microcks.RunContainer(ctx, testcontainers.WithImage("quay.io/microcks/microcks-uber:nightly"))
+      microcksContainer, err := microcks.RunContainer(ctx, testcontainers.WithImage("quay.io/microcks/microcks-uber:1.8.0"))
       ```
   - id: nodejs
     url: https://github.com/microcks/microcks-testcontainers-node
