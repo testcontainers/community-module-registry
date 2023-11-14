@@ -11,6 +11,12 @@ docs:
       var microcks = new MicrocksContainer(DockerImageName.parse("quay.io/microcks/microcks-uber:1.8.0"));
       microcks.start();
       ```
+  - id: go
+    url: https://github.com/microcks/microcks-testcontainers-go
+    example: |
+      ```go
+      microcksContainer, err := microcks.RunContainer(ctx, testcontainers.WithImage("quay.io/microcks/microcks-uber:nightly"))
+      ```
   - id: nodejs
     url: https://github.com/microcks/microcks-testcontainers-node
     example: |
