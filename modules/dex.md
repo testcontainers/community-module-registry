@@ -12,7 +12,6 @@ docs:
             .withClient(new DexContainer.Client("client-1", "client-1-secret", "https://one.example.com/authorized"))
             .withUser(new DexContainer.User("alice", "alice@example.com", "alice-password"));
       container.start();
-      var issuerUri = container.getIssuerUri(); // -> example: http://localhost:52329/dex
       ```
 description: |
   Dex is an identity service that uses OpenID Connect to drive authentication for other apps.
