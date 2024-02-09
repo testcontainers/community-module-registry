@@ -9,8 +9,6 @@ docs:
     example: |
       ```go
         dynamodbLocalContainer, _ := dynamodblocal.RunContainer(context.Background())
-        client, _ := dynamodbLocalContainer.GetDynamoDBClient(context.Background())
-        result, err := client.ListTables(context.Background(), nil)
       ```
 description: |
   Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. 
