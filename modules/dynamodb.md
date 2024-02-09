@@ -8,7 +8,7 @@ docs:
     isThirdParty: true
     example: |
       ```go
-        dynamodbLocalContainer, _ := dynamodblocal.RunContainer(context.Background())
+        dynamodbLocalContainer, err := dynamodblocal.RunContainer(context.Background())
       ```
 description: |
   Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. 
