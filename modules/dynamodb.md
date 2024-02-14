@@ -10,6 +10,15 @@ docs:
       ```go
         dynamodbLocalContainer, err := dynamodblocal.RunContainer(context.Background(), testcontainers.WithImage("amazon/dynamodb-local:2.2.1"))
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.DynamoDb
+    example: |
+      ```csharp
+      var dynamoDbContainer = new DynamoDbBuilder()
+        .WithImage("amazon/dynamodb-local:1.21.0")
+        .Build();
+      await dynamoDbContainer.StartAsync();
+      ```
 description: |
   Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. 
 
