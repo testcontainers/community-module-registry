@@ -8,7 +8,7 @@ docs:
     isThirdParty: true
     example: |
       ```go
-      container, err := smocker.RunContainer(context.Background());
+      container, err := smocker.RunContainer(context.Background(), testcontainers.WithImage("thiht/smocker:0.18.5"));
       ```
 description: |
   Smocker is a simple and efficient HTTP mock server.
