@@ -30,7 +30,7 @@ description: |
 Format notes:
 
 - Current ID field values: `java`, `go`, `dotnet`, `nodejs`, `python`, `rust`, `haskell`, `ruby`
-- Current categories: `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `web`.
+- Current categories: `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `vector-database`, `web`.
 - The descripttion field supports Markdown
 - The example fields for each technology stack are injected into Markdown, and should use its language specification
 
