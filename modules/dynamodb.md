@@ -8,7 +8,7 @@ docs:
     isThirdParty: true
     example: |
       ```go
-        dynamodbLocalContainer, err := dynamodblocal.RunContainer(context.Background(), testcontainers.WithImage("amazon/dynamodb-local:2.2.1"))
+      dynamodbLocalContainer, err := dynamodblocal.RunContainer(context.Background(), testcontainers.WithImage("amazon/dynamodb-local:2.2.1"))
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.DynamoDb
