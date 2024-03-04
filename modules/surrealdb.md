@@ -3,6 +3,12 @@ title: SurrealDB
 categories:
   - nosql-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/surrealdb/
+    example: |
+      ```go
+        surrealdbContainer, err := surrealdb.RunContainer(ctx, testcontainers.WithImage("surrealdb/surrealdb:v1.1.1"))
+      ```
   - id: rust
     url: https://github.com/testcontainers/testcontainers-rs-modules-community
     isThirdParty: true
