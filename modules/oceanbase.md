@@ -12,5 +12,5 @@ docs:
       oceanbase.start();
       ```
 description: |
-  OceanBase is an open source distributed SQL database.
+  OceanBase is an open source unlimited scalable distributed database for data-intensive transactional and real-time operational analytics workloads, with ultra-fast performance that has once achieved world records in the TPC-C benchmark test.
 ---
