@@ -3,13 +3,19 @@ title: SurrealDB
 categories:
   - nosql-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/surrealdb/
+    example: |
+      ```go
+      surrealdbContainer, err := surrealdb.RunContainer(ctx, testcontainers.WithImage("surrealdb/surrealdb:v1.1.1"))
+      ```
   - id: rust
     url: https://github.com/testcontainers/testcontainers-rs-modules-community
     isThirdParty: true
     example: |
       ```rust
-        let docker = Cli::default();
-        let surrealdb_container = docker.run(SurrealDb::default());
+      let docker = Cli::default();
+      let surrealdb_container = docker.run(SurrealDb::default());
       ```
 description: |
   SurrealDB is an end-to-end cloud-native database designed for modern applications, including web, mobile, serverless, Jamstack, backend, and traditional applications.
