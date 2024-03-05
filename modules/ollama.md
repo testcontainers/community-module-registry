@@ -16,8 +16,11 @@ docs:
     example: |
       ```go
       ollamaContainer, err := ollama.RunContainer(ctx,
-              testcontainers.WithImage("ollama/ollama:0.1.26"),
-              ollama.WithModel("all-minilm"))
+              testcontainers.WithImage("ollama/ollama:0.1.26"))
+      if err != nil {
+            log.Fatalf("failed to start container: %s", err)
+      }
+      _, _, err = ollamaContainer.Exec(ctx, []string{"ollama", "pull", "all-minilm"})
       ```
 description: |
   Ollama makes it easy to get up and running with large language models locally.
