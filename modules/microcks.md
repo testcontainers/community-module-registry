@@ -6,6 +6,7 @@ categories:
 docs:
   - id: java
     url: https://github.com/microcks/microcks-testcontainers-java
+    isThirdParty: true
     example: |
       ```java
       var microcks = new MicrocksContainer(DockerImageName.parse("quay.io/microcks/microcks-uber:1.8.0"));
@@ -13,12 +14,14 @@ docs:
       ```
   - id: go
     url: https://github.com/microcks/microcks-testcontainers-go
+    isThirdParty: true
     example: |
       ```go
       microcksContainer, err := microcks.RunContainer(ctx, testcontainers.WithImage("quay.io/microcks/microcks-uber:1.8.0"))
       ```
   - id: nodejs
     url: https://github.com/microcks/microcks-testcontainers-node
+    isThirdParty: true
     example: |
       ```javascript
       const microcks = await new MicrocksContainer().start();
