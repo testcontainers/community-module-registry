@@ -5,6 +5,7 @@ categories:
 docs:
   - id: java
     url: https://github.com/streamnative/oxia-java/tree/main/testcontainers
+    isThirdParty: true
     example: |
       ```java
       var oxia = new OxiaContainer("streamnative/oxia:0.3");
