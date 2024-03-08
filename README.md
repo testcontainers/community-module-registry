@@ -1,6 +1,17 @@
 ## Community Module Registry
 
-1. Create `<module-name>.md` file in the `modules` directory with the following content:
+To add a new module create a new folder with the structure:
+
+```
+modules
+- <module-name>
+  - index.md
+  - logo.svg (optional)
+```
+
+### index.md
+
+The content of the file should be markdown frontmatter using the following template:
 
 ```
 ---
@@ -10,7 +21,7 @@ categories:
 docs:
   - id: java
     url: https://github.com/GoodforGod/arangodb-testcontainers
-    isThirdParty: true
+    maintainer: community
     example: |
       ```java
       var arango = new ArangoContainer();
@@ -18,6 +29,7 @@ docs:
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/arangodb/
+    maintainer: core
     example: |
       ```javascript
       const container = await new ArangoDBContainer().start();
@@ -27,17 +39,32 @@ description: |
 ---
 ```
 
-Format notes:
+#### Format notes: 
+- Current ID field values: 
+  
+  `java`, `go`, `dotnet`, `nodejs`, `python`, `rust`, `haskell`, `ruby`
 
-- Current ID field values: `java`, `go`, `dotnet`, `nodejs`, `python`, `rust`, `haskell`, `ruby`
-- Current categories: `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `vector-database`, `web`.
-- The descripttion field supports Markdown
+- Current categories: 
+
+  `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `vector-database`, `web`
+
+- Current maintainer values:
+
+  `core`, `community`, `official`
+
+- The description field supports Markdown
+
 - The example fields for each technology stack are injected into Markdown, and should use its language specification
 
-2. Add module logo `[module-name]-mark.svg` to `assets` directory. The logo should be:
-* a square SVG version of the module logo with no additional background
-* prefer 30x30 for consistency
+---
 
-3. Add `[module-name]-share.png` to `assets` directory. 
-* use the square module logo svg scaled to `229x229px` and center it on the blank cube in the share image template, 
-use the example `my-module-share-example.png` as a guide
+### logo.svg
+
+This optional file will be displayed next to the module's name in the catalogue. Logo files should be:
+
+* a square SVG version of the module logo with no additional background
+* prefer 60x60 for consistency
+
+If no logo is provided a default image will be used instead:
+
+<img src="https://testcontainers.com/images/modules/none.svg">
