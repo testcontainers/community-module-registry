@@ -5,7 +5,7 @@ categories:
   - web
 officialPartner:
   name: WireMock
-  url:
+  url: https://wiremock.org/
 docs:
   - id: java
     url: https://github.com/wiremock/wiremock-testcontainers-java
