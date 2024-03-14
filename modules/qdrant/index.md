@@ -17,6 +17,13 @@ docs:
       ```go
       qdrantContainer, err := qdrant.RunContainer(ctx, testcontainers.WithImage("qdrant/qdrant:v1.7.4"))
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/qdrant/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new QdrantContainer().start();
+      ```
 description: |
   Qdrant is a vector database & vector similarity search engine. It deploys as an API service providing search for the nearest high-dimensional vectors.
 ---
