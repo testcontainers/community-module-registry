@@ -2,10 +2,13 @@
 title: Qdrant
 categories:
   - vector-database
+officialPartner:
+  name: Qdrant
+  url: https://qdrant.tech
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/qdrant/
-    maintainer: core
+    maintainer: official
     example: |
       ```java
       var qdrant = new QdrantContainer("qdrant/qdrant:v1.7.4");
