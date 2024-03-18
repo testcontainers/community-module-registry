@@ -15,7 +15,7 @@ docs:
       ```
   - id: go
     url: https://golang.testcontainers.org/modules/qdrant/
-    maintainer: core
+    maintainer: official
     example: |
       ```go
       qdrantContainer, err := qdrant.RunContainer(ctx, testcontainers.WithImage("qdrant/qdrant:v1.7.4"))
