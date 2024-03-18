@@ -2,17 +2,20 @@
 title: Qdrant
 categories:
   - vector-database
+officialPartner:
+  name: Qdrant
+  url: https://qdrant.tech
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/qdrant/
-    maintainer: core
+    maintainer: official
     example: |
       ```java
       var qdrant = new QdrantContainer("qdrant/qdrant:v1.7.4");
       ```
   - id: go
     url: https://golang.testcontainers.org/modules/qdrant/
-    maintainer: core
+    maintainer: official
     example: |
       ```go
       qdrantContainer, err := qdrant.RunContainer(ctx, testcontainers.WithImage("qdrant/qdrant:v1.7.4"))
