@@ -21,5 +21,5 @@ docs:
       qdrantContainer, err := qdrant.RunContainer(ctx, testcontainers.WithImage("qdrant/qdrant:v1.7.4"))
       ```
 description: |
-  Qdrant is a vector database & vector similarity search engine. It deploys as an API service providing search for the nearest high-dimensional vectors.
+  Qdrant is the leading, high-performance, scalable, open-source vector database and search engine, essential for building the next generation of AI/ML applications. Qdrant is able to handle billions of vectors, supports the matching of semantically complex objects, and is implemented in Rust for performance, memory safety, and scale. Read more on www.qdrant.tech
 ---
