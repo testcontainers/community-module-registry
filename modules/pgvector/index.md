@@ -33,7 +33,7 @@ docs:
       var pgVectorContainer = new PostgreSqlBuilder()
         .WithImage("pgvector/pgvector:pg16")
         .Build();
-      pgVectorContainer.StartAsync();
+      await pgVectorContainer.StartAsync();
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/postgresql/

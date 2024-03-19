@@ -32,7 +32,7 @@ docs:
       var postgreSqlContainer = new PostgreSqlBuilder()
         .WithImage("postgres:15.1")
         .Build();
-      postgreSqlContainer.StartAsync();
+      await postgreSqlContainer.StartAsync();
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/postgresql/

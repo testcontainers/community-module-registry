@@ -19,7 +19,7 @@ docs:
       var arangodb = new ArangoDbBuilder()
         .WithImage("arangodb:3.11.5")
         .Build();
-      arangodb.StartAsync();
+      await arangodb.StartAsync();
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/arangodb/

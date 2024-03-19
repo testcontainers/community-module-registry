@@ -33,7 +33,7 @@ docs:
       var timescaleContainer = new PostgreSqlBuilder()
         .WithImage("timescale/timescaledb:2.1.0-pg11")
         .Build();
-      timescaleContainer.StartAsync();
+      await timescaleContainer.StartAsync();
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/postgresql/
