@@ -33,7 +33,7 @@ docs:
       var postgisContainer = new PostgreSqlBuilder()
         .WithImage("postgis/postgis:12-3.0")
         .Build();
-      postgisContainer.StartAsync();
+      await postgisContainer.StartAsync();
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/postgresql/
