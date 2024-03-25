@@ -12,7 +12,7 @@ docs:
       influx.start();
       ```
   - id: go
-    url: https://golang.testcontainers.org/modules/databases/influxdb/
+    url: https://golang.testcontainers.org/modules/influxdb/
     maintainer: core
     example: |
       ```go
