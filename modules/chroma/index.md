@@ -17,6 +17,13 @@ docs:
       ```go
       chromaContainer, err := chroma.RunContainer(ctx, testcontainers.WithImage("chromadb/chroma:0.4.22"))
       ```
+  - id: node
+    url: https://node.testcontainers.org/modules/chromadb/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new ChromaDBContainer().start();
+      ```
 description: |
   Chroma is the AI-native open-source embedding database.
 ---
