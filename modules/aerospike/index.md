@@ -2,6 +2,7 @@
 title: Aerospike
 categories:
   - nosql-database
+  - vector-database
 docs:
   - id: go
     url: https://github.com/ajeetdsouza/testcontainers-aerospike-go
