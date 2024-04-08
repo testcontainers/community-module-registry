@@ -11,7 +11,7 @@ docs:
     maintainer: official
     example: |
       ```java
-      var dapr = new DaprContainer("daprio/daprd:1.12.0");
+      var dapr = new DaprContainer("daprio/daprd:1.13.2");
       dapr.start();
       ```
 description: |
