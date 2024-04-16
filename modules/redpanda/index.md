@@ -31,6 +31,13 @@ docs:
         .Build();
       await redpandaContainer.StartAsync();
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/redpanda/
+    maintainer: core
+    example: |
+      ```javascript
+      const redpandaContainer = await new RedpandaContainer().start();
+      ```
 description: |
   Redpanda is the Kafka-compatible streaming data platform.
 ---
