@@ -2,13 +2,14 @@
 title: Oracle Free
 categories:
   - relational-database
+  - vector-database
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/databases/oraclefree/
     maintainer: core
     example: |
       ```java
-      var oracle = new OracleContainer("gvenzl/oracle-free:23.3-slim-faststart");
+      var oracle = new OracleContainer("gvenzl/oracle-free:23.4-slim-faststart");
       oracle.start();
       ```
 description: |
