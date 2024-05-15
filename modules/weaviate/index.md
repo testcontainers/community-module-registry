@@ -2,6 +2,9 @@
 title: Weaviate
 categories:
   - vector-database
+officialPartner:
+  name: Weaviate
+  url: https://weaviate.io/
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/weaviate/
