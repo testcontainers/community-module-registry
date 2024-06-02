@@ -9,7 +9,7 @@ docs:
     maintainer: core
     example: |
       ```java
-      var postgres = new PostgreSQLContainer<>(DockerImageName.parse("postgres:9.6.12"));
+      var postgres = new PostgreSQLContainer<>(DockerImageName.parse("postgres:16-alpine"));
       postgres.start();
       ```
   - id: go
@@ -18,7 +18,7 @@ docs:
     example: |
       ```go
       postgresContainer, err := postgres.RunContainer(ctx,
-        testcontainers.WithImage("postgres:9.6"),
+        testcontainers.WithImage("postgres:16-alpine"),
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),
         postgres.WithPassword("password"),
@@ -30,7 +30,7 @@ docs:
     example: |
       ```csharp
       var postgreSqlContainer = new PostgreSqlBuilder()
-        .WithImage("postgres:15.1")
+        .WithImage("postgres:16")
         .Build();
       await postgreSqlContainer.StartAsync();
       ```
