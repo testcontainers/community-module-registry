@@ -28,7 +28,7 @@ docs:
     example: |
       ```csharp
       var msSqlContainer = new MsSqlBuilder()
-        .WithImage("mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04")
+        .WithImage("mcr.microsoft.com/mssql/server:2022-CU10-ubuntu-22.04")
         .Build();
       await msSqlContainer.StartAsync();
       ```
