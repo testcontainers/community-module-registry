@@ -9,7 +9,7 @@ docs:
     example: |
       ```javascript
       import path from "path";
-      import { PlaywrightContainer } from "@testcontainers/playwright";
+      import { PlaywrightContainer } from "testcontainers-node-playwright";
 
       const PLAYWRIGHT_PROJECT_TESTS_TO_RUN_INTO_THE_CONTAINER = path.resolve(__dirname, "..", "example-project");
 
