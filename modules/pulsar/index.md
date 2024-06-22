@@ -26,6 +26,16 @@ docs:
         pulsar.WithTransactions(),
       )
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Pulsar
+    maintainer: core
+    example: |
+      ```csharp
+      var pulsarContainer = new PulsarBuilder()
+        .WithImage("apachepulsar/pulsar:2.10.0")
+        .Build();
+      await pulsarContainer.StartAsync();
+      ```
 description: |
   Apache Pulsar is an open-source, distributed messaging and streaming platform. Messages can be consumed and acknowledged individually or consumed as streams with less than 5ms of latency.
 ---
