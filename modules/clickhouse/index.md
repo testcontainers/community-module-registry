@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      clickHouseContainer, err := clickhouse.RunContainer(ctx, testcontainers.WithImage("clickhouse/clickhouse-server:23.3.8.21-alpine"))
+      clickHouseContainer, err := clickhouse.Run(ctx, "clickhouse/clickhouse-server:23.3.8.21-alpine")
       ```
 description: |
   ClickHouse is an open-source database management system for analytical processing that allows users to generate reports using SQL queries in real-time.

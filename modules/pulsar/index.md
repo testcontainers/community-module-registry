@@ -19,8 +19,8 @@ docs:
     maintainer: official
     example: |
       ```go
-      pulsarContainer, err := pulsar.RunContainer(ctx,
-        testcontainers.WithImage("apachepulsar/pulsar:2.10.0"),
+      pulsarContainer, err := pulsar.Run(ctx,
+        "apachepulsar/pulsar:2.10.0",
         pulsar.WithPulsarEnv("brokerDeduplicationEnabled", "true"),
         pulsar.WithFunctionsWorker(),
         pulsar.WithTransactions(),

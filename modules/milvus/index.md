@@ -15,7 +15,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      milvusContainer, err := milvus.RunContainer(ctx, testcontainers.WithImage("milvusdb/milvus:v2.3.9"))
+      milvusContainer, err := milvus.Run(ctx, "milvusdb/milvus:v2.3.9")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Milvus

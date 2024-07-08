@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      consulContainer, err := consul.RunContainer(ctx, testcontainers.WithImage("hashicorp/consul:1.15"))
+      consulContainer, err := consul.Run(ctx, "hashicorp/consul:1.15")
       ```
 description: |
   Consul is a service mesh and distributed key-value store.

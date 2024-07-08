@@ -17,8 +17,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      ollamaContainer, err := ollama.RunContainer(ctx,
-              testcontainers.WithImage("ollama/ollama:0.1.26"))
+      ollamaContainer, err := ollama.Run(ctx, "ollama/ollama:0.1.26")
       if err != nil {
             log.Fatalf("failed to start container: %s", err)
       }

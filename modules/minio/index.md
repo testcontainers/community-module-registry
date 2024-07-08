@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      minioContainer, err := minio.RunContainer(ctx, testcontainers.WithImage("minio/minio:RELEASE.2024-01-16T16-07-38Z"))
+      minioContainer, err := minio.Run(ctx, "minio/minio:RELEASE.2024-01-16T16-07-38Z")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Minio

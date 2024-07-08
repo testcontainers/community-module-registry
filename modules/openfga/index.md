@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      openfgaContainer, err := openfga.RunContainer(ctx, testcontainers.WithImage("openfga/openfga:v1.5.0"))
+      openfgaContainer, err := openfga.Run(ctx, "openfga/openfga:v1.5.0")
       ```
 description: |
   OpenFGA is an open-source authorization solution that allows developers to build granular access control using an easy-to-read modeling language and friendly APIs.

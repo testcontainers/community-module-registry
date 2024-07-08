@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      rabbitmqContainer, err := rabbitmq.RunContainer(ctx, testcontainers.WithImage("rabbitmq:3.7.25-management-alpine"),
+      rabbitmqContainer, err := rabbitmq.Run(ctx, "rabbitmq:3.7.25-management-alpine")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.RabbitMq

@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mongoDBContainer, err := mongodb.RunContainer(ctx, testcontainers.WithImage("mongo:6"))
+      mongoDBContainer, err := mongodb.Run(ctx, "mongo:6")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.MongoDb

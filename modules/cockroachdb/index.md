@@ -19,7 +19,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      cockroachdbContainer, err := cockroachdb.RunContainer(ctx, testcontainers.WithImage("cockroachdb/cockroach:v22.2.3")
+      cockroachdbContainer, err := cockroachdb.Run(ctx, "cockroachdb/cockroach:v22.2.3")
       ```
 description: |
   CockroachDB is an open-source, cloud-native, resilient, distributed SQL database.

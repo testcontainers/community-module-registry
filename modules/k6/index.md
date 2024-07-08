@@ -15,7 +15,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      k6Container, err := k6.RunContainer(ctx, testcontainers.WithImage("szkiba/k6x:v0.3.1"))
+      k6Container, err := k6.Run(ctx, "szkiba/k6x:v0.3.1")
       ```
 description: |
   k6 is an open-source tool and cloud service that makes load testing easy for developers and QA engineers.
