@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      kafkaContainer, err := kafka.RunContainer(ctx, testcontainers.WithImage("confluentinc/confluent-local:7.5.0"))
+      kafkaContainer, err := kafka.Run(ctx, "confluentinc/confluent-local:7.5.0")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Kafka

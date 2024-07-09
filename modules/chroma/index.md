@@ -15,7 +15,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      chromaContainer, err := chroma.RunContainer(ctx, testcontainers.WithImage("chromadb/chroma:0.4.22"))
+      chromaContainer, err := chroma.Run(ctx, "chromadb/chroma:0.4.22")
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/chromadb/

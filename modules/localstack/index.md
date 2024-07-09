@@ -19,7 +19,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      localstackContainer, err := localstack.RunContainer(ctx, testcontainers.WithImage("localstack/localstack:1.4.0"))
+      localstackContainer, err := localstack.Run(ctx, "localstack/localstack:1.4.0")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.LocalStack

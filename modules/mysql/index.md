@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mysqlContainer, err := mysql.RunContainer(ctx, testcontainers.WithImage("mysql:5.7.34"))
+      mysqlContainer, err := mysql.Run(ctx, "mysql:5.7.34")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.MySql

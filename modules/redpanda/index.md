@@ -19,7 +19,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      redpandaContainer, err := redpanda.RunContainer(ctx, testcontainers.WithImage("docker.redpanda.com/redpandadata/redpanda:v23.1.7"))
+      redpandaContainer, err := redpanda.Run(ctx, "docker.redpanda.com/redpandadata/redpanda:v23.1.7")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Redpanda

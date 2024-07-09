@@ -18,8 +18,8 @@ docs:
     maintainer: core
     example: |
       ```go
-      timescaleContainer, err := postgres.RunContainer(ctx,
-        testcontainers.WithImage("timescale/timescaledb:2.1.0-pg11"),
+      timescaleContainer, err := postgres.Run(ctx,
+        "timescale/timescaledb:2.1.0-pg11",
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),
         postgres.WithPassword("password"),

@@ -17,7 +17,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      redisContainer, err := redis.RunContainer(ctx, testcontainers.WithImage("redis:6"))
+      redisContainer, err := redis.Run(ctx, "redis:6")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Redis

@@ -16,8 +16,8 @@ docs:
     maintainer: core
     example: |
       ```go
-      vaultContainer, err := vault.RunContainer(ctx,
-        testcontainers.WithImage("hashicorp/vault:1.13.0"),
+      vaultContainer, err := vault.Run(ctx,
+        "hashicorp/vault:1.13.0",
         vault.WithToken("root-token"),
         vault.WithInitCommand("secrets enable transit", "write -f transit/keys/my-key"),
         vault.WithInitCommand("kv put secret/test1 foo1=bar1"),

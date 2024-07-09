@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      cassandraContainer, err := cassandra.RunContainer(ctx, testcontainers.WithImage("cassandra:4.1.3"))
+      cassandraContainer, err := cassandra.Run(ctx, "cassandra:4.1.3")
       ```
 description: |
   Cassandra is a free and open source, distributed NoSQL database management system. It is designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.
