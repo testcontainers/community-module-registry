@@ -11,14 +11,14 @@ docs:
     maintainer: core
     example: |
       ```java
-      var weaviate = new WeaviateContainer("semitechnologies/weaviate:1.23.9");
+      var weaviate = new WeaviateContainer("semitechnologies/weaviate:1.25.5");
       ```
   - id: go
     url: https://golang.testcontainers.org/modules/weaviate/
     maintainer: core
     example: |
       ```go
-      weaviateContainer, err := weaviate.Run(ctx, "semitechnologies/weaviate:1.23.9")
+      weaviateContainer, err := weaviate.Run(ctx, "semitechnologies/weaviate:1.25.5")
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/weaviate/
