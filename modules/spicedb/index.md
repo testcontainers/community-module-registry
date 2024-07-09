@@ -8,7 +8,7 @@ docs:
     maintainer: community
     example: |
       ```go
-        spiceDBContainer, err := spicedb.RunContainer(ctx, testcontainers.WithImage("authzed/spicedb:v1.33.0"))
+        spiceDBContainer, err := spicedb.Run(ctx, "authzed/spicedb:v1.33.0")
       ```
 description: |
   SpiceDB is a graph database purpose-built for storing and evaluating access control data.

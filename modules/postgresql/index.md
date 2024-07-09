@@ -17,8 +17,8 @@ docs:
     maintainer: core
     example: |
       ```go
-      postgresContainer, err := postgres.RunContainer(ctx,
-        testcontainers.WithImage("postgres:16-alpine"),
+      postgresContainer, err := postgres.Run(ctx,
+        "postgres:16-alpine",
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),
         postgres.WithPassword("password"),

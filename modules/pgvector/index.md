@@ -18,8 +18,8 @@ docs:
     maintainer: core
     example: |
       ```go
-      pgVectorContainer, err := postgres.RunContainer(ctx,
-        testcontainers.WithImage("pgvector/pgvector:pg16"),
+      pgVectorContainer, err := postgres.Run(ctx,
+        "pgvector/pgvector:pg16",
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),
         postgres.WithPassword("password"),

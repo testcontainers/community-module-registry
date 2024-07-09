@@ -17,7 +17,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      elasticsearchContainer, err := elasticsearch.RunContainer(ctx, testcontainers.WithImage("docker.elastic.co/elasticsearch/elasticsearch:8.9.0"))
+      elasticsearchContainer, err := elasticsearch.Run(ctx, "docker.elastic.co/elasticsearch/elasticsearch:8.9.0")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Elasticsearch

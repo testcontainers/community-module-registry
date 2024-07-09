@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mariaDBContainer, err := mariadb.RunContainer(ctx, testcontainers.WithImage("mariadb:11.0.3"))
+      mariaDBContainer, err := mariadb.Run(ctx, "mariadb:11.0.3")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.MariaDb

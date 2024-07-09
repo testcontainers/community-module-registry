@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      openldapContainer, err := openldap.RunContainer(ctx, testcontainers.WithImage("bitnami/openldap:2.6.6"))
+      openldapContainer, err := openldap.Run(ctx, "bitnami/openldap:2.6.6")
       ```
 description: |
   OpenLDAP Software is an open source implementation of the Lightweight Directory Access Protocol (LDAP).

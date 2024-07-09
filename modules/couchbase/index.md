@@ -18,8 +18,8 @@ docs:
     maintainer: core
     example: |
       ```go
-      couchbaseContainer, err := couchbase.RunContainer(ctx,
-        testcontainers.WithImage("couchbase/server:community-7.0.2"),
+      couchbaseContainer, err := couchbase.Run(ctx,
+        "couchbase/server:community-7.0.2",
         couchbase.WithBucket(couchbase.NewBucket("bucketName")),
       )
       ```

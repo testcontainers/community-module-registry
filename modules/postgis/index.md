@@ -18,8 +18,8 @@ docs:
     maintainer: core
     example: |
       ```go
-      postgisContainer, err := postgres.RunContainer(ctx,
-        testcontainers.WithImage("postgis/postgis:12-3.0"),
+      postgisContainer, err := postgres.Run(ctx,
+        "postgis/postgis:12-3.0",
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),
         postgres.WithPassword("password"),

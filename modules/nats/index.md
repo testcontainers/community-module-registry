@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      natsContainer, err := nats.RunContainer(ctx, testcontainers.WithImage("nats:2.9"))
+      natsContainer, err := nats.Run(ctx, "nats:2.9")
       ``````
   - id: nodejs
     url: https://node.testcontainers.org/modules/nats/

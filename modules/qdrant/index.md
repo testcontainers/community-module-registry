@@ -18,7 +18,7 @@ docs:
     maintainer: official
     example: |
       ```go
-      qdrantContainer, err := qdrant.RunContainer(ctx, testcontainers.WithImage("qdrant/qdrant:v1.7.4"))
+      qdrantContainer, err := qdrant.Run(ctx, "qdrant/qdrant:v1.7.4")
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/qdrant/

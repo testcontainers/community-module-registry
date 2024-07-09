@@ -17,7 +17,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      opensearchContainer, err := opensearch.RunContainer(ctx, testcontainers.WithImage("opensearchproject/opensearch:2.11.1"))
+      opensearchContainer, err := opensearch.Run(ctx, "opensearchproject/opensearch:2.11.1")
       ```
 description: |
   OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications licensed under Apache 2.0 and powered by Apache Lucene.

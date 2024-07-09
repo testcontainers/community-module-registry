@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      k3sContainer, err := k3s.RunContainer(ctx, testcontainers.WithImage("rancher/k3s:v1.27.1-k3s1"))
+      k3sContainer, err := k3s.Run(ctx, "rancher/k3s:v1.27.1-k3s1")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.K3s

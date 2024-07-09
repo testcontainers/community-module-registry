@@ -16,7 +16,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      artemisContainer, err := artemis.RunContainer(ctx, testcontainers.WithImage("docker.io/apache/activemq-artemis:2.30.0-alpine"))
+      artemisContainer, err := artemis.Run(ctx, "docker.io/apache/activemq-artemis:2.30.0-alpine")
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.ActiveMQ

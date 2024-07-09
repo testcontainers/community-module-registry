@@ -18,7 +18,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      weaviateContainer, err := weaviate.RunContainer(ctx, testcontainers.WithImage("semitechnologies/weaviate:1.23.9"))
+      weaviateContainer, err := weaviate.Run(ctx, "semitechnologies/weaviate:1.23.9")
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/weaviate/
