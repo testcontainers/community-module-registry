@@ -16,7 +16,7 @@ docs:
       ```
     installation: |
       ```bash
-      go get -u github.com/ajeetdsouza/testcontainers-aerospike-go@latest
+      go get -u github.com/ajeetdsouza/testcontainers-aerospike-go
       ```
 description: |
   Aerospike is a real-time, high performance NoSQL database.
