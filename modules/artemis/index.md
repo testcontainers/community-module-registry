@@ -11,12 +11,25 @@ docs:
       var artemis = new ArtemisContainer("apache/activemq-artemis:2.30.0-alpine");
       artemis.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>activemq</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/artemis/
     maintainer: core
     example: |
       ```go
       artemisContainer, err := artemis.Run(ctx, "docker.io/apache/activemq-artemis:2.30.0-alpine")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/artemis
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.ActiveMQ
@@ -27,6 +40,10 @@ docs:
         .WithImage("apache/activemq-artemis:2.31.2")
         .Build();
         await artemisContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.ActiveMq --version 3.9.0
       ```
 description: |
   Apache ActiveMQ Artemis is an open source project to build a multi-protocol, embeddable, very high performance, clustered, asynchronous messaging system.

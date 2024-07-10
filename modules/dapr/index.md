@@ -14,6 +14,15 @@ docs:
       var dapr = new DaprContainer("daprio/daprd:1.13.2");
       dapr.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>io.diagrid.testcontainers</groupId>
+          <artifactId>dapr</artifactId>
+          <version>0.10.14</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   Dapr is a CNCF and open-source project to enable developers with a consistent set of application-level APIs to develop faster cloud-native applications.
 ---

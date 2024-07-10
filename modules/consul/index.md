@@ -11,12 +11,25 @@ docs:
       var consul = new ConsulContainer(DockerImageName.parse("hashicorp/consul:1.15"));
       consul.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>consul</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/consul/
     maintainer: core
     example: |
       ```go
       consulContainer, err := consul.Run(ctx, "hashicorp/consul:1.15")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/consul
       ```
 description: |
   Consul is a service mesh and distributed key-value store.

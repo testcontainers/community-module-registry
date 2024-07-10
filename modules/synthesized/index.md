@@ -30,6 +30,15 @@ docs:
       new SynthesizedTDK(SynthesizedTDK.DEFAULT_IMAGE_NAME)
           .transform(input, output, config);
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>io.synthesized</groupId>
+          <artifactId>tdk-tc</artifactId>
+          <version>1.05</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   Synthesized Test Data Kit (TDK) is a DevOps’ best friend for database masking and generation. Forget about
   hacky masking and seeding scripts that can easily leak PII or produce inaccurate results. You can plug it 

@@ -16,6 +16,15 @@ docs:
                 .withMapping("hello", WireMockContainerJunit5Test.class, "hello-world.json");
       wiremockServer.start();                
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.wiremock.integrations.testcontainers</groupId>
+          <artifactId>wiremock-testcontainers-module</artifactId>
+          <version>1.0-alpha-13</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: nodejs
     url: https://github.com/wiremock/wiremock-testcontainers-node
     maintainer: official
@@ -26,6 +35,10 @@ docs:
         .withMapping("./mapping.json")
         .withExposedPorts(8080)
         .start();
+      ```
+    installation: |
+      ```bash
+      npm install @wiremock/wiremock-testcontainers-node --save-dev
       ```
   - id: go
     url: https://github.com/wiremock/wiremock-testcontainers-go
@@ -46,6 +59,10 @@ docs:
          }
        })
       ```
+    installation: |
+      ```bash
+      go get github.com/wiremock/wiremock-testcontainers-go
+      ```
   - id: python
     url: https://wiremock.readthedocs.io/en/latest/testcontainers/
     maintainer: official
@@ -64,6 +81,10 @@ docs:
             )
           ) # (3)
           yield wm
+      ```
+    installation: |
+      ```bash
+      pip install wiremock
       ```
 description: |
     This module allows provisioning the WireMock server as a standalone container within your tests,

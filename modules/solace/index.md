@@ -11,6 +11,15 @@ docs:
       var solaceContainer = new SolaceContainer(DockerImageName.parse("solace/solace-pubsub-standard:10.2"));
       solace.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>solace</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   Solace PubSub+ is an event streaming, management and monitoring platform that gives you everything you need to design, deploy and manage an event-driven system. Stream events across hybrid, multi-cloud and IoT environments, quickly, reliably and securely. Manage your entire events ecosystem.
 ---

@@ -11,6 +11,15 @@ docs:
       var arango = new ArangoContainer();
       arango.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>com.github.goodforgod</groupId>
+          <artifactId>arangodb-testcontainers</artifactId>
+          <version>3.0.1</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.ArangoDb
     maintainer: core
@@ -21,12 +30,20 @@ docs:
         .Build();
       await arangodb.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.ArangoDb --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/arangodb/
     maintainer: core
     example: |
       ```javascript
       const container = await new ArangoDBContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/arangodb --save-dev
       ```
 description: |
   ArangoDB is a free and open-source native graph database system. It supports three data models; graphs, JSON documents, and key/value.

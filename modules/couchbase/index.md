@@ -13,6 +13,15 @@ docs:
       ));
       couchbase.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>couchbase</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/couchbase/
     maintainer: core
@@ -22,6 +31,10 @@ docs:
         "couchbase/server:community-7.0.2",
         couchbase.WithBucket(couchbase.NewBucket("bucketName")),
       )
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/couchbase
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Couchbase
@@ -33,12 +46,20 @@ docs:
         .Build();
       await couchbaseContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Couchbase --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/couchbase/
     maintainer: core
     example: |
       ```javascript
       const container = await new CouchbaseContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/couchbase --save-dev
       ```
 description: |
   Couchbase is an open-source, distributed, multi-model, document oriented, NoSQL database.

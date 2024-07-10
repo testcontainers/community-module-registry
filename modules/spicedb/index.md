@@ -10,6 +10,10 @@ docs:
       ```go
         spiceDBContainer, err := spicedb.Run(ctx, "authzed/spicedb:v1.33.0")
       ```
+    installation: |
+      ```bash
+      go get github.com/Mariscal6/testcontainers-spicedb-go
+      ```
 description: |
   SpiceDB is a graph database purpose-built for storing and evaluating access control data.
 ---

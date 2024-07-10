@@ -13,6 +13,15 @@ docs:
             .withUser(new DexContainer.User("alice", "alice@example.com", "alice-password"));
       container.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>wf.garnier</groupId>
+          <artifactId>testcontainers-dex</artifactId>
+          <version>3.2.0</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   Dex is an identity service that uses OpenID Connect to drive authentication for other apps.
 

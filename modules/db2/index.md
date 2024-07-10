@@ -12,6 +12,15 @@ docs:
         .acceptLicense();
       db2.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>db2</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   IBM Db2 is a family of data management products, including database servers.
 ---

@@ -14,6 +14,15 @@ docs:
                     .withGitPassword("12345"); // overwrite the default git password
       gitServer.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>io.github.sparsick.testcontainers.gitserver</groupId>
+          <artifactId>testcontainers-gitserver</artifactId>
+          <version>0.8.0</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
    Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 ---

@@ -12,6 +12,15 @@ docs:
       var oracle = new OracleContainer("gvenzl/oracle-free:23.4-slim-faststart");
       oracle.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>oracle-free</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   Oracle Database Free is a free edition of the world's leading database specifically designed for anybody to develop, learn, and run on Oracle Database for free.
 ---

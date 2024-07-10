@@ -13,6 +13,15 @@ docs:
       ```java
       var qdrant = new QdrantContainer("qdrant/qdrant:v1.7.4");
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>qdrant</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/qdrant/
     maintainer: official
@@ -20,12 +29,20 @@ docs:
       ```go
       qdrantContainer, err := qdrant.Run(ctx, "qdrant/qdrant:v1.7.4")
       ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/qdrant
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/qdrant/
     maintainer: core
     example: |
       ```javascript
       const container = await new QdrantContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/qdrant --save-dev
       ```
 description: |
   Qdrant is the leading, high-performance, scalable, open-source vector database and search engine, essential for building the next generation of AI/ML applications. Qdrant is able to handle billions of vectors, supports the matching of semantically complex objects, and is implemented in Rust for performance, memory safety, and scale. Read more on www.qdrant.tech

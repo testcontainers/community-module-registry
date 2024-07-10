@@ -10,6 +10,10 @@ docs:
       ```go
         flywayContainer, err := flyway.RunContainer(ctx, testcontainers.WithImage("flyway/flyway:10.15.0"))
       ```
+    installation: |
+      ```bash
+      go get github.com/CyberOwlTeam/testcontainers-go-flyway
+      ```
 description: |
   Flyway by Redgate • Database Migrations Made Easy.
 ---

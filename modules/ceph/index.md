@@ -11,6 +11,15 @@ docs:
       CephContainer cephServer = new CephContainer();
       cephServer.start();                
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>com.github.jarlah</groupId>
+          <artifactId>testcontainers-ceph</artifactId>
+          <version>2.0.0</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   This module allows provisioning the Ceph server as a standalone container within your tests based on [Ceph Demo Container](https://github.com/ceph/ceph-container).
 

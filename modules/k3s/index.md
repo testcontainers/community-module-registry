@@ -11,12 +11,25 @@ docs:
       var k3s = new K3sContainer(DockerImageName.parse("rancher/k3s:v1.21.3-k3s1"));
       k3s.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>k3s</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/k3s/
     maintainer: core
     example: |
       ```go
       k3sContainer, err := k3s.Run(ctx, "rancher/k3s:v1.27.1-k3s1")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/k3s
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.K3s
@@ -27,6 +40,10 @@ docs:
         .WithImage("rancher/k3s:v1.26.2-k3s1")
         .Build();
       await k3sConainter.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.K3s --version 3.9.0
       ```
 description: |
   K3s is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.

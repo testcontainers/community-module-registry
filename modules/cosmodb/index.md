@@ -13,6 +13,15 @@ docs:
       );
       cosmos.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>azure</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.CosmosDb
     maintainer: core
@@ -22,6 +31,10 @@ docs:
         .WithImage("mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest")
         .Build();
       await cosmosDbContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.CosmosDb --version 3.9.0
       ```
 description: |
   Azure Cosmos DB is a fully managed, horizontally scalable, NoSQL and relational database.
