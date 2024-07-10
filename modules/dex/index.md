@@ -20,7 +20,8 @@ docs:
           <artifactId>testcontainers-dex</artifactId>
           <version>3.2.0</version>
           <scope>test</scope>
-    </dependency>
+      </dependency>
+      ```
 description: |
   Dex is an identity service that uses OpenID Connect to drive authentication for other apps.
 
