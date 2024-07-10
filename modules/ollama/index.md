@@ -12,6 +12,15 @@ docs:
       ollama.start();
       ollama.execInContainer("ollama", "pull", "all-minilm");
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>ollama</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/ollama/
     maintainer: core
@@ -23,12 +32,20 @@ docs:
       }
       _, _, err = ollamaContainer.Exec(ctx, []string{"ollama", "pull", "all-minilm"})
       ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/ollama
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/ollama/
     maintainer: core
     example: |
       ```javascript
       const container = await new OllamaContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/ollama --save-dev
       ```
 description: |
   Ollama makes it easy to get up and running with large language models locally.

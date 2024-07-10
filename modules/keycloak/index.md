@@ -11,6 +11,15 @@ docs:
       var keycloak = new KeycloakContainer();
       keycloak.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>com.github.dasniko</groupId>
+          <artifactId>testcontainers-keycloak</artifactId>
+          <version>3.4.0</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://github.com/stillya/testcontainers-keycloak
     maintainer: community
@@ -25,6 +34,10 @@ docs:
         keycloak.WithAdminPassword("admin"),
       )
       ```
+    installation: |
+      ```bash
+      go get github.com/stillya/testcontainers-keycloak
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Keycloak
     maintainer: core
@@ -34,6 +47,10 @@ docs:
         .WithImage("quay.io/keycloak/keycloak:21.1")
         .Build();
       await keycloakContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Keycloak --version 3.9.0
       ```
 description: |
   Keycloak is an open source identity and access management application that provides user federation, strong authentication, user management, fine-grained authorization, and more.

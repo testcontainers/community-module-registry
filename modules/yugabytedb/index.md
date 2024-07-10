@@ -14,6 +14,15 @@ docs:
       var yugabyte = new YugabyteDBYSQLContainer(DockerImageName.parse("yugabytedb/yugabyte:2.14.4.0-b26"));
       yugabyte.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>yugabytedb</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   YugabyteDB is a high-performance transactional distributed SQL database for cloud-native applications.
 ---

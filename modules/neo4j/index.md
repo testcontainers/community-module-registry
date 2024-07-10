@@ -15,6 +15,15 @@ docs:
       var neo4j = new Neo4jContainer<>(DockerImageName.parse("neo4j:4.4"));
       neo4j.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>neo4j</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/neo4j/
     maintainer: core
@@ -26,6 +35,10 @@ docs:
         neo4j.WithLabsPlugin(neo4j.Apoc),
       )
       ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/neo4j
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Neo4j
     maintainer: core
@@ -36,12 +49,20 @@ docs:
         .Build();
       await neo4jContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Neo4j --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/neo4j/
     maintainer: core
     example: |
       ```javascript
       const container = await new Neo4jContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/neo4j --save-dev
       ```
 description: |
   Neo4j is a highly scalable open source graph database management system.

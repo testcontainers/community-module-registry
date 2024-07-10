@@ -12,6 +12,15 @@ docs:
         .acceptLicense();
       mssqlserver.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>mssqlserver</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/mssql/
     maintainer: core
@@ -21,6 +30,10 @@ docs:
         "mcr.microsoft.com/mssql/server:2022-CU10-ubuntu-22.04",
         mssql.WithAcceptEULA(),
       )
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/mssql
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.MsSql
@@ -32,12 +45,20 @@ docs:
         .Build();
       await msSqlContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.MsSql --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/mssqlserver/
     maintainer: core
     example: |
       ```javascript
       const container = await new MSSQLServerContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/mssqlserver --save-dev
       ```
 description: |
   Microsoft SQL Server is a relational database management system.

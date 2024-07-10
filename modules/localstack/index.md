@@ -14,12 +14,25 @@ docs:
       var localstack = new LocalStackContainer(DockerImageName.parse("localstack/localstack:0.11.3"));
       localstack.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>localstack</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/localstack/
     maintainer: core
     example: |
       ```go
       localstackContainer, err := localstack.Run(ctx, "localstack/localstack:1.4.0")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/localstack
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.LocalStack
@@ -31,12 +44,20 @@ docs:
         .Build();
       await localStackContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.LocalStack --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/localstack/
     maintainer: core
     example: |
       ```javascript
       const container = await new LocalstackContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/localstack --save-dev
       ```
 description: |
   LocalStack is a fully functional local AWS cloud stack. This module allows you to develop your cloud and serverless apps without actually using the cloud.

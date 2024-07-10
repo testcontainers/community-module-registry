@@ -14,12 +14,25 @@ docs:
       var redpanda = new RedpandaContainer(DockerImageName.parse("docker.redpanda.com/redpandadata/redpanda:v22.2.1"));
       redpanda.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>redpanda</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/redpanda/
     maintainer: core
     example: |
       ```go
       redpandaContainer, err := redpanda.Run(ctx, "docker.redpanda.com/redpandadata/redpanda:v23.1.7")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/redpanda
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Redpanda
@@ -31,12 +44,20 @@ docs:
         .Build();
       await redpandaContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Redpanda --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/redpanda/
     maintainer: core
     example: |
       ```javascript
       const redpandaContainer = await new RedpandaContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/redpanda --save-dev
       ```
 description: |
   Redpanda is the Kafka-compatible streaming data platform.

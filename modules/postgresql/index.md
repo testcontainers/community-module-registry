@@ -12,6 +12,15 @@ docs:
       var postgres = new PostgreSQLContainer<>(DockerImageName.parse("postgres:16-alpine"));
       postgres.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>postgresql</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/postgres/
     maintainer: core
@@ -24,6 +33,10 @@ docs:
         postgres.WithPassword("password"),
       )
       ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/postgres
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.PostgreSql
     maintainer: core
@@ -34,12 +47,20 @@ docs:
         .Build();
       await postgreSqlContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.PostgreSql --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/postgresql/
     maintainer: core
     example: |
       ```javascript
       const container = await new PostgreSqlContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/postgresql --save-dev
       ```
 description: |
   PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.

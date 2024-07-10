@@ -11,6 +11,15 @@ docs:
       var etcdContainer = new EtcdContainer();
       etcdContainer.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>io.etcd</groupId>
+          <artifactId>jetcd-core</artifactId>
+          <version>0.8.2</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   etcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node.
 ---

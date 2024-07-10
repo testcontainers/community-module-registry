@@ -13,6 +13,15 @@ docs:
       );
       bigtable.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>gcloud</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/gcloud/
     maintainer: core
@@ -23,6 +32,10 @@ docs:
         testcontainers.WithImage("gcr.io/google.com/cloudsdktool/cloud-sdk:380.0.0-emulators"),
         gcloud.WithProjectID("bigtable-project"),
       )
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/gcloud
       ```
 description: |
   Google's Cloud SDK provides a platform to work with the services provided through their Cloud Platform.

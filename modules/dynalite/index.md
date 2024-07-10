@@ -13,6 +13,15 @@ docs:
       ));
       dynamoDB.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>dynalite</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   Dynalite is an implementation of Amazon's DynamoDB built on LevelDB that aims to match live DynamoDB instances as closely as possible, including all limits and error messages.
 ---

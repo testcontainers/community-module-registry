@@ -11,12 +11,25 @@ docs:
       var mysql = new MySQLContainer<>(DockerImageName.parse("mysql:5.7.34"));
       mysql.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>mysql</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/mysql/
     maintainer: core
     example: |
       ```go
       mysqlContainer, err := mysql.Run(ctx, "mysql:5.7.34")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/mysql
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.MySql
@@ -28,12 +41,20 @@ docs:
         .Build();
       await mySqlContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.MySql --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/mysql/
     maintainer: core
     example: |
       ```javascript
       const container = await new MySqlContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/mysql --save-dev
       ```
 description: |
   MySQL is an open-source relational database management system.

@@ -10,6 +10,10 @@ docs:
       ```go
       registryContainer, err := registry.RunContainer(context.Background(), testcontainers.WithImage("registry:2.8.3"))
       ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/registry
+      ```
 description: |
   The Open Source Registry implementation for storing and distributing container images and other content using the OCI Distribution Specification.
 ---

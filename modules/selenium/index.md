@@ -12,6 +12,15 @@ docs:
         withCapabilities(new ChromeOptions())
       chrome.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>selenium</artifactId>
+          <version>1.19.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.WebDriver
     maintainer: core
@@ -22,12 +31,20 @@ docs:
         .Build();
       await WebDriverContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.WebDriver --version 3.9.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/selenium/
     maintainer: core
     example: |
       ```javascript
       const container = await new SeleniumContainer("selenium/standalone-chrome:112.0").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/selenium --save-dev
       ```
 description: |
   Selenium is an umbrella project encapsulating a variety of tools and libraries enabling web browser automation. Selenium specifically provides an infrastructure for the W3C WebDriver specification — a platform and language-neutral coding interface compatible with all major web browsers.

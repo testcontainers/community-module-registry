@@ -14,6 +14,15 @@ docs:
       var microcks = new MicrocksContainer(DockerImageName.parse("quay.io/microcks/microcks-uber:1.8.0"));
       microcks.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>io.github.microcks</groupId>
+          <artifactId>microcks-testcontainers</artifactId>
+          <version>0.2.8</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://github.com/microcks/microcks-testcontainers-go
     maintainer: official
@@ -21,12 +30,20 @@ docs:
       ```go
       microcksContainer, err := microcks.RunContainer(ctx, testcontainers.WithImage("quay.io/microcks/microcks-uber:1.8.0"))
       ```
+    installation: |
+      ```bash
+      go get github.com/microcks/microcks-testcontainers-go
+      ```
   - id: nodejs
     url: https://github.com/microcks/microcks-testcontainers-node
     maintainer: official
     example: |
       ```javascript
       const microcks = await new MicrocksContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @microcks/microcks-testcontainers --save-dev
       ```
 description: |
   Microcks is an open-source cloud-native platform for mocking and contract-testing all kinds of APIs. It supports REST [OpenAPI](https://www.openapis.org/), [gRPC](https://grpc.io/), [GraphQL](https://graphql.org/), [Async APIs](https://www.asyncapi.com/) and SOAP WebServices.

@@ -11,6 +11,15 @@ docs:
       var kind = new KindContainer<>();
       kind.start();
       ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>com.dajudge.kindcontainer</groupId>
+          <artifactId>kindcontainer</artifactId>
+          <version>1.4.6</version>
+          <scope>test</scope>
+      </dependency>
+      ```
 description: |
   Kindcontainer provides ephemeral Kubernetes clusters for integration testing.
 ---

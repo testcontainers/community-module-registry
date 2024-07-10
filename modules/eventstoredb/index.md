@@ -13,6 +13,10 @@ docs:
         .Build();
       await eventStoreDbContainer.StartAsync();
       ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.EventStoreDb --version 3.9.0
+      ```
 description: |
   EventStoreDB is an event sourcing database that stores data in streams of immutable events.
 ---
