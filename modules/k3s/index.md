@@ -16,7 +16,7 @@ docs:
       <dependency>
           <groupId>org.testcontainers</groupId>
           <artifactId>k3s</artifactId>
-          <version>1.19.8</version>
+          <version>1.20.0</version>
           <scope>test</scope>
       </dependency>
       ```
