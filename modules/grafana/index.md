@@ -20,6 +20,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/grafana-lgtm/
+    maintainer: core
+    example: |
+      ```java
+      grafanaLgtmContainer, err := grafanalgtm.Run(ctx, "grafana/otel-lgtm:0.6.0")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/grafanalgtm
+      ```
 description: |
   Grafana is the open source analytics & monitoring solution for every database.
 ---
