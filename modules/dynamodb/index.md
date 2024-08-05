@@ -8,7 +8,7 @@ docs:
     maintainer: community
     example: |
       ```go
-      dynamodbLocalContainer, err := dynamodblocal.RunContainer(context.Background(), testcontainers.WithImage("amazon/dynamodb-local:2.2.1"))
+      dynamodbLocalContainer, err := dynamodblocal.Run(context.Background(), "amazon/dynamodb-local:2.2.1")
       ```
     installation: |
       ```bash
