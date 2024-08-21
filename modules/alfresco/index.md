@@ -4,7 +4,7 @@ categories:
   - other
 docs:
   - id: java
-    url: https://java.testcontainers.org/modules/alfresco/
+    url: https://github.com/AlfrescoLabs/alfresco-testcontainers
     maintainer: community
     example: |
       ```java
