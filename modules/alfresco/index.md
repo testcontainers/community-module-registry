@@ -8,7 +8,7 @@ docs:
     maintainer: community
     example: |
       ```java
-      var alfresco = new AlfrescoContainer("23.2.1");
+      var alfresco = new AlfrescoContainer(DockerImageName.parse("alfresco/alfresco-content-repository-community:23.2.1"));
       alfresco.start();
       ```
     installation: |
