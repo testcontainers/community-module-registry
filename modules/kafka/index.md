@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```java
-      var kafka = new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:6.2.1"));
+      var kafka = new KafkaContainer("apache/kafka-native:3.8.0");
       kafka.start();
       ```
     installation: |
@@ -16,7 +16,7 @@ docs:
       <dependency>
           <groupId>org.testcontainers</groupId>
           <artifactId>kafka</artifactId>
-          <version>1.20.0</version>
+          <version>1.20.1</version>
           <scope>test</scope>
       </dependency>
       ```
