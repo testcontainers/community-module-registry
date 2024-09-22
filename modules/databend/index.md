@@ -26,19 +26,6 @@ docs:
     example: |
       ```go
     databendContainer, err := databend.Run(ctx, "datafuselabs/databend:v1.2.615", databend.WithUsername("test1"), databend.WithPassword("pass1"))
-    connectionString, err := databendContainer.ConnectionString(ctx, "sslmode=disable")
-    if err != nil {
-        log.Printf("failed to get connection string: %s", err)
-        return
-    }
-
-    db, err := sql.Open("databend", connectionString)
-    if err != nil {
-        log.Printf("failed to connect to Databend: %s", err)
-        return
-    }
-    defer db.Close()
-    )
       ```
     installation: |
       ```bash
