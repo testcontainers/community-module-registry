@@ -8,8 +8,8 @@ docs:
     maintainer: core
     example: |
       ```java
-      var databendContainer = new DatabendContainer();
-      databendContainer.start();
+      DatabendContainer databend = new DatabendContainer("datafuselabs/databend:v1.2.615");
+      databend.start();
       ```
     installation: |
       ```xml
