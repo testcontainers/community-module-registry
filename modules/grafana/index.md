@@ -24,7 +24,7 @@ docs:
     url: https://golang.testcontainers.org/modules/grafana-lgtm/
     maintainer: core
     example: |
-      ```java
+      ```go
       grafanaLgtmContainer, err := grafanalgtm.Run(ctx, "grafana/otel-lgtm:0.6.0")
       ```
     installation: |
