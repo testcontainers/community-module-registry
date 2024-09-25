@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-    databendContainer, err := databend.Run(ctx, "datafuselabs/databend:v1.2.615", databend.WithUsername("test1"), databend.WithPassword("pass1"))
+      databendContainer, err := databend.Run(ctx, "datafuselabs/databend:v1.2.615", databend.WithUsername("test1"), databend.WithPassword("pass1"))
       ```
     installation: |
       ```bash
