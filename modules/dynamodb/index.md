@@ -4,15 +4,15 @@ categories:
   - nosql-database
 docs:
   - id: go
-    url: https://github.com/abhirockzz/dynamodb-local-testcontainers-go
-    maintainer: community
+    url: https://golang.testcontainers.org/modules/dynamodb/
+    maintainer: core
     example: |
       ```go
-      dynamodbLocalContainer, err := dynamodblocal.RunContainer(context.Background(), testcontainers.WithImage("amazon/dynamodb-local:2.2.1"))
+      dynamodbContainer, err := dynamodblocal.Run(context.Background(), "amazon/dynamodb-local:2.2.1")
       ```
     installation: |
       ```bash
-      go get github.com/abhirockzz/dynamodb-local-testcontainers-go
+      go get github.com/testcontainers/testcontainers-go/modules/dynamodb
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.DynamoDb
