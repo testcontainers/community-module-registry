@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```java
-      var influx = new InfluxDBContainer<>(DockerImageName.parse("influxdb:2.0.7");
+      var influx = new InfluxDBContainer<>(DockerImageName.parse("influxdb:2.0.7"));
       influx.start();
       ```
     installation: |
