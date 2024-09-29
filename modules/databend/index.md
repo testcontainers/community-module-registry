@@ -31,6 +31,16 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/databend
       ```
+  - id: rust
+    url: https://github.com/testcontainers/testcontainers-rs-modules-community
+    maintainer: community
+    example: |
+    ```rust
+     let databend = DatabendImage::default().start().await.unwrap();
+    ```
+    installation: |
+    ```rust
+    use testcontainers_modules::{databend, testcontainers::runners::AsyncRunner};
 description: |
     Databend, built in Rust, is an open-source cloud data warehouse.
 ---
