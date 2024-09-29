@@ -40,7 +40,7 @@ docs:
     ```
     installation: |
     ```rust
-    use testcontainers_modules::{databend, testcontainers::runners::AsyncRunner};
+    use testcontainers_modules::{databend::Databend as DatabendImage, testcontainers::runners::AsyncRunner};
 description: |
     Databend, built in Rust, is an open-source cloud data warehouse.
 ---
