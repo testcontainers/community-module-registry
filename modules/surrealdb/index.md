@@ -15,7 +15,7 @@ docs:
       go get github.com/testcontainers/testcontainers-go/modules/surrealdb
       ```
   - id: rust
-    url: https://github.com/testcontainers/testcontainers-rs-modules-community
+    url: https://github.com/testcontainers/testcontainers-rs-modules-community/tree/main/src/surrealdb
     maintainer: community
     example: |
       ```rust
