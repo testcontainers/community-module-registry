@@ -39,8 +39,9 @@ docs:
      let databend = DatabendImage::default().start().await.unwrap();
     ```
     installation: |
-    ```rust
-    use testcontainers_modules::{databend::Databend as DatabendImage, testcontainers::runners::AsyncRunner};
+     ```bash
+      cargo add -F surrealdb --dev testcontainers-modules
+      ```
 description: |
     Databend, built in Rust, is an open-source cloud data warehouse.
 ---
