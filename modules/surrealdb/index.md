@@ -15,16 +15,17 @@ docs:
       go get github.com/testcontainers/testcontainers-go/modules/surrealdb
       ```
   - id: rust
-    url: https://github.com/testcontainers/testcontainers-rs-modules-community
+    url: https://github.com/testcontainers/testcontainers-rs-modules-community/tree/main/src/surrealdb
     maintainer: community
     example: |
       ```rust
-      let docker = Cli::default();
-      let surrealdb_container = docker.run(SurrealDb::default());
+      use testcontainers_modules::{surrealdb::SurrealDb, testcontainers::runners::AsyncRunner};
+      let surrealdb_container = SurrealDb::default().start().await.unwrap();
       ```
     installation: |
-      ```rust
-      use testcontainers_modules::{surrealdb, testcontainers::runners::SyncRunner};
+      ```bash
+      cargo add -F surrealdb --dev testcontainers-modules
+      ```
 description: |
   SurrealDB is an end-to-end cloud-native database designed for modern applications, including web, mobile, serverless, Jamstack, backend, and traditional applications.
 
