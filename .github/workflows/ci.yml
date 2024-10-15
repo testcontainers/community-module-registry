@@ -17,5 +17,8 @@ jobs:
       - name: Install yamllint
         run: pip install --force-reinstall -v "yamllint==1.35.1"
 
+      - name: List YAML files
+        run: yamllint --list-files .
+
       - name: Lint YAML files
-        run: yamllint -d .yamllint **/index.md
+        run: yamllint -d .yamllint .

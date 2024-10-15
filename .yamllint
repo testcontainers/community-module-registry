@@ -1,5 +1,11 @@
 extends: default
 
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+  - '.yamllint'
+  - 'index.md'
+
 rules:
   # 120 chars should be enough, but don't fail if a line is longer
   line-length:
