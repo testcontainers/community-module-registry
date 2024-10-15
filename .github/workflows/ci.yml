@@ -21,4 +21,4 @@ jobs:
         run: yamllint --list-files .
 
       - name: Lint YAML files
-        run: yamllint -d .yamllint "**/index.md"
+        run: find . -name 'index.md' | xargs yamllint -d .yamllint
