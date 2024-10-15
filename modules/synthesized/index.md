@@ -19,7 +19,7 @@ docs:
       //Output JdbcDatabaseContainer: output database with generated data output
       PostgreSQLContainer<?> output = new PostgreSQLContainer<>("postgres:15-alpine")
           .withNetwork(network);
-      
+
       String config = """
               default_config:
                 mode: GENERATION
@@ -41,6 +41,6 @@ docs:
       ```
 description: |
   Synthesized Test Data Kit (TDK) is a DevOps’ best friend for database masking and generation. Forget about
-  hacky masking and seeding scripts that can easily leak PII or produce inaccurate results. You can plug it 
+  hacky masking and seeding scripts that can easily leak PII or produce inaccurate results. You can plug it
   in into your CI/CD pipeline or use it as a command-line tool.
 ---
