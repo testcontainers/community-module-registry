@@ -15,4 +15,4 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332  # v4
 
       - name: Run yamllint using Docker
-        run: docker run --rm -it -v $(pwd):/data cytopia/yamllint:latest --no-warnings -d .yamllint .
+        run: docker run --rm -t -v $(pwd):/data cytopia/yamllint:latest --no-warnings -d .yamllint .

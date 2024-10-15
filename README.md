@@ -44,7 +44,7 @@ description: |
 The project uses `yamllint` to format the modules, so make sure the file is correctly formatted. Please run the following command to check the files:
 
 ```bash
-docker run --rm -it -v $(pwd):/data cytopia/yamllint:latest --no-warnings -d .yamllint .
+docker run --rm -t -v $(pwd):/data cytopia/yamllint:latest --no-warnings -d .yamllint .
 ```
 
 - Current ID field values: 
