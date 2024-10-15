@@ -1,0 +1,20 @@
+name: CI tasks
+
+on:
+  pull_request
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    steps:
+      - name: Check out modules
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+
+      - name: Install yamllint
+        run: pip install --force-reinstall -v "yamllint==1.35.1"
+
+      - name: Lint YAML files
+        run: yamllint -d .yamllint.yml **/index.md
