@@ -35,11 +35,11 @@ docs:
     url: https://github.com/testcontainers/testcontainers-rs-modules-community
     maintainer: community
     example: |
-    ```rust
-     let databend = DatabendImage::default().start().await.unwrap();
-    ```
+      ```rust
+      let databend = DatabendImage::default().start().await.unwrap();
+      ```
     installation: |
-     ```bash
+      ```bash
       cargo add -F surrealdb --dev testcontainers-modules
       ```
 description: |
