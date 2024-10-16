@@ -20,5 +20,3 @@ docs:
 description: |
     Permify is an open-source authorization service for creating fine-grained and scalable authorization systems.
 ---
-
-

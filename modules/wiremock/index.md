@@ -14,7 +14,7 @@ docs:
       ```java
       WireMockContainer wiremockServer = new WireMockContainer("2.35.0")
                 .withMapping("hello", WireMockContainerJunit5Test.class, "hello-world.json");
-      wiremockServer.start();                
+      wiremockServer.start();
       ```
     installation: |
       ```xml
@@ -95,8 +95,8 @@ description: |
     isolate yourself from flakey 3rd parties and simulate APIs that don’t exist yet.
     WireMock has a rich matching system, allowing any part of an incoming request
     to be matched against complex and precise criteria.
-    
-    Read more: 
+
+    Read more:
      - [WireMock Documentation](https://wiremock.org/docs/)
      - [WireMock and Testcontainers](https://wiremock.org/docs/solutions/testcontainers/)
 ---
