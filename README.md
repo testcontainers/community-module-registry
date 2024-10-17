@@ -2,7 +2,7 @@
 
 To add a new module create a new folder with the structure:
 
-```
+```yaml
 modules
 - <module-name>
   - index.md
@@ -13,7 +13,7 @@ modules
 
 The content of the file should be markdown frontmatter using the following template:
 
-```
+```yaml
 ---
 title: ArangoDB
 categories:
