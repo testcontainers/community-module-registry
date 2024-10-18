@@ -20,6 +20,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/etcd/
+    maintainer: core
+    example: |
+      ```go
+      etcdContainer, err := etcd.Run(ctx, "gcr.io/etcd-development/etcd:v3.5.14")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/etcd
+      ```
 description: |
   etcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node.
 ---
