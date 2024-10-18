@@ -23,6 +23,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/yugabytedb/
+    maintainer: core
+    example: |
+      ```go
+      yugabytedbContainer, err := yugabytedb.Run(ctx, "yugabytedb/yugabyte:2024.1.3.0-b105")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/yugabytedb
+      ```
 description: |
   YugabyteDB is a high-performance transactional distributed SQL database for cloud-native applications.
 ---
