@@ -14,5 +14,11 @@ jobs:
       - name: Check out modules
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332  # v4
 
-      - name: Run yamllint using Docker
-        run: docker run --rm -t -v $(pwd):/data cytopia/yamllint:latest --no-warnings -d .yamllint .
+      - name: Install yamllint
+        run: pip install --force-reinstall -v "yamllint==1.35.1"
+
+      - name: List YAML files
+        run: yamllint --list-files .
+
+      - name: Lint YAML files
+        run: find . -name 'index.md' | xargs yamllint --no-warnings -d .yamllint
