@@ -21,6 +21,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/etcd/
+    maintainer: core
+    example: |
+      ```go
+      meiliContainer, err := meilisearch.Run(ctx, "getmeili/meilisearch:v1.10.3")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/meilisearch
+      ```
 description: |
   Meilisearch is a flexible and powerful user-focused search engine that can be added to any website or application.
 ---
