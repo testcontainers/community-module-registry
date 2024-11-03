@@ -45,6 +45,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.MariaDb --version 3.9.0
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/mariadb/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new MariaDbContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/mariadb --save-dev
+      ```
 description: |
   MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system.
 ---
