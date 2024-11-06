@@ -31,6 +31,17 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/cassandra
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/cassandra/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new CassandraContainer("cassandra:5.0.2").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/cassandra --save-dev
+      ```
 description: |
   Cassandra is a free and open source, distributed NoSQL database management system. It is designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.
 ---
