@@ -12,7 +12,7 @@ docs:
       ```
     example: |
       ```go
-      tbContainer, err := tigerbeetle.RunContainer(ctx)
+      tbContainer, err := tigerbeetle.Run(ctx, "https://ghcr.io/tigerbeetle/tigerbeetle:latest")
       ```
 description: |
   TigerBeetle is a distributed financial accounting database designed for mission critical safety and performance.
