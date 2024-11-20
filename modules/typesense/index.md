@@ -1,7 +1,7 @@
 ---
 title: Typesense
 categories:
-  - relational-database
+  - vector-database
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/databases/typesense/
