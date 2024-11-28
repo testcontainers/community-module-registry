@@ -5,11 +5,11 @@ categories:
 docs:
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/memcached/README.html
-    maintainer: core
+    maintainer: community
     example: |
       ```python
       with MemcachedContainer(image = "memcached:1.6.32") as memcached:
-         host, port = memcached.get_host_and_port()
+        host, port = memcached.get_host_and_port()
       ```
     installation: |
       ```bash

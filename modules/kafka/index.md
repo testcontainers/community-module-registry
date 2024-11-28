@@ -56,6 +56,18 @@ docs:
       ```bash
       npm install @testcontainers/kafka --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/kafka/README.html
+    maintainer: community
+    example: |
+      ```python
+      with KafkaContainer() as kafka:
+        connection = kafka.get_bootstrap_server()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[kafka]
+      ```
 description: |
   Kafka is an open-source distributed event streaming platform for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 ---

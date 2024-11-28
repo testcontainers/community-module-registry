@@ -34,6 +34,21 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/cockroachdb
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/cockroachdb/README.html
+    maintainer: community
+    example: |
+      ```python
+      with CockroachDBContainer('cockroachdb/cockroach:v24.1.1') as crdb:
+        engine = sqlalchemy.create_engine(crdb.get_connection_url())
+        with engine.begin() as connection:
+          result = connection.execute(sqlalchemy.text("select version()"))
+          version, = result.fetchone()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[cockroachdb]
+      ```
 description: |
   CockroachDB is an open-source, cloud-native, resilient, distributed SQL database.
 ---

@@ -45,6 +45,18 @@ docs:
       ```bash
       dotnet add package Testcontainers.K3s --version 3.9.0
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/k3s/README.html
+    maintainer: community
+    example: |
+      ```python
+      with K3SContainer() as k3s:
+        kube_config = k3s.config_yaml()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[k3s]
+      ```
 description: |
   K3s is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.
 ---

@@ -47,6 +47,18 @@ docs:
       ```bash
       npm install @testcontainers/ollama --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/ollama/README.html
+    maintainer: community
+    example: |
+      ```python
+      with OllamaContainer() as ollama:
+        ollama.list_models()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[ollama]
+      ```
 description: |
   Ollama makes it easy to get up and running with large language models locally.
 ---

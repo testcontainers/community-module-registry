@@ -5,11 +5,11 @@ categories:
 docs:
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/scylla/README.html
-    maintainer: core
+    maintainer: community
     example: |
       ```python
       with ScyllaContainer(image = "scylladb/scylla:6.2") as scylla:
-         cluster = scylla.get_cluster()
+        cluster = scylla.get_cluster()
       ```
     installation: |
       ```bash

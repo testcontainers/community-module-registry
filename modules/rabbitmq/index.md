@@ -56,6 +56,18 @@ docs:
       ```bash
       npm install @testcontainers/rabbitmq --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/rabbitmq/README.html
+    maintainer: community
+    example: |
+      ```python
+      with RabbitMqContainer("rabbitmq:3.9.10") as rabbitmq:
+        connection = pika.BlockingConnection(rabbitmq.get_connection_params())
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[rabbitmq]
+      ```
 description: |
   RabbitMQ is an open-source message-broker software that originally implemented the Advanced Message Queuing Protocol and has since been extended with a plug-in architecture to support Streaming Text Oriented Messaging Protocol, MQ Telemetry Transport, and other protocols.
 ---

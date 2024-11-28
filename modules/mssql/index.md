@@ -60,6 +60,20 @@ docs:
       ```bash
       npm install @testcontainers/mssqlserver --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/mssql/README.html
+    maintainer: community
+    example: |
+      ```python
+      with SqlServerContainer("mcr.microsoft.com/mssql/server:2022-CU12-ubuntu-22.04") as mssql:
+        engine = sqlalchemy.create_engine(mssql.get_connection_url())
+        with engine.begin() as connection:
+          result = connection.execute(sqlalchemy.text("select @@VERSION"))
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[mssql]
+      ```
 description: |
   Microsoft SQL Server is a relational database management system.
 ---

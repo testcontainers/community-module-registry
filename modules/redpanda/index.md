@@ -59,6 +59,18 @@ docs:
       ```bash
       npm install @testcontainers/redpanda --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/kafka/README.html
+    maintainer: community
+    example: |
+      ```python
+      with RedpandaContainer() as redpanda:
+        connection = redpanda.get_bootstrap_server()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[kafka]
+      ```
 description: |
   Redpanda is the Kafka-compatible streaming data platform.
 ---

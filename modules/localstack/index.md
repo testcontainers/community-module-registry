@@ -59,6 +59,19 @@ docs:
       ```bash
       npm install @testcontainers/localstack --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/localstack/README.html
+    maintainer: community
+    example: |
+      ```python
+      with LocalStackContainer(image="localstack/localstack:2.0.1") as localstack:
+        dynamo_client = localstack.get_client("dynamodb")
+        tables = dynamo_client.list_tables()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[localstack]
+      ```
 description: |
   LocalStack is a fully functional local AWS cloud stack. This module allows you to develop your cloud and serverless apps without actually using the cloud.
 ---

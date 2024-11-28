@@ -57,6 +57,18 @@ docs:
       ```bash
       npm install @testcontainers/elasticsearch --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/elasticsearch/README.html
+    maintainer: community
+    example: |
+      ```python
+      with ElasticSearchContainer(f'elasticsearch:8.3.3', mem_limit='3G') as es:
+        resp = urllib.request.urlopen(es.get_url())
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[elasticsearch]
+      ```
 description: |
   Elasticsearch is a search and analytics engine based on Apache Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 ---

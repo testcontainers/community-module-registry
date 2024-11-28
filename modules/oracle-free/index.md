@@ -21,6 +21,18 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/oracle-free/README.html
+    maintainer: community
+    example: |
+      ```python
+      with OracleDbContainer() as oracle:
+        engine = sqlalchemy.create_engine(oracle.get_connection_url())
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[oracle-free]
+      ```
 description: |
   Oracle Database Free is a free edition of the world's leading database specifically designed for anybody to develop, learn, and run on Oracle Database for free.
 ---

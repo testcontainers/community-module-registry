@@ -31,6 +31,18 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/influxdb
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/influxdb/README.html
+    maintainer: community
+    example: |
+      ```python
+      with InfluxDbContainer() as influxdb_container:
+        connection_url = influxdb_container.get_url()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[influxdb]
+      ```
 description: |
   InfluxDB is an open-source time series database for storage and retrieval of time series data in fields such as operations monitoring, application metrics, Internet of Things sensor data, and real-time analytics.
 ---

@@ -42,6 +42,23 @@ docs:
       ```bash
       npm install @testcontainers/cassandra --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/cassandra/README.html
+    maintainer: community
+    example: |
+      ```python
+      with CassandraContainer("cassandra:4.1.4") as cassandra, Cluster(
+        cassandra.get_contact_points(),
+        load_balancing_policy=DCAwareRoundRobinPolicy(cassandra.get_local_datacenter()),
+      ) as cluster:
+        session = cluster.connect()
+        result = session.execute("SELECT release_version FROM system.local;")
+        result.one().release_version
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[cassandra]
+      ```
 description: |
   Cassandra is a free and open source, distributed NoSQL database management system. It is designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.
 ---

@@ -52,6 +52,18 @@ docs:
       ```bash
       dotnet add package Testcontainers.Keycloak --version 3.9.0
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/keycloak/README.html
+    maintainer: community
+    example: |
+      ```python
+      with KeycloakContainer() as keycloak:
+        client = keycloak.get_client()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[keycloak]
+      ```
 description: |
   Keycloak is an open source identity and access management application that provides user federation, strong authentication, user management, fine-grained authorization, and more.
 ---

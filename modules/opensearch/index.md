@@ -32,6 +32,18 @@ docs:
       ```bash
       go get github.com/opensearch-project/opensearch-testcontainers
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/opensearch/README.html
+    maintainer: community
+    example: |
+      ```python
+      with OpenSearchContainer() as opensearch:
+        client = opensearch.get_client()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[opensearch]
+      ```
 description: |
   OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications licensed under Apache 2.0 and powered by Apache Lucene.
 ---
