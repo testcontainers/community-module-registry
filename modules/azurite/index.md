@@ -43,6 +43,16 @@ docs:
     installation: |
       ```bash
       pip install testcontainers[azurite]
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/azurite/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:3.33.0").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/azurite --save-dev
       ```
 description: |
   A lightweight server clone of Azure Storage.

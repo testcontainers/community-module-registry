@@ -56,6 +56,16 @@ docs:
     installation: |
       ```bash
       pip install testcontainers[k3s]
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/k3s/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new K3sContainer("rancher/k3s:v1.31.2-k3s1").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/k3s --save-dev
       ```
 description: |
   K3s is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.
