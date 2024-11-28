@@ -52,7 +52,7 @@ docs:
     example: |
       ```python
       with BrowserWebDriverContainer(DesiredCapabilities.CHROME) as chrome:
-        webdriver = chrome.get_driver()
+          webdriver = chrome.get_driver()
       ```
     installation: |
       ```bash

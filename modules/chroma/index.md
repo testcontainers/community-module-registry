@@ -47,10 +47,10 @@ docs:
     example: |
       ```python
       with ChromaContainer() as chroma:
-        config = chroma.get_config()
-        client = chromadb.HttpClient(host=config["host"], port=config["port"])
-        col = client.get_or_create_collection("test")
-        col.name
+          config = chroma.get_config()
+          client = chromadb.HttpClient(host=config["host"], port=config["port"])
+          collection = client.get_or_create_collection("test")
+          print(collection.name)
       ```
     installation: |
       ```bash

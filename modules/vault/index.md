@@ -42,8 +42,8 @@ docs:
     example: |
       ```python
       with VaultContainer("hashicorp/vault:1.16.1") as vault_container:
-        connection_url = vault_container.get_connection_url()
-        client = hvac.Client(url=connection_url, token=vault_container.root_token)
+          connection_url = vault_container.get_connection_url()
+          client = hvac.Client(url=connection_url, token=vault_container.root_token)
       ```
     installation: |
       ```bash

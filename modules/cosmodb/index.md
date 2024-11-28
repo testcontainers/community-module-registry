@@ -36,6 +36,19 @@ docs:
       ```bash
       dotnet add package Testcontainers.CosmosDb --version 3.9.0
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/cosmosdb/README.html
+    maintainer: core
+    example: |
+      ```python
+      with CosmosDBNoSQLEndpointContainer() as emulator:
+          client = CosmosClient(url=emulator.url, credential=emulator.key, connection_verify=False)
+          db = client.create_database_if_not_exists("test")
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[cosmosdb]
+      ```
 description: |
   Azure Cosmos DB is a fully managed, horizontally scalable, NoSQL and relational database.
 ---

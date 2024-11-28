@@ -58,7 +58,7 @@ docs:
     example: |
       ```python
       with KeycloakContainer() as keycloak:
-        client = keycloak.get_client()
+          client = keycloak.get_client()
       ```
     installation: |
       ```bash

@@ -50,8 +50,8 @@ docs:
     example: |
       ```python
       with WeaviateContainer() as container:
-        with container.get_client() as client:
-          client.is_live()
+          with container.get_client() as client:
+              client.is_live()
       ```
     installation: |
       ```bash

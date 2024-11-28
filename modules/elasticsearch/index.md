@@ -63,7 +63,7 @@ docs:
     example: |
       ```python
       with ElasticSearchContainer(f'elasticsearch:8.3.3', mem_limit='3G') as es:
-        resp = urllib.request.urlopen(es.get_url())
+          resp = urllib.request.urlopen(es.get_url())
       ```
     installation: |
       ```bash

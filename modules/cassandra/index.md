@@ -48,12 +48,12 @@ docs:
     example: |
       ```python
       with CassandraContainer("cassandra:4.1.4") as cassandra, Cluster(
-        cassandra.get_contact_points(),
-        load_balancing_policy=DCAwareRoundRobinPolicy(cassandra.get_local_datacenter()),
+          cassandra.get_contact_points(),
+          load_balancing_policy=DCAwareRoundRobinPolicy(cassandra.get_local_datacenter()),
       ) as cluster:
-        session = cluster.connect()
-        result = session.execute("SELECT release_version FROM system.local;")
-        result.one().release_version
+          session = cluster.connect()
+          result = session.execute("SELECT release_version FROM system.local;")
+          result.one().release_version
       ```
     installation: |
       ```bash

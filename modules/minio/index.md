@@ -51,7 +51,7 @@ docs:
     example: |
       ```python
       with MinioContainer() as minio:
-        client = minio.get_client()
+          client = minio.get_client()
       ```
     installation: |
       ```bash

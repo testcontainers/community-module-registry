@@ -37,7 +37,7 @@ docs:
     example: |
       ```python
       with InfluxDbContainer() as influxdb_container:
-        connection_url = influxdb_container.get_url()
+          connection_url = influxdb_container.get_url()
       ```
     installation: |
       ```bash

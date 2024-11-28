@@ -26,7 +26,7 @@ docs:
     example: |
       ```python
       with NginxContainer() as nginx:
-        url = f"http://{nginx.get_container_host_ip()}:{nginx.get_exposed_port(nginx.port)}/"
+          url = f"http://{nginx.get_container_host_ip()}:{nginx.get_exposed_port(nginx.port)}/"
       ```
     installation: |
       ```bash

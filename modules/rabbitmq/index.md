@@ -62,7 +62,7 @@ docs:
     example: |
       ```python
       with RabbitMqContainer("rabbitmq:3.9.10") as rabbitmq:
-        connection = pika.BlockingConnection(rabbitmq.get_connection_params())
+          connection = pika.BlockingConnection(rabbitmq.get_connection_params())
       ```
     installation: |
       ```bash

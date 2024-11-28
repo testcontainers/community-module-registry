@@ -51,9 +51,9 @@ docs:
     example: |
       ```python
       with ArangoDbContainer("arangodb:3.11.8") as arango:
-        client = ArangoClient(hosts=arango.get_connection_url())
-        sys_db = client.db(username="root", password="passwd")
-        sys_db.create_database("test")
+          client = ArangoClient(hosts=arango.get_connection_url())
+          sys_db = client.db(username="root", password="passwd")
+          sys_db.create_database("test")
       ```
     installation: |
       ```bash

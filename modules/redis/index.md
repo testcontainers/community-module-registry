@@ -63,7 +63,7 @@ docs:
     example: |
       ```python
       with RedisContainer() as redis_container:
-        redis_client = redis_container.get_client()
+          redis_client = redis_container.get_client()
       ```
     installation: |
       ```bash

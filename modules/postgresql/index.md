@@ -68,7 +68,7 @@ docs:
     example: |
       ```python
       with PostgresContainer("postgres:16") as postgres:
-        engine = sqlalchemy.create_engine(postgres.get_connection_url())
+          engine = sqlalchemy.create_engine(postgres.get_connection_url())
       ```
     installation: |
       ```bash

@@ -26,11 +26,11 @@ docs:
     example: |
       ```python
       with TrinoContainer("trinodb/trino:451") as trino:
-        conn = connect(
-          host=trino.get_container_host_ip(),
-          port=trino.get_exposed_port(trino.port),
-          user="test",
-        )
+          conn = connect(
+              host=trino.get_container_host_ip(),
+              port=trino.get_exposed_port(trino.port),
+              user="test",
+          )
       ```
     installation: |
       ```bash

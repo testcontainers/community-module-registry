@@ -37,8 +37,8 @@ docs:
     example: |
       ```python
       with ClickHouseContainer("clickhouse/clickhouse-server:21.8") as clickhouse:
-        client = clickhouse_driver.Client.from_url(clickhouse.get_connection_url())
-        client.execute("select 'working'")
+          client = clickhouse_driver.Client.from_url(clickhouse.get_connection_url())
+          client.execute("select 'working'")
       ```
     installation: |
       ```bash

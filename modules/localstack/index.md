@@ -65,8 +65,8 @@ docs:
     example: |
       ```python
       with LocalStackContainer(image="localstack/localstack:2.0.1") as localstack:
-        dynamo_client = localstack.get_client("dynamodb")
-        tables = dynamo_client.list_tables()
+          dynamo_client = localstack.get_client("dynamodb")
+          tables = dynamo_client.list_tables()
       ```
     installation: |
       ```bash

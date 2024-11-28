@@ -50,8 +50,8 @@ docs:
     example: |
       ```python
       with QdrantContainer() as qdrant:
-        client = qdrant.get_client()
-        client.get_collections()
+          client = qdrant.get_client()
+          client.get_collections()
       ```
     installation: |
       ```bash

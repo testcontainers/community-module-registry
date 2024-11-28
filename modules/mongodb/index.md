@@ -62,7 +62,7 @@ docs:
     example: |
       ```python
       with MongoDbContainer("mongo:7.0.7") as mongo:
-        db = mongo.get_connection_client()
+          db = mongo.get_connection_client()
       ```
     installation: |
       ```bash

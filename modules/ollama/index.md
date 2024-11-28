@@ -53,7 +53,7 @@ docs:
     example: |
       ```python
       with OllamaContainer() as ollama:
-        ollama.list_models()
+          endpoint = ollama.get_endpoint()
       ```
     installation: |
       ```bash

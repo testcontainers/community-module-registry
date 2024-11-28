@@ -38,7 +38,7 @@ docs:
     example: |
       ```python
       with OpenSearchContainer() as opensearch:
-        client = opensearch.get_client()
+          client = opensearch.get_client()
       ```
     installation: |
       ```bash

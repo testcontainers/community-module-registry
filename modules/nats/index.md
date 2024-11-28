@@ -31,7 +31,7 @@ docs:
     example: |
       ```python
       with NatsContainer() as nats_container:
-        client = await nats_connect(nats_container.nats_uri())
+          client = await nats.connect(nats_container.nats_uri())
       ```
     installation: |
       ```bash

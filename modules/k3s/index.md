@@ -51,7 +51,7 @@ docs:
     example: |
       ```python
       with K3SContainer() as k3s:
-        kube_config = k3s.config_yaml()
+          kube_config = k3s.config_yaml()
       ```
     installation: |
       ```bash

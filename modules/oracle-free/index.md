@@ -27,7 +27,7 @@ docs:
     example: |
       ```python
       with OracleDbContainer() as oracle:
-        engine = sqlalchemy.create_engine(oracle.get_connection_url())
+          engine = sqlalchemy.create_engine(oracle.get_connection_url())
       ```
     installation: |
       ```bash

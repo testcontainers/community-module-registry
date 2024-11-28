@@ -37,6 +37,18 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/gcloud
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/google/README.html
+    maintainer: community
+    example: |
+      ```python
+      with DatastoreContainer() as datastore:
+          datastore_client = datastore.get_datastore_client()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[google]
+      ```
 description: |
   Google's Cloud SDK provides a platform to work with the services provided through their Cloud Platform.
   Currently, this module supports Bigtable, Datastore, Firestore, Spanner, and Pub/Sub emulators.

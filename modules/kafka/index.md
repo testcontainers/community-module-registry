@@ -62,7 +62,7 @@ docs:
     example: |
       ```python
       with KafkaContainer() as kafka:
-        connection = kafka.get_bootstrap_server()
+          connection = kafka.get_bootstrap_server()
       ```
     installation: |
       ```bash
