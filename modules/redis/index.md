@@ -59,7 +59,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/redis/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with RedisContainer() as redis_container:

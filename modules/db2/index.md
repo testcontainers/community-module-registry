@@ -23,7 +23,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/db2/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with Db2Container("icr.io/db2_community/db2:latest") as db2:

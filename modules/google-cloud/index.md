@@ -39,7 +39,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/google/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with DatastoreContainer() as datastore:

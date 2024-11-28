@@ -47,7 +47,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/k3s/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with K3SContainer() as k3s:

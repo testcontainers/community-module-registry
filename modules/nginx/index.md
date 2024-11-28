@@ -22,7 +22,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/nginx/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with NginxContainer() as nginx:

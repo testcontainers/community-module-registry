@@ -43,7 +43,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/chroma/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with ChromaContainer() as chroma:

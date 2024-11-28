@@ -64,7 +64,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/postgres/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with PostgresContainer("postgres:16") as postgres:

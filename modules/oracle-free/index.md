@@ -23,7 +23,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/oracle-free/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with OracleDbContainer() as oracle:

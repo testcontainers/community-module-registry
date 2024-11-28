@@ -22,7 +22,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/trino/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with TrinoContainer("trinodb/trino:451") as trino:

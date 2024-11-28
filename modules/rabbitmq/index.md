@@ -58,7 +58,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/rabbitmq/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with RabbitMqContainer("rabbitmq:3.9.10") as rabbitmq:

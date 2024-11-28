@@ -46,7 +46,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/qdrant/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with QdrantContainer() as qdrant:

@@ -34,7 +34,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/opensearch/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with OpenSearchContainer() as opensearch:

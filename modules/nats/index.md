@@ -27,7 +27,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/nats/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with NatsContainer() as nats_container:

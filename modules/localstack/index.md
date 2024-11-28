@@ -61,7 +61,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/localstack/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with LocalStackContainer(image="localstack/localstack:2.0.1") as localstack:

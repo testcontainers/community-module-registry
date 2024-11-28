@@ -54,7 +54,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/keycloak/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with KeycloakContainer() as keycloak:

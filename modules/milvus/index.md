@@ -46,7 +46,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/milvus/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with MilvusContainer("milvusdb/milvus:v2.4.4") as milvus_container:

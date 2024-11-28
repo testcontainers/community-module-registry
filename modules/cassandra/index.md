@@ -44,7 +44,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/cassandra/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with CassandraContainer("cassandra:4.1.4") as cassandra, Cluster(

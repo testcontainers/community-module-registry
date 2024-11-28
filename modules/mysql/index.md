@@ -58,7 +58,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/mysql/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with MySqlContainer('mysql:5.7.17') as mysql:

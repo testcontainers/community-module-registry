@@ -58,7 +58,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/mongodb/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with MongoDbContainer("mongo:7.0.7") as mongo:

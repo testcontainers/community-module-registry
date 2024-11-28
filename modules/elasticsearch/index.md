@@ -59,7 +59,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/elasticsearch/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with ElasticSearchContainer(f'elasticsearch:8.3.3', mem_limit='3G') as es:

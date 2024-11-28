@@ -58,7 +58,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/kafka/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with KafkaContainer() as kafka:

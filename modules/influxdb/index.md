@@ -33,7 +33,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/influxdb/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with InfluxDbContainer() as influxdb_container:

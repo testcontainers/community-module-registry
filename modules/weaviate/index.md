@@ -46,7 +46,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/weaviate/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with WeaviateContainer() as container:

@@ -33,7 +33,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/clickhouse/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with ClickHouseContainer("clickhouse/clickhouse-server:21.8") as clickhouse:

@@ -48,7 +48,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/selenium/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with BrowserWebDriverContainer(DesiredCapabilities.CHROME) as chrome:

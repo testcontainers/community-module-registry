@@ -47,7 +47,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/minio/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with MinioContainer() as minio:

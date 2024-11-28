@@ -36,7 +36,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/cockroachdb/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with CockroachDBContainer('cockroachdb/cockroach:v24.1.1') as crdb:

@@ -47,7 +47,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/arangodb/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with ArangoDbContainer("arangodb:3.11.8") as arango:

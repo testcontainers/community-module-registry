@@ -38,7 +38,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/vault/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with VaultContainer("hashicorp/vault:1.16.1") as vault_container:

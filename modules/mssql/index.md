@@ -62,7 +62,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/mssql/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with SqlServerContainer("mcr.microsoft.com/mssql/server:2022-CU12-ubuntu-22.04") as mssql:

@@ -66,7 +66,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/neo4j/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with Neo4jContainer() as neo4j, neo4j.get_driver() as driver, driver.session() as session:

@@ -30,7 +30,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/azurite/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with AzuriteContainer() as azurite_container:

@@ -49,7 +49,7 @@ docs:
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/ollama/README.html
-    maintainer: community
+    maintainer: core
     example: |
       ```python
       with OllamaContainer() as ollama:
