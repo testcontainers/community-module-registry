@@ -56,6 +56,18 @@ docs:
       ```bash
       npm install @testcontainers/mysql --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/mysql/README.html
+    maintainer: core
+    example: |
+      ```python
+      with MySqlContainer('mysql:5.7.17') as mysql:
+          engine = sqlalchemy.create_engine(mysql.get_connection_url())
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[mysql]
+      ```
 description: |
   MySQL is an open-source relational database management system.
 ---

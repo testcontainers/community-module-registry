@@ -9,7 +9,7 @@ docs:
     example: |
       ```python
       with ScyllaContainer(image = "scylladb/scylla:6.2") as scylla:
-         cluster = scylla.get_cluster()
+          cluster = scylla.get_cluster()
       ```
     installation: |
       ```bash

@@ -44,6 +44,19 @@ docs:
       ```bash
       npm install @testcontainers/weaviate --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/weaviate/README.html
+    maintainer: core
+    example: |
+      ```python
+      with WeaviateContainer() as container:
+          with container.get_client() as client:
+              client.is_live()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[weaviate]
+      ```
 description: |
   Weaviate is an open source, AI-native vector database that helps developers create intuitive and reliable AI-powered applications.
 ---

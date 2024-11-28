@@ -45,6 +45,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.K3s --version 3.9.0
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/k3s/README.html
+    maintainer: core
+    example: |
+      ```python
+      with K3SContainer() as k3s:
+          kube_config = k3s.config_yaml()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[k3s]
   - id: nodejs
     url: https://node.testcontainers.org/modules/k3s/
     maintainer: core

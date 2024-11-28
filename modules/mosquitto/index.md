@@ -9,11 +9,11 @@ docs:
     example: |
       ```python
       with MosquittoContainer(image = "eclipse-mosquitto:2.0.20") as mosquitto_broker:
-         mqtt_client = mosquitto_broker.get_client()
+          mqtt_client = mosquitto_broker.get_client()
       ```
     installation: |
       ```bash
-      pip install testcontainers[memcached]
+      pip install testcontainers[mqtt]
       ```
 description: |
   Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1.

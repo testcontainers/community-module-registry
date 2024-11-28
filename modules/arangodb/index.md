@@ -45,6 +45,20 @@ docs:
       ```bash
       npm install @testcontainers/arangodb --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/arangodb/README.html
+    maintainer: core
+    example: |
+      ```python
+      with ArangoDbContainer("arangodb:3.11.8") as arango:
+          client = ArangoClient(hosts=arango.get_connection_url())
+          sys_db = client.db(username="root", password="passwd")
+          sys_db.create_database("test")
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[arangodb]
+      ```
 description: |
   ArangoDB is a free and open-source native graph database system. It supports three data models; graphs, JSON documents, and key/value.
 ---

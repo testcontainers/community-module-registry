@@ -9,12 +9,12 @@ docs:
     example: |
       ```python
       with MailpitContainer(image = "axllent/mailpit:v1.21") as mailpit:
-         host_ip = mailpit.get_container_host_ip()
-         host_port = mailpit.get_exposed_smtp_port()
-         server = smtplib.SMTP(
-             mailpit.get_container_host_ip(),
-             mailpit.get_exposed_smtp_port(),
-         )
+          host_ip = mailpit.get_container_host_ip()
+          host_port = mailpit.get_exposed_smtp_port()
+          server = smtplib.SMTP(
+              mailpit.get_container_host_ip(),
+              mailpit.get_exposed_smtp_port(),
+          )
          code, _ = server.login("any", "auth")
       ```
     installation: |

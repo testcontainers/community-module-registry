@@ -64,6 +64,19 @@ docs:
       ```bash
       npm install @testcontainers/neo4j --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/neo4j/README.html
+    maintainer: core
+    example: |
+      ```python
+      with Neo4jContainer() as neo4j, neo4j.get_driver() as driver, driver.session() as session:
+          result = session.run("MATCH (n) RETURN n LIMIT 1")
+          record = result.single()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[neo4j]
+      ```
 description: |
   Neo4j is a highly scalable open source graph database management system.
 ---
