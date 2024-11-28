@@ -1,4 +1,4 @@
-## Community Module Registry
+## Community Module Registry [![Netlify Status](https://api.netlify.com/api/v1/badges/bec91239-ecd9-4f28-8908-ee63623ac60a/deploy-status)](https://app.netlify.com/sites/testcontainers-site/deploys)
 
 To add a new module create a new folder with the structure:
 
