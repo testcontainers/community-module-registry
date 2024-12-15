@@ -44,6 +44,19 @@ docs:
       ```bash
       npm install @testcontainers/qdrant --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/qdrant/README.html
+    maintainer: core
+    example: |
+      ```python
+      with QdrantContainer() as qdrant:
+          client = qdrant.get_client()
+          client.get_collections()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[qdrant]
+      ```
 description: |
   Qdrant is the leading, high-performance, scalable, open-source vector database and search engine, essential for building the next generation of AI/ML applications. Qdrant is able to handle billions of vectors, supports the matching of semantically complex objects, and is implemented in Rust for performance, memory safety, and scale. Read more on www.qdrant.tech
 ---

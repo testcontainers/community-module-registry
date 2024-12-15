@@ -9,7 +9,7 @@ docs:
     example: |
       ```python
       with MosquittoContainer(image = "eclipse-mosquitto:2.0.20") as mosquitto_broker:
-         mqtt_client = mosquitto_broker.get_client()
+          mqtt_client = mosquitto_broker.get_client()
       ```
     installation: |
       ```bash

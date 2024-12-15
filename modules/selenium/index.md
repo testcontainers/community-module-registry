@@ -46,6 +46,18 @@ docs:
       ```bash
       npm install @testcontainers/selenium --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/selenium/README.html
+    maintainer: core
+    example: |
+      ```python
+      with BrowserWebDriverContainer(DesiredCapabilities.CHROME) as chrome:
+          webdriver = chrome.get_driver()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[selenium]
+      ```
 description: |
   Selenium is an umbrella project encapsulating a variety of tools and libraries enabling web browser automation. Selenium specifically provides an infrastructure for the W3C WebDriver specification — a platform and language-neutral coding interface compatible with all major web browsers.
 ---

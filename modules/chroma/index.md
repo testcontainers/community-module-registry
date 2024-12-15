@@ -41,6 +41,21 @@ docs:
       ```bash
       npm install @testcontainers/chromadb --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/chroma/README.html
+    maintainer: core
+    example: |
+      ```python
+      with ChromaContainer() as chroma:
+          config = chroma.get_config()
+          client = chromadb.HttpClient(host=config["host"], port=config["port"])
+          collection = client.get_or_create_collection("test")
+          print(collection.name)
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[chroma]
+      ```
 description: |
   Chroma is the AI-native open-source embedding database.
 ---

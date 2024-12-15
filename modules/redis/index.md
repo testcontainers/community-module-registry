@@ -57,6 +57,18 @@ docs:
       ```bash
       npm install @testcontainers/redis --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/redis/README.html
+    maintainer: core
+    example: |
+      ```python
+      with RedisContainer() as redis_container:
+          redis_client = redis_container.get_client()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[redis]
+      ```
 description: |
   Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices.
 ---

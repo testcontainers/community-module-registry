@@ -25,6 +25,18 @@ docs:
       ```bash
       npm install @testcontainers/nats --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/nats/README.html
+    maintainer: core
+    example: |
+      ```python
+      with NatsContainer() as nats_container:
+          client = await nats.connect(nats_container.nats_uri())
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[nats]
+      ```
 description: |
   NATS is an open-source messaging system that enables applications to securely communicate across any combination of cloud vendors, on-premise, edge, web and mobile, and devices.
 ---

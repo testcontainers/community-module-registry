@@ -56,6 +56,18 @@ docs:
       ```bash
       npm install @testcontainers/mongodb --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/mongodb/README.html
+    maintainer: core
+    example: |
+      ```python
+      with MongoDbContainer("mongo:7.0.7") as mongo:
+          db = mongo.get_connection_client()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[mongodb]
+      ```
 description: |
   MongoDB is a source-available cross-platform document-oriented database program.
 ---

@@ -62,6 +62,18 @@ docs:
       ```bash
       npm install @testcontainers/postgresql --save-dev
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/postgres/README.html
+    maintainer: core
+    example: |
+      ```python
+      with PostgresContainer("postgres:16") as postgres:
+          engine = sqlalchemy.create_engine(postgres.get_connection_url())
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[postgres]
+      ```
 description: |
   PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 ---

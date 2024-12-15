@@ -45,6 +45,18 @@ docs:
       ```bash
       dotnet add package Testcontainers.Minio --version 3.9.0
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/minio/README.html
+    maintainer: core
+    example: |
+      ```python
+      with MinioContainer() as minio:
+          client = minio.get_client()
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[minio]
+      ```
 description: |
   MinIO is a high performance object storage solution. It is API compatible with the Amazon S3 cloud storage service and can handle unstructured data such as photos, videos, log files, backups, and container images with a current maximum supported object size of 5TB.
 ---

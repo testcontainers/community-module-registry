@@ -36,6 +36,19 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/vault
       ```
+  - id: python
+    url: https://testcontainers-python.readthedocs.io/en/latest/modules/vault/README.html
+    maintainer: core
+    example: |
+      ```python
+      with VaultContainer("hashicorp/vault:1.16.1") as vault_container:
+          connection_url = vault_container.get_connection_url()
+          client = hvac.Client(url=connection_url, token=vault_container.root_token)
+      ```
+    installation: |
+      ```bash
+      pip install testcontainers[vault]
+      ```
 description: |
   HashiCorp Vault is an identity-based secrets and encryption management system for storing API encryption keys, passwords, and certificates.
 ---
