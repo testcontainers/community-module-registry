@@ -9,7 +9,7 @@ docs:
     example: |
       ```java
       var image = DockerImageName.parse("ghcr.io/geomesa/accumulo-uno:2.1.3");
-      var accumulo = new new AccumuloContainer(image).withGeoMesaDistributedRuntime();
+      var accumulo = new AccumuloContainer(image).withGeoMesaDistributedRuntime();
       accumulo.start();
       ```
     installation: |
