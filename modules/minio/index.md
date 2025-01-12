@@ -57,6 +57,17 @@ docs:
       ```bash
       pip install testcontainers[minio]
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/minio/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new MinioContainer("minio/minio:RELEASE.2024-12-13T22-19-12Z").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/minio --save-dev
+      ```
 description: |
   MinIO is a high performance object storage solution. It is API compatible with the Amazon S3 cloud storage service and can handle unstructured data such as photos, videos, log files, backups, and container images with a current maximum supported object size of 5TB.
 ---
