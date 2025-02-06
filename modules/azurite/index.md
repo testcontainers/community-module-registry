@@ -3,6 +3,23 @@ title: Azurite
 categories:
   - cloud
 docs:
+  - id: java
+    url: https://java.testcontainers.org/modules/azure/#azurite-storage-emulator
+    maintainer: core
+    example: |
+      ```java
+      var container = new AzuriteContainer(DockerImageName.parse("mcr.microsoft.com/azure-storage/azurite:3.33.0"));
+      container.start();
+      ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>azure</artifactId>
+          <version>1.20.5</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/azurite/
     maintainer: core
