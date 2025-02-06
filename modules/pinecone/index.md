@@ -3,6 +3,23 @@ title: Pinecone
 categories:
   - vector-database
 docs:
+  - id: java
+    url: https://java.testcontainers.org/modules/pinecone/
+    maintainer: core
+    example: |
+      ```java
+      var container = new PineconeContainer(DockerImageName.parse("ghcr.io/pinecone-io/pinecone-local:v0.7.0"));
+      container.start();
+      ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>pinecone</artifactId>
+          <version>1.20.5</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/pinecone/
     maintainer: core
