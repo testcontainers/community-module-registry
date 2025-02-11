@@ -33,6 +33,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/weaviate
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Weaviate
+    maintainer: core
+    example: |
+      ```csharp
+      var weaviateContainer = new WeaviateBuilder()
+        .WithImage("semitechnologies/weaviate:1.26.14")
+        .Build();
+      await weaviateContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Weaviate --version 4.2.0
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/weaviate/
     maintainer: core
