@@ -26,7 +26,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Azurite --version 3.9.0
+      dotnet add package Testcontainers.Azurite
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/azurite/README.html

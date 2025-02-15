@@ -44,7 +44,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Redis --version 3.9.0
+      dotnet add package Testcontainers.Redis
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/redis/

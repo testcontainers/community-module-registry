@@ -43,7 +43,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Kafka --version 3.9.0
+      dotnet add package Testcontainers.Kafka
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/kafka/

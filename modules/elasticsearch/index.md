@@ -44,7 +44,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Elasticsearch --version 3.9.0
+      dotnet add package Testcontainers.Elasticsearch
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/elasticsearch/

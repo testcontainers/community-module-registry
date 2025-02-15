@@ -51,7 +51,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Pulsar --version 3.9.0
+      dotnet add package Testcontainers.Pulsar
       ```
 description: |
   Apache Pulsar is an open-source, distributed messaging and streaming platform. Messages can be consumed and acknowledged individually or consumed as streams with less than 5ms of latency.

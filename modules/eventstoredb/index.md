@@ -15,7 +15,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.EventStoreDb --version 3.9.0
+      dotnet add package Testcontainers.EventStoreDb
       ```
 description: |
   EventStoreDB is an event sourcing database that stores data in streams of immutable events.

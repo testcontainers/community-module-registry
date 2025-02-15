@@ -43,7 +43,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.K3s --version 3.9.0
+      dotnet add package Testcontainers.K3s
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/k3s/README.html

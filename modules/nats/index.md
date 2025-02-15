@@ -14,6 +14,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/nats
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Nats
+    maintainer: core
+    example: |
+      ```csharp
+      var natsContainer = new NatsBuilder()
+        .WithImage("nats:2.9")
+        .Build();
+      await natsContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Nats
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/nats/
     maintainer: core

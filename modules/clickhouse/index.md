@@ -31,6 +31,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/clickhouse
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.ClickHouse
+    maintainer: core
+    example: |
+      ```csharp
+      var clickHouseContainer = new ClickHouseBuilder()
+        .WithImage("clickhouse/clickhouse-server:23.6-alpine")
+        .Build();
+      await clickHouseContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.ClickHouse
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/clickhouse/README.html
     maintainer: core

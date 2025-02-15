@@ -32,7 +32,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Oracle --version 3.9.0
+      dotnet add package Testcontainers.Oracle
       ```
 description: |
   Oracle Database Express Edition is a free, smaller-footprint edition of Oracle Database.

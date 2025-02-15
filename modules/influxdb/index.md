@@ -31,6 +31,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/influxdb
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.InfluxDb
+    maintainer: core
+    example: |
+      ```csharp
+      var influxDbContainer = new InfluxDbBuilder()
+        .WithImage("influxdb:2.7")
+        .Build();
+      await influxDbContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.InfluxDb
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/influxdb/README.html
     maintainer: core

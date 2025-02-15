@@ -50,7 +50,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.PostgreSql --version 3.9.0
+      dotnet add package Testcontainers.PostgreSql
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/postgresql/
