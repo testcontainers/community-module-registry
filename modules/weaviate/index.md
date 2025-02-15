@@ -45,7 +45,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Weaviate --version 4.2.0
+      dotnet add package Testcontainers.Weaviate
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/weaviate/
