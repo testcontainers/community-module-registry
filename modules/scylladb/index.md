@@ -3,6 +3,23 @@ title: ScyllaDB
 categories:
   - nosql-database
 docs:
+  - id: java
+    url: https://java.testcontainers.org/modules/databases/scylladb/
+    maintainer: core
+    example: |
+      ```java
+      var scylladb = new ScyllaDBContainer<>(DockerImageName.parse("scylladb/scylla"));
+      scylladb.start();
+      ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>org.testcontainers</groupId>
+          <artifactId>scylladb</artifactId>
+          <version>1.20.0</version>
+          <scope>test</scope>
+      </dependency>
+      ```  
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/scylla/README.html
     maintainer: core
