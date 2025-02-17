@@ -43,7 +43,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.MongoDb --version 3.9.0
+      dotnet add package Testcontainers.MongoDb
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/mongodb/

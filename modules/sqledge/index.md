@@ -15,7 +15,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.SqlEdge --version 3.9.0
+      dotnet add package Testcontainers.SqlEdge
       ```
 description: |
   Azure SQL Edge is an Internet of Things (IoT) database for edge computing which combines capabilities such as data streaming and time series with built-in machine learning and graph features.

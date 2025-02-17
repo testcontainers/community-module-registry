@@ -31,6 +31,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/consul
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Consul
+    maintainer: core
+    example: |
+      ```csharp
+      var consulContainer = new ConsulBuilder()
+        .WithImage("consul:1.15")
+        .Build();
+      await consulContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Consul
+      ```
 description: |
   Consul is a service mesh and distributed key-value store.
 

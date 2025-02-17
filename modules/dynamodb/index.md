@@ -26,7 +26,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.DynamoDb --version 3.9.0
+      dotnet add package Testcontainers.DynamoDb
       ```
 description: |
   Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.

@@ -43,7 +43,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.ActiveMq --version 3.9.0
+      dotnet add package Testcontainers.ActiveMq
       ```
 description: |
   Apache ActiveMQ Artemis is an open source project to build a multi-protocol, embeddable, very high performance, clustered, asynchronous messaging system.

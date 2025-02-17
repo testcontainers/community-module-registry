@@ -33,7 +33,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.WebDriver --version 3.9.0
+      dotnet add package Testcontainers.WebDriver
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/selenium/

@@ -14,7 +14,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.CouchDb --version 3.9.0
+      dotnet add package Testcontainers.CouchDb
       ```
 description: |
   CouchDB is an open-source document-oriented NoSQL clustered database that allows you to run a single logical database server on any number of servers or VM.

@@ -42,7 +42,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Milvus --version 3.9.0
+      dotnet add package Testcontainers.Milvus
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/milvus/README.html

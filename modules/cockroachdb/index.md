@@ -34,6 +34,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/cockroachdb
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.CockroachDb
+    maintainer: core
+    example: |
+      ```csharp
+      var cockroachDbContainer = new CockroachDbBuilder()
+        .WithImage("cockroachdb/cockroach:latest-v23.1")
+        .Build();
+      await cockroachDbContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.CockroachDb
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/cockroachdb/README.html
     maintainer: core

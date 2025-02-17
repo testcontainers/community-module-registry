@@ -46,7 +46,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.LocalStack --version 3.9.0
+      dotnet add package Testcontainers.LocalStack
       ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/localstack/

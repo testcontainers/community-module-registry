@@ -50,7 +50,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Keycloak --version 3.9.0
+      dotnet add package Testcontainers.Keycloak
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/keycloak/README.html

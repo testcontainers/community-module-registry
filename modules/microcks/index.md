@@ -55,7 +55,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Microcks.Testcontainers --version 0.1.0
+      dotnet add package Microcks.Testcontainers
       ``
 description: |
   Microcks is an open-source cloud-native platform for mocking and contract-testing all kinds of APIs. It supports REST [OpenAPI](https://www.openapis.org/), [gRPC](https://grpc.io/), [GraphQL](https://graphql.org/), [Async APIs](https://www.asyncapi.com/) and SOAP WebServices.
