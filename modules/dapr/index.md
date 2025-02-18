@@ -17,9 +17,9 @@ docs:
     installation: |
       ```xml
       <dependency>
-          <groupId>io.diagrid.testcontainers</groupId>
-          <artifactId>dapr</artifactId>
-          <version>0.10.14</version>
+          <groupId>io.dapr</groupId>
+          <artifactId>testcontainers-dapr</artifactId>
+          <version>0.13.3</version>
           <scope>test</scope>
       </dependency>
       ```
