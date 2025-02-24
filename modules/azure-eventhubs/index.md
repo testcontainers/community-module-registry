@@ -28,6 +28,20 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.EventHubs
+    maintainer: core
+    example: |
+      ```csharp
+      var eventHubsContainer = new EventHubsBuilder()
+        .WithImage("mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest")
+        .Build();
+      await eventHubsContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.EventHubs
+      ```
 description: |
   Azure Event Hubs emulator is designed to offer a local development experience for Azure Event Hubs.
 ---

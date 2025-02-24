@@ -31,6 +31,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/cassandra
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Cassandra
+    maintainer: core
+    example: |
+      ```csharp
+      var cassandraContainer = new CassandraBuilder()
+        .WithImage("cassandra:5.0")
+        .Build();
+      await cassandraContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Cassandra
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/cassandra/
     maintainer: core
