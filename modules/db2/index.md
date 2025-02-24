@@ -21,6 +21,20 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Db2
+    maintainer: core
+    example: |
+      ```csharp
+      var db2Container = new Db2Builder()
+        .WithImage("icr.io/db2_community/db2:12.1.0.0")
+        .Build();
+      await db2Container.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Db2
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/db2/README.html
     maintainer: core

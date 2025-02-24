@@ -31,6 +31,20 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.ServiceBus
+    maintainer: core
+    example: |
+      ```csharp
+      var serviceBusContainer = new ServiceBusBuilder()
+        .WithImage("mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
+        .Build();
+      await serviceBusContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.ServiceBus
+      ```
 description: |
   The Azure Service Bus emulator offers a local development experience for the Service bus service.
 ---
