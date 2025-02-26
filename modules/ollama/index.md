@@ -26,11 +26,11 @@ docs:
     maintainer: core
     example: |
       ```go
-      ollamaContainer, err := ollama.Run(ctx, "ollama/ollama:0.1.26")
+      ollamaContainer, err := ollama.Run(context.Background(), "ollama/ollama:0.1.26")
       if err != nil {
             log.Fatalf("failed to start container: %s", err)
       }
-      _, _, err = ollamaContainer.Exec(ctx, []string{"ollama", "pull", "all-minilm"})
+      _, _, err = ollamaContainer.Exec(context.Background(), []string{"ollama", "pull", "all-minilm"})
       ```
     installation: |
       ```bash

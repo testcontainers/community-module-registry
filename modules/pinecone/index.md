@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      pineconeContainer, err := pinecone.Run(ctx, "ghcr.io/pinecone-io/pinecone-local:v0.7.0")
+      pineconeContainer, err := pinecone.Run(context.Background(), "ghcr.io/pinecone-io/pinecone-local:v0.7.0")
       ```
     installation: |
       ```bash

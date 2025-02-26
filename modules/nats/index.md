@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      natsContainer, err := nats.Run(ctx, "nats:2.9")
+      natsContainer, err := nats.Run(context.Background(), "nats:2.9")
       ```
     installation: |
       ```bash

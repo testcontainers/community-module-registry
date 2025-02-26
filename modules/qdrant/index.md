@@ -27,7 +27,7 @@ docs:
     maintainer: official
     example: |
       ```go
-      qdrantContainer, err := qdrant.Run(ctx, "qdrant/qdrant:v1.7.4")
+      qdrantContainer, err := qdrant.Run(context.Background(), "qdrant/qdrant:v1.7.4")
       ```
     installation: |
       ```bash

@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      k3sContainer, err := k3s.Run(ctx, "rancher/k3s:v1.27.1-k3s1")
+      k3sContainer, err := k3s.Run(context.Background(), "rancher/k3s:v1.27.1-k3s1")
       ```
     installation: |
       ```bash

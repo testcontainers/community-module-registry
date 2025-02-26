@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mysqlContainer, err := mysql.Run(ctx, "mysql:5.7.34")
+      mysqlContainer, err := mysql.Run(context.Background(), "mysql:5.7.34")
       ```
     installation: |
       ```bash

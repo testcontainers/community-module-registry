@@ -27,7 +27,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      postgisContainer, err := postgres.Run(ctx,
+      postgisContainer, err := postgres.Run(context.Background(),
         "postgis/postgis:12-3.0",
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),

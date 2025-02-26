@@ -28,7 +28,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      localstackContainer, err := localstack.Run(ctx, "localstack/localstack:1.4.0")
+      localstackContainer, err := localstack.Run(context.Background(), "localstack/localstack:1.4.0")
       ```
     installation: |
       ```bash

@@ -27,7 +27,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      weaviateContainer, err := weaviate.Run(ctx, "semitechnologies/weaviate:1.25.5")
+      weaviateContainer, err := weaviate.Run(context.Background(), "semitechnologies/weaviate:1.25.5")
       ```
     installation: |
       ```bash

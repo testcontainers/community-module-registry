@@ -26,7 +26,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      meiliContainer, err := meilisearch.Run(ctx, "getmeili/meilisearch:v1.10.3")
+      meiliContainer, err := meilisearch.Run(context.Background(), "getmeili/meilisearch:v1.10.3")
       ```
     installation: |
       ```bash

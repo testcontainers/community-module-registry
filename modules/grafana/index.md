@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      grafanaLgtmContainer, err := grafanalgtm.Run(ctx, "grafana/otel-lgtm:0.6.0")
+      grafanaLgtmContainer, err := grafanalgtm.Run(context.Background(), "grafana/otel-lgtm:0.6.0")
       ```
     installation: |
       ```bash
