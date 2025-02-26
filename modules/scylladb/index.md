@@ -20,6 +20,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/scylladb/
+    maintainer: core
+    example: |
+      ```go
+      container, err := scylla.Run(context.Background(), "scylladb/scylla:6.2");
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/scylla
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/scylla/README.html
     maintainer: core
