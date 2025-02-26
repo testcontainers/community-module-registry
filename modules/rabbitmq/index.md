@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      rabbitmqContainer, err := rabbitmq.Run(ctx, "rabbitmq:3.7.25-management-alpine")
+      rabbitmqContainer, err := rabbitmq.Run(context.Background(), "rabbitmq:3.7.25-management-alpine")
       ```
     installation: |
       ```bash

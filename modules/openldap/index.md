@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      openldapContainer, err := openldap.Run(ctx, "bitnami/openldap:2.6.6")
+      openldapContainer, err := openldap.Run(context.Background(), "bitnami/openldap:2.6.6")
       ```
     installation: |
       ```bash

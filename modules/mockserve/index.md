@@ -26,7 +26,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mockServerContainer, err := mockserver.Run(ctx, "mockserver/mockserver:5.15.0")
+      mockServerContainer, err := mockserver.Run(context.Background(), "mockserver/mockserver:5.15.0")
       ```
     installation: |
       ```bash

@@ -8,7 +8,7 @@ docs:
    maintainer: community
    example: |
        ```go
-       container, err := permifytest.Run(ctx)
+       container, err := permifytest.Run(context.Background())
        if err != nil {
            return err
        }

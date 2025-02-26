@@ -28,7 +28,7 @@ docs:
     example: |
       ```go
       bigTableContainer, err := gcloud.RunBigTableContainer(
-        ctx,
+        context.Background(),
         testcontainers.WithImage("gcr.io/google.com/cloudsdktool/cloud-sdk:380.0.0-emulators"),
         gcloud.WithProjectID("bigtable-project"),
       )

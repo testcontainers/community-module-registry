@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      consulContainer, err := consul.Run(ctx, "hashicorp/consul:1.15")
+      consulContainer, err := consul.Run(context.Background(), "hashicorp/consul:1.15")
       ```
     installation: |
       ```bash

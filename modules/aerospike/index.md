@@ -9,7 +9,7 @@ docs:
     maintainer: community
     example: |
       ```go
-      container, err := aeroTest.RunContainer(ctx)
+      container, err := aeroTest.RunContainer(context.Background())
       if err != nil {
         return err
       }

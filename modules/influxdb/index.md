@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      influxdbContainer, err := influxdb.Run(ctx, "influxdb:1.8.10")
+      influxdbContainer, err := influxdb.Run(context.Background(), "influxdb:1.8.10")
       ```
     installation: |
       ```bash

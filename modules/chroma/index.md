@@ -24,7 +24,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      chromaContainer, err := chroma.Run(ctx, "chromadb/chroma:0.4.22")
+      chromaContainer, err := chroma.Run(context.Background(), "chromadb/chroma:0.4.22")
       ```
     installation: |
       ```bash

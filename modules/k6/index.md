@@ -24,7 +24,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      k6Container, err := k6.Run(ctx, "szkiba/k6x:v0.3.1")
+      k6Container, err := k6.Run(context.Background(), "szkiba/k6x:v0.3.1")
       ```
     installation: |
       ```bash

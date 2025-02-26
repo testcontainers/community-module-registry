@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      openfgaContainer, err := openfga.Run(ctx, "openfga/openfga:v1.5.0")
+      openfgaContainer, err := openfga.Run(context.Background(), "openfga/openfga:v1.5.0")
       ```
     installation: |
       ```bash

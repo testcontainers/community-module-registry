@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      clickHouseContainer, err := clickhouse.Run(ctx, "clickhouse/clickhouse-server:23.3.8.21-alpine")
+      clickHouseContainer, err := clickhouse.Run(context.Background(), "clickhouse/clickhouse-server:23.3.8.21-alpine")
       ```
     installation: |
       ```bash

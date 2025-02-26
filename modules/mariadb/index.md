@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mariaDBContainer, err := mariadb.Run(ctx, "mariadb:11.0.3")
+      mariaDBContainer, err := mariadb.Run(context.Background(), "mariadb:11.0.3")
       ```
     installation: |
       ```bash

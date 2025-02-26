@@ -27,7 +27,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      pgVectorContainer, err := postgres.Run(ctx,
+      pgVectorContainer, err := postgres.Run(context.Background(),
         "pgvector/pgvector:pg16",
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),

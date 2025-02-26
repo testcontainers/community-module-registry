@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mongoDBContainer, err := mongodb.Run(ctx, "mongo:6")
+      mongoDBContainer, err := mongodb.Run(context.Background(), "mongo:6")
       ```
     installation: |
       ```bash

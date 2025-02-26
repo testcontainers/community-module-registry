@@ -45,8 +45,7 @@ docs:
     maintainer: official
     example: |
       ```golang
-       ctx := context.Background()
-       container, err := RunContainer(ctx,
+       container, err := RunContainer(context.Background(),
          WithImage("wiremock/wiremock:2.35.0-1"),
          WithMappingFile("hello", filepath.Join("testdata", "hello-world.json")),
        )
@@ -54,7 +53,7 @@ docs:
          t.Fatal(err)
        }
        t.Cleanup(func() {
-         if err := container.Terminate(ctx); err != nil {
+         if err := container.Terminate(context.Background()); err != nil {
          t.Fatalf("failed to terminate container: %s", err)
          }
        })
