@@ -45,18 +45,10 @@ docs:
     maintainer: official
     example: |
       ```golang
-       container, err := RunContainer(context.Background(),
-         WithImage("wiremock/wiremock:2.35.0-1"),
-         WithMappingFile("hello", filepath.Join("testdata", "hello-world.json")),
+       wiremockContainer, err := wiremock.RunContainer(context.Background(),
+         wiremock.WithImage("wiremock/wiremock:2.35.0-1"),
+         wiremock.WithMappingFile("hello", filepath.Join("testdata", "hello-world.json")),
        )
-       if err != nil {
-         t.Fatal(err)
-       }
-       t.Cleanup(func() {
-         if err := container.Terminate(context.Background()); err != nil {
-         t.Fatalf("failed to terminate container: %s", err)
-         }
-       })
       ```
     installation: |
       ```bash
