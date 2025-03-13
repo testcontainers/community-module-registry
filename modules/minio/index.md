@@ -45,17 +45,6 @@ docs:
       ```bash
       dotnet add package Testcontainers.Minio
       ```
-  - id: nodejs
-    url: https://node.testcontainers.org/modules/minio/
-    maintainer: core
-    example: |
-      ```javascript
-      const container = await new MinioContainer("minio/minio:RELEASE.2024-12-13T22-19-12Z").start();
-      ```
-    installation: |
-      ```bash
-      npm install @testcontainers/minio --save-dev
-      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/minio/README.html
     maintainer: core
