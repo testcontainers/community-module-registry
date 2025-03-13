@@ -20,6 +20,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/toxiproxy/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new ToxiProxyContainer("ghcr.io/shopify/toxiproxy:2.11.0").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/toxiproxy --save-dev
+      ```
 description: |
   Toxiproxy is a framework for simulating network conditions. It's made specifically to work in testing, CI and development environments, supporting deterministic tampering with connections, but with support for randomized chaos and customization.
 ---
