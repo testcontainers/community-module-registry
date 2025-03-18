@@ -33,6 +33,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/qdrant
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Qdrant
+    maintainer: core
+    example: |
+      ```csharp
+      var qdrantContainer = new QdrantBuilder()
+        .WithImage("qdrant/qdrant:v1.13.4")
+        .Build();
+      await qdrantContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Qdrant
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/qdrant/
     maintainer: core
