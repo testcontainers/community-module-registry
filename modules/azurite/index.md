@@ -21,7 +21,7 @@ docs:
       </dependency>
       ```
   - id: go
-    url: https://golang.testcontainers.org/modules/azurite/
+    url: https://golang.testcontainers.org/modules/azure/#azurite
     maintainer: core
     example: |
       ```go
@@ -29,7 +29,7 @@ docs:
       ```
     installation: |
       ```bash
-      go get github.com/testcontainers/testcontainers-go/modules/azurite
+      go get github.com/testcontainers/testcontainers-go/modules/azure
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Azurite

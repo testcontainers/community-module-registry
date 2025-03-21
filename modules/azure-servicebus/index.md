@@ -31,6 +31,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/azure/#servicebus
+    maintainer: core
+    example: |
+      ```go
+      servicebusContainer, err := servicebus.Run(context.Background(), "mcr.microsoft.com/azure-messaging/servicebus-emulator:1.1.2")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/azure
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.ServiceBus
     maintainer: core
