@@ -37,6 +37,17 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/gcloud
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/gcloud/
+    maintainer: core
+    example: |
+      ```javascript
+      const datastoreEmulatorContainer = await new DatastoreEmulatorContainer().start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/gcloud --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/google/README.html
     maintainer: core

@@ -48,6 +48,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.CockroachDb
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/cockroachdb/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new CockroachDbContainer("cockroachdb/cockroach:v24.3.5").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/cockroachdb --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/cockroachdb/README.html
     maintainer: core
