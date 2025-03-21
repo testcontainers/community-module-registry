@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      inbucketContainer, err := inbucket.Run(ctx, "inbucket/inbucket:sha-2d409bb")
+      inbucketContainer, err := inbucket.Run(context.Background(), "inbucket/inbucket:sha-2d409bb")
       ```
     installation: |
       ```bash

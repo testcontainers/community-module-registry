@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      vaultContainer, err := vault.Run(ctx,
+      vaultContainer, err := vault.Run(context.Background(),
         "hashicorp/vault:1.13.0",
         vault.WithToken("root-token"),
         vault.WithInitCommand("secrets enable transit", "write -f transit/keys/my-key"),

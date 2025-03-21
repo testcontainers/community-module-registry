@@ -9,7 +9,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      valkeyContainer, err := valkey.Run(ctx, "docker.io/valkey/valkey:7.2.5")
+      valkeyContainer, err := valkey.Run(context.Background(), "docker.io/valkey/valkey:7.2.5")
       ```
     installation: |
       ```bash

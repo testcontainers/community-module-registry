@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      minioContainer, err := minio.Run(ctx, "minio/minio:RELEASE.2024-01-16T16-07-38Z")
+      minioContainer, err := minio.Run(context.Background(), "minio/minio:RELEASE.2024-01-16T16-07-38Z")
       ```
     installation: |
       ```bash

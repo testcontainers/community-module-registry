@@ -24,7 +24,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      milvusContainer, err := milvus.Run(ctx, "milvusdb/milvus:v2.3.9")
+      milvusContainer, err := milvus.Run(context.Background(), "milvusdb/milvus:v2.3.9")
       ```
     installation: |
       ```bash

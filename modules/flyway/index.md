@@ -8,7 +8,7 @@ docs:
     maintainer: community
     example: |
       ```go
-        flywayContainer, err := flyway.RunContainer(ctx, testcontainers.WithImage("flyway/flyway:10.15.0"))
+        flywayContainer, err := flyway.RunContainer(context.Background(), testcontainers.WithImage("flyway/flyway:10.15.0"))
       ```
     installation: |
       ```bash

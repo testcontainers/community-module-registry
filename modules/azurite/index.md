@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      azuriteContainer, err := azurite.Run(ctx, "mcr.microsoft.com/azure-storage/azurite:3.28.0")
+      azuriteContainer, err := azurite.Run(context.Background(), "mcr.microsoft.com/azure-storage/azurite:3.28.0")
       ```
     installation: |
       ```bash

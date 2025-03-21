@@ -28,7 +28,7 @@ docs:
     maintainer: official
     example: |
       ```go
-      microcksContainer, err := microcks.RunContainer(ctx, testcontainers.WithImage("quay.io/microcks/microcks-uber:1.8.0"))
+      microcksContainer, err := microcks.RunContainer(context.Background(), testcontainers.WithImage("quay.io/microcks/microcks-uber:1.8.0"))
       ```
     installation: |
       ```bash

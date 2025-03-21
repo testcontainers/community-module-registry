@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      doltContainer, err := dolt.Run(ctx, "dolthub/dolt-sql-server:1.32.4")
+      doltContainer, err := dolt.Run(context.Background(), "dolthub/dolt-sql-server:1.32.4")
       ```
     installation: |
       ```bash

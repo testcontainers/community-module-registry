@@ -27,7 +27,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      timescaleContainer, err := postgres.Run(ctx,
+      timescaleContainer, err := postgres.Run(context.Background(),
         "timescale/timescaledb:2.1.0-pg11",
         postgres.WithDatabase("test"),
         postgres.WithUsername("user"),
