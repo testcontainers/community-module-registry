@@ -36,6 +36,19 @@ docs:
       ```bash
       dotnet add package Testcontainers.CosmosDb
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/cosmosdb/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new AzureCosmosDbEmulatorContainer(
+        "mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:vnext-EN20250228"
+      ).start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/azure-cosmosdb-emulator --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/cosmosdb/README.html
     maintainer: core

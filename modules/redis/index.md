@@ -51,7 +51,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new RedisContainer().start();
+      const container = await new RedisContainer("redis:7.2").start();
       ```
     installation: |
       ```bash

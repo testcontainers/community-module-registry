@@ -41,7 +41,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new OllamaContainer().start();
+      const container = await new OllamaContainer("ollama/ollama:0.1.44").start();
       ```
     installation: |
       ```bash
