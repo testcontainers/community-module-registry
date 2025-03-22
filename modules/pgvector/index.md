@@ -57,7 +57,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new PostgreSqlContainer(image="pgvector/pgvector:pg16").start();
+      const container = await new PostgreSqlContainer("pgvector/pgvector:pg16").start();
       ```
     installation: |
       ```bash

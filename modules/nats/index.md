@@ -33,7 +33,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new NatsContainer().start();
+      const container = await new NatsContainer("nats:2.8.4-alpine").start();
       ```
     installation: |
       ```bash

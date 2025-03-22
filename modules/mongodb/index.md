@@ -50,7 +50,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const mongodbContainer = await new MongoDBContainer().start();
+      const mongodbContainer = await new MongoDBContainer("mongo:6.0.1").start();
       ```
     installation: |
       ```bash

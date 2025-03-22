@@ -26,7 +26,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new HiveMQContainer().start();
+      const container = await new HiveMQContainer("hivemq/hivemq-ce:2023.5").start();
       ```
     installation: |
       ```bash
