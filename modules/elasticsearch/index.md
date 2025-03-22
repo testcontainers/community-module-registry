@@ -51,7 +51,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new ElasticsearchContainer().start();
+      const container = await new ElasticsearchContainer("elasticsearch:7.17.7").start();
       ```
     installation: |
       ```bash

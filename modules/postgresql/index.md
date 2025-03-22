@@ -56,7 +56,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new PostgreSqlContainer().start();
+      const container = await new PostgreSqlContainer("postgres:13.3-alpine").start();
       ```
     installation: |
       ```bash

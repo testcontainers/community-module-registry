@@ -52,7 +52,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new WeaviateContainer().start();
+      const container = await new WeaviateContainer("semitechnologies/weaviate:1.24.5").start();
       ```
     installation: |
       ```bash

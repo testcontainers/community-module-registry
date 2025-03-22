@@ -53,7 +53,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new LocalstackContainer().start();
+      const container = await new LocalstackContainer("localstack/localstack:2.2.0").start();
       ```
     installation: |
       ```bash

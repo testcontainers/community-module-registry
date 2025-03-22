@@ -50,7 +50,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new RabbitMQContainer().start();
+      const container = await new RabbitMQContainer("rabbitmq:3.12.11-management-alpine").start();
       ```
     installation: |
       ```bash

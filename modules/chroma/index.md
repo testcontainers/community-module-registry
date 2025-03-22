@@ -35,7 +35,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new ChromaDBContainer().start();
+      const container = await new ChromaDBContainer("chromadb/chroma:0.6.3").start();
       ```
     installation: |
       ```bash

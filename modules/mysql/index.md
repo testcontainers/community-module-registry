@@ -50,7 +50,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new MySqlContainer().start();
+      const container = await new MySqlContainer("mysql:8.0.31").start();
       ```
     installation: |
       ```bash

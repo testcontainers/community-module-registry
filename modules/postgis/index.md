@@ -57,7 +57,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new PostgreSqlContainer(image = "postgis/postgis:12-3.0").start();
+      const container = await new PostgreSqlContainer("postgis/postgis:12-3.0").start();
       ```
     installation: |
       ```bash

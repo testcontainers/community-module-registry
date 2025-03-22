@@ -38,7 +38,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new QdrantContainer().start();
+      const container = await new QdrantContainer("qdrant/qdrant:v1.13.4").start();
       ```
     installation: |
       ```bash

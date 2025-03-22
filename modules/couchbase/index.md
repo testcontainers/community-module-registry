@@ -55,7 +55,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new CouchbaseContainer().start();
+      const container = await new CouchbaseContainer("couchbase/server:community-7.0.2").start();
       ```
     installation: |
       ```bash

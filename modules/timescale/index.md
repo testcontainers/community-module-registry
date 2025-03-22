@@ -57,7 +57,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new PostgreSqlContainer(image = "timescale/timescaledb:2.1.0-pg11").start();
+      const container = await new PostgreSqlContainer("timescale/timescaledb:2.1.0-pg11").start();
       ```
     installation: |
       ```bash

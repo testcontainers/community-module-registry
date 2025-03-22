@@ -50,7 +50,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const kafkaContainer = await new KafkaContainer().withExposedPorts(9093).start();
+      const kafkaContainer = await new KafkaContainer("confluentinc/cp-kafka:7.2.2").start();
       ```
     installation: |
       ```bash
