@@ -58,7 +58,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new Neo4jContainer().start();
+      const container = await new Neo4jContainer("neo4j:4.4.12").start();
       ```
     installation: |
       ```bash

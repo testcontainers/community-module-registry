@@ -50,7 +50,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new MariaDbContainer().start();
+      const container = await new MariaDbContainer("mariadb:11.5.2").start();
       ```
     installation: |
       ```bash
