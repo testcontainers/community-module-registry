@@ -62,18 +62,6 @@ docs:
       ```bash
       pip install testcontainers[cosmosdb]
       ```
-  - id: nodejs
-    url: https://node.testcontainers.org/modules/azurecosmosdb/
-    maintainer: core
-    example: |
-      ```javascript
-      const imageName = "mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:vnext-EN20250228";
-      const container = await new AzureCosmosDbEmulatorContainer(imageName).start();
-      ```
-    installation: |
-      ```bash
-      npm install @testcontainers/azurecosmosdb --save-dev
-      ```
 description: |
   Azure Cosmos DB is a fully managed, horizontally scalable, NoSQL and relational database.
 ---
