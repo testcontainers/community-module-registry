@@ -36,9 +36,19 @@ docs:
     maintainer: core
     example: |
       ```csharp
+      var network = new NetworkBuilder().Build();
+      var mssql = new MsSqlBuilder()
+          .WithImage("mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04")
+          .WithNetwork(network)
+          .WithNetworkAliases(ServiceBusBuilder.DatabaseNetworkAlias)
+          .Build();
+      await mssql.StartAsync();
+
       var serviceBusContainer = new ServiceBusBuilder()
-        .WithImage("mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
-        .Build();
+          .WithImage("mcr.microsoft.com/azure-messaging/servicebus-emulator:1.0.1")
+          .WithAcceptLicenseAgreement(true)
+          .WithMsSqlContainer(network, mssql, ServiceBusBuilder.DatabaseNetworkAlias)
+          .Build();
       await serviceBusContainer.StartAsync();
       ```
     installation: |
