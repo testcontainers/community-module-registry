@@ -26,7 +26,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      opensearchContainer, err := opensearch.Run(ctx, "opensearchproject/opensearch:2.11.1")
+      opensearchContainer, err := opensearch.Run(context.Background(), "opensearchproject/opensearch:2.11.1")
       ```
     installation: |
       ```bash

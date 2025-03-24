@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      vearchContainer, err := vearch.Run(ctx, "vearch/vearch:3.5.1")
+      vearchContainer, err := vearch.Run(context.Background(), "vearch/vearch:3.5.1")
       ```
     installation: |
       ```bash

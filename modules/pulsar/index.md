@@ -28,7 +28,7 @@ docs:
     maintainer: official
     example: |
       ```go
-      pulsarContainer, err := pulsar.Run(ctx,
+      pulsarContainer, err := pulsar.Run(context.Background(),
         "apachepulsar/pulsar:2.10.0",
         pulsar.WithPulsarEnv("brokerDeduplicationEnabled", "true"),
         pulsar.WithFunctionsWorker(),

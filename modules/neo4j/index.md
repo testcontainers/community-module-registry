@@ -29,7 +29,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      neo4jContainer, err := neo4j.Run(ctx,
+      neo4jContainer, err := neo4j.Run(context.Background(),
         "neo4j:4.4",
         neo4j.WithAdminPassword("letmein!"),
         neo4j.WithLabsPlugin(neo4j.Apoc),

@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      etcdContainer, err := etcd.Run(ctx, "gcr.io/etcd-development/etcd:v3.5.14")
+      etcdContainer, err := etcd.Run(context.Background(), "gcr.io/etcd-development/etcd:v3.5.14")
       ```
     installation: |
       ```bash

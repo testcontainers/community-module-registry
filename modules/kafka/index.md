@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      kafkaContainer, err := kafka.Run(ctx, "confluentinc/confluent-local:7.5.0")
+      kafkaContainer, err := kafka.Run(context.Background(), "confluentinc/confluent-local:7.5.0")
       ```
     installation: |
       ```bash

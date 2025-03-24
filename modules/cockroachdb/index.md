@@ -28,7 +28,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      cockroachdbContainer, err := cockroachdb.Run(ctx, "cockroachdb/cockroach:v22.2.3")
+      cockroachdbContainer, err := cockroachdb.Run(context.Background(), "cockroachdb/cockroach:v22.2.3")
       ```
     installation: |
       ```bash

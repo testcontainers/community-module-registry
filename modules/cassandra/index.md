@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      cassandraContainer, err := cassandra.Run(ctx, "cassandra:4.1.3")
+      cassandraContainer, err := cassandra.Run(context.Background(), "cassandra:4.1.3")
       ```
     installation: |
       ```bash

@@ -28,6 +28,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/azure/#eventhubs
+    maintainer: core
+    example: |
+      ```go
+      eventhubsContainer, err := eventhubs.Run(context.Background(), "mcr.microsoft.com/azure-messaging/eventhubs-emulator:2.0.1")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/azure
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.EventHubs
     maintainer: core

@@ -26,7 +26,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      mssqlContainer, err := mssql.Run(ctx,
+      mssqlContainer, err := mssql.Run(context.Background(),
         "mcr.microsoft.com/mssql/server:2022-CU10-ubuntu-22.04",
         mssql.WithAcceptEULA(),
       )

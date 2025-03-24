@@ -27,7 +27,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      couchbaseContainer, err := couchbase.Run(ctx,
+      couchbaseContainer, err := couchbase.Run(context.Background(),
         "couchbase/server:community-7.0.2",
         couchbase.WithBucket(couchbase.NewBucket("bucketName")),
       )

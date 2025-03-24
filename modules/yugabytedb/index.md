@@ -28,7 +28,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      yugabytedbContainer, err := yugabytedb.Run(ctx, "yugabytedb/yugabyte:2024.1.3.0-b105")
+      yugabytedbContainer, err := yugabytedb.Run(context.Background(), "yugabytedb/yugabyte:2024.1.3.0-b105")
       ```
     installation: |
       ```bash

@@ -28,7 +28,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      redpandaContainer, err := redpanda.Run(ctx, "docker.redpanda.com/redpandadata/redpanda:v23.1.7")
+      redpandaContainer, err := redpanda.Run(context.Background(), "docker.redpanda.com/redpandadata/redpanda:v23.1.7")
       ```
     installation: |
       ```bash

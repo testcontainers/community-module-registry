@@ -8,7 +8,7 @@ docs:
     maintainer: community
     example: |
       ```go
-        spiceDBContainer, err := spicedb.Run(ctx, "authzed/spicedb:v1.33.0")
+        spiceDBContainer, err := spicedb.Run(context.Background(), "authzed/spicedb:v1.33.0")
       ```
     installation: |
       ```bash

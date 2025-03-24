@@ -21,15 +21,15 @@ docs:
       </dependency>
       ```
   - id: go
-    url: https://golang.testcontainers.org/modules/azurite/
+    url: https://golang.testcontainers.org/modules/azure/#azurite
     maintainer: core
     example: |
       ```go
-      azuriteContainer, err := azurite.Run(ctx, "mcr.microsoft.com/azure-storage/azurite:3.28.0")
+      azuriteContainer, err := azurite.Run(context.Background(), "mcr.microsoft.com/azure-storage/azurite:3.28.0")
       ```
     installation: |
       ```bash
-      go get github.com/testcontainers/testcontainers-go/modules/azurite
+      go get github.com/testcontainers/testcontainers-go/modules/azure
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Azurite

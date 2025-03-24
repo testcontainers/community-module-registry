@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      artemisContainer, err := artemis.Run(ctx, "docker.io/apache/activemq-artemis:2.30.0-alpine")
+      artemisContainer, err := artemis.Run(context.Background(), "docker.io/apache/activemq-artemis:2.30.0-alpine")
       ```
     installation: |
       ```bash

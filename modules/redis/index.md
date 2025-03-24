@@ -26,7 +26,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      redisContainer, err := redis.Run(ctx, "redis:6")
+      redisContainer, err := redis.Run(context.Background(), "redis:6")
       ```
     installation: |
       ```bash
