@@ -39,7 +39,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new ArangoDBContainer().start();
+      const container = await new ArangoDBContainer("arangodb:3.10.0").start();
       ```
     installation: |
       ```bash

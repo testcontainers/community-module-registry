@@ -54,7 +54,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new MSSQLServerContainer().start();
+      const container = await new MSSQLServerContainer("mcr.microsoft.com/mssql/server:2022-CU13-ubuntu-22.04").start();
       ```
     installation: |
       ```bash

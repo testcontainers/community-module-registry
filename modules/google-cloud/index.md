@@ -42,7 +42,9 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const datastoreEmulatorContainer = await new DatastoreEmulatorContainer().start();
+      const datastoreEmulatorContainer = await new DatastoreEmulatorContainer(
+        "gcr.io/google.com/cloudsdktool/cloud-sdk"
+      ).start();
       ```
     installation: |
       ```bash

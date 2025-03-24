@@ -53,7 +53,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const redpandaContainer = await new RedpandaContainer().start();
+      const redpandaContainer = await new RedpandaContainer("docker.redpanda.com/redpandadata/redpanda:v23.3.10").start();
       ```
     installation: |
       ```bash
