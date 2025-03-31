@@ -1,7 +1,7 @@
 ---
 title: Xunit
 categories:
-  - other
+  - test-framework
 docs:
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Xunit
