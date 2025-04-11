@@ -27,10 +27,10 @@ docs:
     maintainer: core
     example: |
       ```go
-      datastoreContainer, err := tcdatastore.Run(
-          context.Background(),
-          "gcr.io/google.com/cloudsdktool/cloud-sdk:380.0.0-emulators",
-          tcdatastore.WithProjectID("datastore-project"),
+      datastoreContainer, err := datastore.Run(
+        context.Background(),
+        "gcr.io/google.com/cloudsdktool/cloud-sdk:380.0.0-emulators",
+        datastore.WithProjectID("datastore-project"),
       )
       ```
     installation: |
