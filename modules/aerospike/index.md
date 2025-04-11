@@ -6,7 +6,7 @@ categories:
 docs:
   - id: go
     url: https://golang.testcontainers.org/modules/aerospike
-    maintainer: community
+    maintainer: core
     example: |
       ```go
       aerospikeContainer, err := aerospike.Run(ctx, "aerospike/aerospike-server:latest")
