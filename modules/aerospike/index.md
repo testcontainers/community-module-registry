@@ -9,7 +9,7 @@ docs:
     maintainer: community
     example: |
       ```go
-      aerospikeContainer, err := aerospike.RunContainer(context.Background())
+      aerospikeContainer, err := aerospike.Run(ctx, "aerospike/aerospike-server:latest")
       ```
     installation: |
       ```bash
