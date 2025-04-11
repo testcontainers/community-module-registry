@@ -27,10 +27,10 @@ docs:
     maintainer: core
     example: |
       ```go
-      bigTableContainer, err := gcloud.RunBigTable(
-        context.Background(),
-        "gcr.io/google.com/cloudsdktool/cloud-sdk:380.0.0-emulators",
-        gcloud.WithProjectID("bigtable-project"),
+      bigQueryContainer, err := tcbigquery.Run(
+          context.Background(),
+          "ghcr.io/goccy/bigquery-emulator:0.6.1",
+          tcbigquery.WithProjectID("bigquery-project"),
       )
       ```
     installation: |
