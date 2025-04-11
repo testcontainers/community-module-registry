@@ -27,10 +27,10 @@ docs:
     maintainer: core
     example: |
       ```go
-      bigQueryContainer, err := tcbigquery.Run(
+      datastoreContainer, err := tcdatastore.Run(
           context.Background(),
-          "ghcr.io/goccy/bigquery-emulator:0.6.1",
-          tcbigquery.WithProjectID("bigquery-project"),
+          "gcr.io/google.com/cloudsdktool/cloud-sdk:380.0.0-emulators",
+          tcdatastore.WithProjectID("datastore-project"),
       )
       ```
     installation: |
