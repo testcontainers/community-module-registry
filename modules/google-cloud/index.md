@@ -62,6 +62,23 @@ docs:
       ```bash
       pip install testcontainers[google]
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.GCloud
+    maintainer: core
+    example: |
+      ```csharp
+      var firestoreContainer = new FirestoreBuilder()
+        .WithImage("gcr.io/google.com/cloudsdktool/google-cloud-cli:446.0.1-emulators")
+        .Build();
+      await firestoreContainer.StartAsync();
+
+      // supported modules:
+      // BigQuery, Bigtable, Firestore (Datastore), PubSub
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.GCloud
+      ```
 description: |
   Google's Cloud SDK provides a platform to work with the services provided through their Cloud Platform.
   Currently, this module supports Bigtable, Datastore, Firestore, Spanner, and Pub/Sub emulators.
