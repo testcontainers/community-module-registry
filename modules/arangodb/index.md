@@ -20,6 +20,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://github.com/testcontainers/testcontainers-go/tree/main/modules/arangodb
+    maintainer: core
+    example: |
+      ```go
+      arangodbContainer, err := tcarangodb.Run(context.Background(), "arangodb:3.11.5")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/arangodb
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.ArangoDb
     maintainer: core
