@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```java
-      var toxiproxy = new ToxiproxyContainer(DockerImageName.parse("ghcr.io/shopify/toxiproxy:2.5.0"));
+      var toxiproxy = new ToxiproxyContainer(DockerImageName.parse("ghcr.io/shopify/toxiproxy:2.12.0"));
       toxiproxy.start();
       ```
     installation: |
@@ -20,12 +20,23 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/toxiproxy/
+    maintainer: core
+    example: |
+      ```go
+      toxiproxyContainer, err := toxiproxy.Run(context.Background(), "ghcr.io/shopify/toxiproxy:2.12.0")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/toxiproxy
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/toxiproxy/
     maintainer: core
     example: |
       ```javascript
-      const container = await new ToxiProxyContainer("ghcr.io/shopify/toxiproxy:2.11.0").start();
+      const container = await new ToxiProxyContainer("ghcr.io/shopify/toxiproxy:2.12.0").start();
       ```
     installation: |
       ```bash
