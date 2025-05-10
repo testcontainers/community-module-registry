@@ -13,8 +13,9 @@ docs:
             new ImageFromDockerfile("my-test-cont", false)
                     .withFileFromFile("openapi.yaml", new File(OPENAPI_FILE))
                     .withFileFromFile("Dockerfile", new File("Dockerfile"))
-    )
-          .withExposedPorts(8080);      ```
+            )
+            .withExposedPorts(8080);      
+      ```
     installation: |
       ```xml
       <dependency>
