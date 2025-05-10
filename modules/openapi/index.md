@@ -22,8 +22,8 @@ docs:
         <groupId>org.testcontainers</groupId>
         <artifactId>testcontainers</artifactId>
         <version>1.17.3</version>
-      <scope>test</scope>
-    </dependency>
+        <scope>test</scope>
+      </dependency>
       ```
 description: |
   The OpenAPI Testcontainers extension allows developers to create on-the-fly a lightweight Test Container from an
