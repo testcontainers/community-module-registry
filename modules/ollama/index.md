@@ -36,6 +36,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/ollama
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Ollama
+    maintainer: core
+    example: |
+      ```csharp
+      var ollamaContainer = new OllamaBuilder()
+        .WithImage("ollama/ollama:0.6.6")
+        .Build();
+      await ollamaContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Ollama
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/ollama/
     maintainer: core
