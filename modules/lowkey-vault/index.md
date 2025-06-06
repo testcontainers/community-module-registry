@@ -18,5 +18,5 @@ docs:
       dotnet add package Testcontainers.LowkeyVault
       ```
 description: |
-  Lowkey Vault is a test double (fake object) aspiring to be compatible with Azure Key Vault REST APIs. https://github.com/nagyesta/lowkey-vault.
+  Lowkey Vault is a test double (fake object) aspiring to be compatible with Azure Key Vault REST APIs.
 ---
