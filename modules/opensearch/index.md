@@ -32,6 +32,20 @@ docs:
       ```bash
       go get github.com/opensearch-project/opensearch-testcontainers
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.OpenSearch
+    maintainer: core
+    example: |
+      ```csharp
+      var openSearchContainer = new OpenSearchBuilder()
+        .WithImage("opensearchproject/opensearch:2.12.0")
+        .Build();
+      await openSearchContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.OpenSearch
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/opensearch/README.html
     maintainer: core

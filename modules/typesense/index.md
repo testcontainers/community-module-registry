@@ -20,6 +20,20 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Typesense
+    maintainer: core
+    example: |
+      ```csharp
+      var typesenseContainer = new TypesenseBuilder()
+        .WithImage("typesense/typesense:28.0")
+        .Build();
+      await typesenseContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Typesense
+      ```
 description: |
   Typesense is a modern, blazing-fast, developer-friendly, open source search engine.
 ---
