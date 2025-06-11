@@ -67,6 +67,36 @@ docs:
       ```bash
       npm install @testcontainers/k3s --save-dev
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/k3s/struct.K3s.html
+    maintainer: community
+    example: |
+      ```rust
+      use std::env::temp_dir;
+
+      use testcontainers_modules::{
+          k3s::{K3s, KUBE_SECURE_PORT},
+          testcontainers::{runners::SyncRunner, ImageExt},
+      };
+
+      let k3s_instance = K3s::default()
+          .with_conf_mount(&temp_dir())
+          .with_privileged(true)
+          .with_userns_mode("host")
+          .start()
+          .unwrap();
+
+      let kube_port = k3s_instance.get_host_port_ipv4(KUBE_SECURE_PORT);
+      let kube_conf = k3s_instance
+          .image()
+          .read_kube_config()
+          .expect("Cannot read kube conf");
+      // use kube_port and kube_conf to connect and control k3s cluster
+      ```
+    installation: |
+      ```bash
+      cargo add -F k3s --dev testcontainers-modules
+      ```
 description: |
   K3s is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.
 ---

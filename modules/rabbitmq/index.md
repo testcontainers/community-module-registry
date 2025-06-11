@@ -68,6 +68,27 @@ docs:
       ```bash
       pip install testcontainers[rabbitmq]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/rabbitmq/struct.RabbitMq.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{rabbitmq, testcontainers::runners::SyncRunner};
+
+      let rabbitmq_instance = rabbitmq::RabbitMq::default().start().unwrap();
+
+      let amqp_url = format!(
+          "amqp://{}:{}",
+          rabbitmq_instance.get_host().unwrap(),
+          rabbitmq_instance.get_host_port_ipv4(5672).unwrap()
+      );
+
+      // do something with the started rabbitmq instance..
+      ```
+    installation: |
+      ```bash
+      cargo add -F rabbitmq --dev testcontainers-modules
+      ```
 description: |
   RabbitMQ is an open-source message-broker software that originally implemented the Advanced Message Queuing Protocol and has since been extended with a plug-in architecture to support Streaming Text Oriented Messaging Protocol, MQ Telemetry Transport, and other protocols.
 ---

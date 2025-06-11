@@ -69,6 +69,21 @@ docs:
       ```bash
       pip install testcontainers[elasticsearch]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/elastic_search/struct.ElasticSearch.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{elastic_search, testcontainers::runners::SyncRunner};
+
+      let dynamodb = elastic_search::ElasticSearch::default().start().unwrap();
+
+      // do something with the started elastic_search instance..
+      ```
+    installation: |
+      ```bash
+      cargo add -F elastic_search --dev testcontainers-modules
+      ```
 description: |
   Elasticsearch is a search and analytics engine based on Apache Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 ---

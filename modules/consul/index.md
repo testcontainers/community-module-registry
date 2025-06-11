@@ -45,6 +45,22 @@ docs:
       ```bash
       dotnet add package Testcontainers.Consul
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/consul/struct.Consul.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{consul, testcontainers::runners::SyncRunner};
+
+      let consul = consul::Consul::default().start().unwrap();
+      let http_port = consul.get_host_port_ipv4(8500).unwrap();
+
+      // do something with the started consul instance..
+      ```
+    installation: |
+      ```bash
+      cargo add -F consul --dev testcontainers-modules
+      ```
 description: |
   Consul is a service mesh and distributed key-value store.
 

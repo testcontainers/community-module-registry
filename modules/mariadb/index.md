@@ -56,6 +56,24 @@ docs:
       ```bash
       npm install @testcontainers/mariadb --save-dev
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/mariadb/struct.Mariadb.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{mariadb, testcontainers::runners::SyncRunner};
+
+      let mariadb_instance = mariadb::Mariadb::default().start().unwrap();
+      let mariadb_url = format!(
+          "mariadb://{}:{}/test",
+          mariadb_instance.get_host().unwrap(),
+          mariadb_instance.get_host_port_ipv4(3306).unwrap(),
+      );
+      ```
+    installation: |
+      ```bash
+      cargo add -F mariadb --dev testcontainers-modules
+      ```
 description: |
   MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system.
 ---

@@ -77,6 +77,27 @@ docs:
       ```bash
       pip install testcontainers[neo4j]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/oracle/free/struct.Oracle.html
+    maintainer: community
+    example: |
+      ```rust
+      use std::time::Duration;
+      use testcontainers_modules::{oracle::free::Oracle, testcontainers::{runners::SyncRunner, ImageExt}};
+
+      // On slower machines more time needed than 60 seconds may be required (see `with_startup_timeout`).
+      let oracle = Oracle::default()
+          .start()
+          .unwrap();
+
+      let http_port = oracle.get_host_port_ipv4(1521).unwrap();
+
+      // do something with the started Oracle instance..
+      ```
+    installation: |
+      ```bash
+      cargo add -F oracle --dev testcontainers-modules
+      ```
 description: |
   Neo4j is a highly scalable open source graph database management system.
 ---

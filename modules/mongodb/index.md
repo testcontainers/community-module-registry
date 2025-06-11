@@ -68,6 +68,19 @@ docs:
       ```bash
       pip install testcontainers[mongodb]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/mongo/struct.Mongo.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{mongo, testcontainers::runners::SyncRunner};
+
+      let mongo_instance = mongo::Mongo::default().start().unwrap();
+      ```
+    installation: |
+      ```bash
+      cargo add -F mongo --dev testcontainers-modules
+      ```
 description: |
   MongoDB is a source-available cross-platform document-oriented database program.
 ---

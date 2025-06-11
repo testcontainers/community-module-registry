@@ -28,6 +28,21 @@ docs:
       ```bash
       dotnet add package Testcontainers.DynamoDb
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/dynamodb_local/struct.DynamoDb.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{dynamodb_local, testcontainers::runners::SyncRunner};
+
+      let dynamodb = dynamodb_local::DynamoDb::default().start().unwrap();
+
+      // do something with the started dynamodb instance..
+      ```
+    installation: |
+      ```bash
+      cargo add -F dynamodb --dev testcontainers-modules
+      ```
 description: |
   Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.
 

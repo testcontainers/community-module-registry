@@ -51,6 +51,19 @@ docs:
       ```bash
       pip install testcontainers[nats]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/nats/struct.Nats.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{nats, testcontainers::runners::SyncRunner};
+
+      let nats_instance = nats::Nats::default().start().unwrap();
+      ```
+    installation: |
+      ```bash
+      cargo add -F nats --dev testcontainers-modules
+      ```
 description: |
   NATS is an open-source messaging system that enables applications to securely communicate across any combination of cloud vendors, on-premise, edge, web and mobile, and devices.
 ---

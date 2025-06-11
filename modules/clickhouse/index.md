@@ -58,6 +58,22 @@ docs:
       ```bash
       pip install testcontainers[clickhouse]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/clickhouse/struct.ClickHouse.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers_modules::{clickhouse, testcontainers::runners::SyncRunner};
+
+      let clickhouse = clickhouse::ClickHouse::default().start().unwrap();
+      let http_port = clickhouse.get_host_port_ipv4(8123).unwrap();
+
+      // do something with the started clickhouse instance..
+      ```
+    installation: |
+      ```bash
+      cargo add -F clickhouse --dev testcontainers-modules
+      ```
 description: |
   ClickHouse is an open-source database management system for analytical processing that allows users to generate reports using SQL queries in real-time.
 ---
