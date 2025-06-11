@@ -17,7 +17,7 @@ docs:
       <dependency>
           <groupId>com.mussonindustrial</groupId>
           <artifactId>testcontainers-ignition</artifactId>
-          <version>0.4.1</version>
+          <version>0.4.3</version>
           <scope>test</scope>
       </dependency>
       ```
