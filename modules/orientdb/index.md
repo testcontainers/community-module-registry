@@ -30,7 +30,7 @@ docs:
       let oriantdb_instance = OrientDb::default()
           .start()
           .unwrap();
-      
+
       // do something with the started oriantdb instance..
       ```
     installation: |
