@@ -72,6 +72,17 @@ docs:
       ```bash
       npm install @testcontainers/azurite --save-dev
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/index.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::azurite::Azurite::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F azurite --dev testcontainers-modules
+      ```
 description: |
   A lightweight server clone of Azure Storage.
 ---

@@ -54,6 +54,17 @@ docs:
       ```bash
       npm install @testcontainers/scylladb --save-dev
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/scylladb/struct.ScyllaDB.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::scylladb::ScyllaDB::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F scylladb --dev testcontainers-modules
+      ```
 description: |
   ScyllaDB is a distributed NoSQL wide-column database for data-intensive apps that require high performance and low latency.
 ---

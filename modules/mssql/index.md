@@ -74,6 +74,17 @@ docs:
       ```bash
       pip install testcontainers[mssql]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/mssql_server/struct.MssqlServer.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::mssql_server::MssqlServer::default().with_accept_eula().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F mssql_server --dev testcontainers-modules
+      ```
 description: |
   Microsoft SQL Server is a relational database management system.
 ---
