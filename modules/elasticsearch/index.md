@@ -74,11 +74,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{elastic_search, testcontainers::runners::SyncRunner};
-
-      let dynamodb = elastic_search::ElasticSearch::default().start().unwrap();
-
-      // do something with the started elastic_search instance..
+      testcontainers_modules:: elastic_search::ElasticSearch::default().start()
       ```
     installation: |
       ```bash

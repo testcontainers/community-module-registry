@@ -33,11 +33,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{dynamodb_local, testcontainers::runners::SyncRunner};
-
-      let dynamodb = dynamodb_local::DynamoDb::default().start().unwrap();
-
-      // do something with the started dynamodb instance..
+      testcontainers_modules::dynamodb_local::DynamoDb::default().start()
       ```
     installation: |
       ```bash

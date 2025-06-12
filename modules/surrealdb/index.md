@@ -19,21 +19,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{surrealdb, testcontainers::runners::SyncRunner};
-
-      let surrealdb_instance = surrealdb::SurrealDb::default().start().unwrap();
-
-      let connection_string = format!(
-          "127.0.0.1:{}",
-          surrealdb_instance
-              .get_host_port_ipv4(surrealdb::SURREALDB_PORT)
-              .unwrap(),
-      );
-
-      let db: Surreal<Client> = Surreal::init();
-      db.connect::<Ws>(connection_string)
-          .await
-          .expect("Failed to connect to SurrealDB");
+      testcontainers_modules::surrealdb::SurrealDb::default().start()
       ```
     installation: |
       ```bash

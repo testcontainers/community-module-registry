@@ -61,14 +61,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{mariadb, testcontainers::runners::SyncRunner};
-
-      let mariadb_instance = mariadb::Mariadb::default().start().unwrap();
-      let mariadb_url = format!(
-          "mariadb://{}:{}/test",
-          mariadb_instance.get_host().unwrap(),
-          mariadb_instance.get_host_port_ipv4(3306).unwrap(),
-      );
+      testcontainers_modules::mariadb::Mariadb::default().start()
       ```
     installation: |
       ```bash

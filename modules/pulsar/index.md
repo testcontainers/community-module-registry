@@ -58,12 +58,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{pulsar, testcontainers::runners::SyncRunner};
-
-      let pulsar = pulsar::Pulsar::default().start().unwrap();
-      let http_port = pulsar.get_host_port_ipv4(6650).unwrap();
-
-      // do something with the running pulsar instance..
+      testcontainers_modules::pulsar::Pulsar::default().start()
       ```
     installation: |
       ```bash

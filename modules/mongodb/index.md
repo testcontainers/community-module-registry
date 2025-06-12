@@ -73,9 +73,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{mongo, testcontainers::runners::SyncRunner};
-
-      let mongo_instance = mongo::Mongo::default().start().unwrap();
+      testcontainers_modules::mongo::Mongo::default().start()
       ```
     installation: |
       ```bash

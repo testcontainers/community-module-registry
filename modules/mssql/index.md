@@ -79,14 +79,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{testcontainers::runners::SyncRunner, mssql_server};
-
-      let mssql_server = mssql_server::MssqlServer::default().with_accept_eula().start().unwrap();
-      let ado_connection_string = format!(
-        "Server=tcp:{},{};Database=test;User Id=sa;Password=yourStrong(!)Password;TrustServerCertificate=True;",
-        mssql_server.get_host().unwrap(),
-        mssql_server.get_host_port_ipv4(1433).unwrap()
-      );
+      testcontainers_modules::mssql_server::MssqlServer::default().with_accept_eula().start()
       ```
     installation: |
       ```bash

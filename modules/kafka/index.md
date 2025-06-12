@@ -73,20 +73,8 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use std::env::temp_dir;
-
-      use testcontainers_modules::kafka::confluent::Kafka;
-      // or also avaliable:  testcontainers_modules::kafka::apache::Kafka;
-
-      use testcontainers_modules::{
-          testcontainers::{runners::SyncRunner, ImageExt},
-      };
-
-      let kafka_instance = Kafka::default()
-          .start()
-          .unwrap();
-
-      // do something with the started kafka instance..
+      testcontainers_modules::kafka::confluent::Kafka::default().start()
+      // or also:  testcontainers_modules::kafka::apache::Kafka::default().start()
       ```
     installation: |
       ```bash

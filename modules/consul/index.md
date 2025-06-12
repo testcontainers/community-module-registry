@@ -50,12 +50,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{consul, testcontainers::runners::SyncRunner};
-
-      let consul = consul::Consul::default().start().unwrap();
-      let http_port = consul.get_host_port_ipv4(8500).unwrap();
-
-      // do something with the started consul instance..
+      testcontainers_modules::consul::Consul::default().start()
       ```
     installation: |
       ```bash

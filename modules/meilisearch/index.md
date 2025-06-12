@@ -37,9 +37,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{meilisearch, testcontainers::runners::SyncRunner};
-
-      let meilisearch_instance = meilisearch::Meilisearch::default().start().unwrap();
+      testcontainers_modules::meilisearch::Meilisearch::default().start()
 
       let dashboard = format!(
           "http://{}:{}",

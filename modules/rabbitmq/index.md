@@ -73,17 +73,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{rabbitmq, testcontainers::runners::SyncRunner};
-
-      let rabbitmq_instance = rabbitmq::RabbitMq::default().start().unwrap();
-
-      let amqp_url = format!(
-          "amqp://{}:{}",
-          rabbitmq_instance.get_host().unwrap(),
-          rabbitmq_instance.get_host_port_ipv4(5672).unwrap()
-      );
-
-      // do something with the started rabbitmq instance..
+      testcontainers_modules::rabbitmq::RabbitMq::default().start()
       ```
     installation: |
       ```bash

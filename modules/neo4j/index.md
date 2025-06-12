@@ -82,17 +82,8 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use std::time::Duration;
-      use testcontainers_modules::{oracle::free::Oracle, testcontainers::{runners::SyncRunner, ImageExt}};
-
       // On slower machines more time needed than 60 seconds may be required (see `with_startup_timeout`).
-      let oracle = Oracle::default()
-          .start()
-          .unwrap();
-
-      let http_port = oracle.get_host_port_ipv4(1521).unwrap();
-
-      // do something with the started Oracle instance..
+      testcontainers_modules::oracle::free::Oracle::default().start()
       ```
     installation: |
       ```bash

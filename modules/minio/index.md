@@ -73,9 +73,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{minio, testcontainers::runners::SyncRunner};
-
-      let minio_instance = minio::MinIO::default().start().unwrap();
+      testcontainers_modules::minio::MinIO::default().start()
       ```
     installation: |
       ```bash

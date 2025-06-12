@@ -73,14 +73,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{mysql, testcontainers::runners::SyncRunner};
-
-      let mysql_instance = mysql::Mysql::default().start().unwrap();
-      let mysql_url = format!(
-          "mysql://{}:{}/test",
-          mysql_instance.get_host().unwrap(),
-          mysql_instance.get_host_port_ipv4(3306).unwrap()
-      );
+      testcontainers_modules::mysql::Mysql::default().start()
       ```
     installation: |
       ```bash

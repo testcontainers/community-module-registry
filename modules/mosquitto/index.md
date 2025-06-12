@@ -20,9 +20,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{mosquitto, testcontainers::runners::SyncRunner};
-
-      let mosquitto_instance = mosquitto::Mosquitto::default().start().unwrap();
+      testcontainers_modules::mosquitto::Mosquitto::default().start()
 
       let broker_url = format!(
           "{}:{}",

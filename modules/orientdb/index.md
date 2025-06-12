@@ -25,13 +25,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{oracle::free::Oracle, testcontainers::{runners::SyncRunner, ImageExt}};
-
-      let oriantdb_instance = OrientDb::default()
-          .start()
-          .unwrap();
-
-      // do something with the started oriantdb instance..
+      testcontainers_modules::orientdb::OrientDb::default().start()
       ```
     installation: |
       ```bash

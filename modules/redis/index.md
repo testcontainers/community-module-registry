@@ -74,22 +74,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use redis::Commands;
-      use testcontainers_modules::{
-          redis::{Redis, REDIS_PORT},
-          testcontainers::runners::SyncRunner,
-      };
-
-      let redis_instance = Redis::default().start().unwrap();
-      let host_ip = redis_instance.get_host().unwrap();
-      let host_port = redis_instance.get_host_port_ipv4(REDIS_PORT).unwrap();
-
-      let url = format!("redis://{host_ip}:{host_port}");
-      let client = redis::Client::open(url.as_ref()).unwrap();
-      let mut con = client.get_connection().unwrap();
-
-      con.set::<_, _, ()>("my_key", 42).unwrap();
-      let result: i64 = con.get("my_key").unwrap();
+      testcontainers_modules::redis::Redis::default().start()
       ```
     installation: |
       ```bash

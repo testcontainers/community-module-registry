@@ -77,16 +77,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{
-          azurite,
-          azurite::{Azurite, BLOB_PORT},
-          testcontainers::runners::SyncRunner,
-      };
-
-      let azurite = Azurite::default().start().unwrap();
-      let blob_port = azurite.get_host_port_ipv4(BLOB_PORT).unwrap();
-
-      // do something with the started azurite instance..
+      testcontainers_modules::azurite::Azurite::default().start()
       ```
     installation: |
       ```bash

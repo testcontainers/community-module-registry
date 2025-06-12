@@ -63,12 +63,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{clickhouse, testcontainers::runners::SyncRunner};
-
-      let clickhouse = clickhouse::ClickHouse::default().start().unwrap();
-      let http_port = clickhouse.get_host_port_ipv4(8123).unwrap();
-
-      // do something with the started clickhouse instance..
+      testcontainers_modules::clickhouse::ClickHouse::default().start()
       ```
     installation: |
       ```bash

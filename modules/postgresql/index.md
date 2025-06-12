@@ -79,15 +79,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{postgres, testcontainers::runners::SyncRunner};
-
-      let postgres_instance = postgres::Postgres::default().start().unwrap();
-
-      let connection_string = format!(
-          "postgres://postgres:postgres@{}:{}/postgres",
-          postgres_instance.get_host().unwrap(),
-          postgres_instance.get_host_port_ipv4(5432).unwrap()
-      );
+      testcontainers_modules::postgres::Postgres::default().start()
       ```
     installation: |
       ```bash

@@ -69,15 +69,7 @@ docs:
     example: |
       ```rust
       use testcontainers::core::ImageExt;
-      use testcontainers_modules::{postgres, testcontainers::runners::SyncRunner};
-
-      let postgres_instance = postgres::Postgres::default().with_name("postgis/postgis").with_tag("16-3.5-alpine").start().unwrap();
-
-      let connection_string = format!(
-          "postgres://postgres:postgres@{}:{}/postgres",
-          postgres_instance.get_host().unwrap(),
-          postgres_instance.get_host_port_ipv4(5432).unwrap()
-      );
+      testcontainers_modules::postgres::Postgres::default().with_name("postgis/postgis").with_tag("16-3.5-alpine").start()
       ```
     installation: |
       ```bash

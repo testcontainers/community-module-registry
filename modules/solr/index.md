@@ -25,14 +25,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{solr, testcontainers::runners::SyncRunner};
-
-      let solr_instance = solr::Solr::default().start().unwrap();
-      let host_port = solr_instance.get_host_port_ipv4(solr::SOLR_PORT).unwrap();
-
-      let solr_url = format!("http://127.0.0.1:{}", host_port);
-
-      // use HTTP client to interact with the solr API
+      testcontainers_modules::solr::Solr::default().start()
       ```
     installation: |
       ```bash

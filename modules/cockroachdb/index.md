@@ -79,12 +79,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{cockroach_db, testcontainers::runners::SyncRunner};
-
-      let cockroach = cockroach_db::CockroachDb::default().start().unwrap();
-      let http_port = cockroach.get_host_port_ipv4(26257).unwrap();
-
-      // do something with the started cockroach instance..
+      testcontainers_modules::cockroach_db::CockroachDb::default().start()
       ```
     installation: |
       ```bash

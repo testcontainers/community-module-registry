@@ -56,9 +56,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{nats, testcontainers::runners::SyncRunner};
-
-      let nats_instance = nats::Nats::default().start().unwrap();
+      testcontainers_modules::nats::Nats::default().start()
       ```
     installation: |
       ```bash

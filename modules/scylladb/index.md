@@ -59,29 +59,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use scylla::client::{session::Session, session_builder::SessionBuilder};
-      use testcontainers_modules::{scylladb::ScyllaDB, testcontainers::runners::AsyncRunner};
-
-      #[tokio::test]
-      async fn default_scylladb() -> Result<(), Box<dyn std::error::Error + 'static>> {
-          let image = ScyllaDB::default();
-          let instance = image.start().await?;
-          let host = instance.get_host().await?;
-          let port = instance.get_host_port_ipv4(9042).await?;
-          let hostname = format!("{host}:{port}");
-          let session: Session = SessionBuilder::new().known_node(hostname).build().await?;
-
-          let prepared_statement = session
-              .prepare("SELECT release_version FROM system.local")
-              .await?;
-          let rows = session
-              .execute_unpaged(&prepared_statement, &[])
-              .await?
-              .into_rows_result()?;
-          let (version,) = rows.single_row::<(String,)>()?;
-          assert_eq!(version, "3.0.8");
-          Ok(())
-      }
+      testcontainers_modules::scylladb::ScyllaDB::default().start()
       ```
     installation: |
       ```bash

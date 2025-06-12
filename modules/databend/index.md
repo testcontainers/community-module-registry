@@ -36,12 +36,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{databend, testcontainers::runners::SyncRunner};
-
-      let databend = databend::Databend::default().start().unwrap();
-      let http_port = databend.get_host_port_ipv4(8000).unwrap();
-
-      // do something with the started databend instance.
+      testcontainers_modules::databend::Databend::default().start()
       ```
     installation: |
       ```bash
