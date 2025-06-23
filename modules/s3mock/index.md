@@ -3,9 +3,6 @@ title: S3Mock
 categories:
   - cloud
   - web
-officialPartner:
-  name: Adobe
-  url: https://adobe.com/
 docs:
   - id: java
     url: https://github.com/adobe/S3Mock/tree/main/testsupport/testcontainers
