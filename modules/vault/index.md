@@ -36,6 +36,17 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/vault
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/vault/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new VaultContainer("hashicorp/vault:1.20.0").withVaultToken(VAULT_TOKEN).start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/vault --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/vault/README.html
     maintainer: core
