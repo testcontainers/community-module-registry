@@ -44,7 +44,7 @@ docs:
     url: https://github.com/wiremock/wiremock-testcontainers-go
     maintainer: official
     example: |
-      ```golang
+      ```go
        wiremockContainer, err := wiremock.RunContainer(context.Background(),
          wiremock.WithImage("wiremock/wiremock:2.35.0-1"),
          wiremock.WithMappingFile("hello", filepath.Join("testdata", "hello-world.json")),
