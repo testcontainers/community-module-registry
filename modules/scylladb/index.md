@@ -25,7 +25,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      container, err := scylla.Run(context.Background(), "scylladb/scylla:6.2");
+      container, err := scylla.Run(context.Background(), "scylladb/scylla:6.2")
       ```
     installation: |
       ```bash
