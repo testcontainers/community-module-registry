@@ -68,6 +68,16 @@ docs:
     installation: |
       ```bash
       cargo add -F clickhouse --dev testcontainers-modules
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/clickhouse/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new ClickHouseContainer("clickhouse/clickhouse-server:25.6-alpine").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/clickhouse --save-dev
       ```
 description: |
   ClickHouse is an open-source database management system for analytical processing that allows users to generate reports using SQL queries in real-time.

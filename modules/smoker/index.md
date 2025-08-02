@@ -8,7 +8,7 @@ docs:
     maintainer: community
     example: |
       ```go
-      container, err := smocker.RunContainer(context.Background(), testcontainers.WithImage("thiht/smocker:0.18.5"));
+      container, err := smocker.RunContainer(context.Background(), testcontainers.WithImage("thiht/smocker:0.18.5"))
       ```
     installation: |
       ```bash

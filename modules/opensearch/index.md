@@ -58,6 +58,17 @@ docs:
       ```bash
       pip install testcontainers[opensearch]
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/opensearch/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new OpenSearchContainer("opensearchproject/opensearch:3.1.0").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/opensearch --save-dev
+      ```
 description: |
   OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications licensed under Apache 2.0 and powered by Apache Lucene.
 ---
