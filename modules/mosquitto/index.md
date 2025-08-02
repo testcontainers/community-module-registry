@@ -15,6 +15,23 @@ docs:
       ```bash
       pip install testcontainers[mqtt]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/mosquitto/struct.Mosquitto.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::mosquitto::Mosquitto::default().start()
+
+      let broker_url = format!(
+          "{}:{}",
+          mosquitto_instance.get_host().unwrap(),
+          mosquitto_instance.get_host_port_ipv4(1883).unwrap()
+      );
+      ```
+    installation: |
+      ```bash
+      cargo add -F mosquitto --dev testcontainers-modules
+      ```
 description: |
   Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1.
 ---

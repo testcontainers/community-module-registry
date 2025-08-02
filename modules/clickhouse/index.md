@@ -58,6 +58,16 @@ docs:
       ```bash
       pip install testcontainers[clickhouse]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/clickhouse/struct.ClickHouse.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::clickhouse::ClickHouse::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F clickhouse --dev testcontainers-modules
   - id: nodejs
     url: https://node.testcontainers.org/modules/clickhouse/
     maintainer: core

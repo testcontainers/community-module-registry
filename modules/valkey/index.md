@@ -26,6 +26,18 @@ docs:
       ```bash
       npm install @testcontainers/valkey --save-dev
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/valkey/struct.Valkey.html
+    maintainer: community
+    example: |
+      ```rust
+      use redis::Commands;
+      testcontainers_modules::valkey::Valkey::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F valkey --dev testcontainers-modules
+      ```
 description: |
   Valkey is an open source (BSD) high-performance key/value datastore that supports a variety of workloads such as caching, message queues, and can act as a primary database. Valkey can run as either a standalone daemon or in a cluster, with options for replication and high availability.
 ---

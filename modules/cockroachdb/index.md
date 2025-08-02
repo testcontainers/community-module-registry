@@ -74,6 +74,17 @@ docs:
       ```bash
       pip install testcontainers[cockroachdb]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/cockroach_db/struct.CockroachDb.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::cockroach_db::CockroachDb::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F clicockroach_db --dev testcontainers-modules
+      ```
 description: |
   CockroachDB is an open-source, cloud-native, resilient, distributed SQL database.
 ---

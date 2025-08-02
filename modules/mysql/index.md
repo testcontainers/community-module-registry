@@ -68,6 +68,17 @@ docs:
       ```bash
       pip install testcontainers[mysql]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/mysql/struct.Mysql.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::mysql::Mysql::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F mysql --dev testcontainers-modules
+      ```
 description: |
   MySQL is an open-source relational database management system.
 ---
