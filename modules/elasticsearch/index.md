@@ -74,7 +74,7 @@ docs:
     maintainer: community
     example: |
       ```rust
-      testcontainers_modules:: elastic_search::ElasticSearch::default().start()
+      testcontainers_modules::elastic_search::ElasticSearch::default().start()
       ```
     installation: |
       ```bash
