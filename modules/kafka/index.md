@@ -74,7 +74,7 @@ docs:
     example: |
       ```rust
       testcontainers_modules::kafka::confluent::Kafka::default().start()
-      // or also:  testcontainers_modules::kafka::apache::Kafka::default().start()
+      // or also: testcontainers_modules::kafka::apache::Kafka::default().start()
       ```
     installation: |
       ```bash
