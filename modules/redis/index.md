@@ -69,6 +69,17 @@ docs:
       ```bash
       pip install testcontainers[redis]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/redis/struct.Redis.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::redis::Redis::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F redis --dev testcontainers-modules
+      ```
 description: |
   Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices.
 ---

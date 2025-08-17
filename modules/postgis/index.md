@@ -63,6 +63,18 @@ docs:
       ```bash
       npm install @testcontainers/postgresql --save-dev
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/postgres/struct.Postgres.html
+    maintainer: community
+    example: |
+      ```rust
+      use testcontainers::core::ImageExt;
+      testcontainers_modules::postgres::Postgres::default().with_name("postgis/postgis").with_tag("16-3.5-alpine").start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F postgres --dev testcontainers-modules
+      ```
 description: |
   PostGIS extends the capabilities of the PostgreSQL relational database by adding support for storing, indexing, and querying geospatial data.
 ---

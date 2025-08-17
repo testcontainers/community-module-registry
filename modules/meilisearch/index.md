@@ -32,6 +32,23 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/meilisearch
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/meilisearch/struct.Meilisearch.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::meilisearch::Meilisearch::default().start()
+
+      let dashboard = format!(
+          "http://{}:{}",
+          meilisearch_instance.get_host().unwrap(),
+          meilisearch_instance.get_host_port_ipv4(7700).unwrap()
+      );
+      ```
+    installation: |
+      ```bash
+      cargo add -F meilisearch --dev testcontainers-modules
+      ```
 description: |
   Meilisearch is a flexible and powerful user-focused search engine that can be added to any website or application.
 ---

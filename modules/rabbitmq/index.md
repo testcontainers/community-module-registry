@@ -68,6 +68,17 @@ docs:
       ```bash
       pip install testcontainers[rabbitmq]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/rabbitmq/struct.RabbitMq.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::rabbitmq::RabbitMq::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F rabbitmq --dev testcontainers-modules
+      ```
 description: |
   RabbitMQ is an open-source message-broker software that originally implemented the Advanced Message Queuing Protocol and has since been extended with a plug-in architecture to support Streaming Text Oriented Messaging Protocol, MQ Telemetry Transport, and other protocols.
 ---
