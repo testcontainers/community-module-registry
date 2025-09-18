@@ -31,6 +31,17 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/etcd
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/etcd/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new EtcdContainer("quay.io/coreos/etcd:v3.6.4").start()
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/etcd --save-dev
+      ```
 description: |
   etcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node.
 ---
