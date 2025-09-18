@@ -41,7 +41,7 @@ docs:
     maintainer: core
     example: |
       ```javascript
-      const container = await new VaultContainer("hashicorp/vault:1.20.0").withVaultToken(VAULT_TOKEN).start();
+      const container = await new VaultContainer("hashicorp/vault:1.20.1").withVaultToken(VAULT_TOKEN).start();
       ```
     installation: |
       ```bash
@@ -59,17 +59,6 @@ docs:
     installation: |
       ```bash
       pip install testcontainers[vault]
-      ```
-  - id: nodejs
-    url: https://node.testcontainers.org/modules/vault/
-    maintainer: core
-    example: |
-      ```javascript
-      const container = await new VaultContainer("hashicorp/vault:1.20.1").start()
-      ```
-    installation: |
-      ```bash
-      npm install @testcontainers/vault --save-dev
       ```
 description: |
   HashiCorp Vault is an identity-based secrets and encryption management system for storing API encryption keys, passwords, and certificates.
