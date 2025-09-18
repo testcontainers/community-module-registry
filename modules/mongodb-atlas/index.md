@@ -20,6 +20,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/mongodb-atlaslocal
+    maintainer: core
+    example: |
+      ```go
+      atlaslocalContainer, err := atlaslocal.Run(ctx, "mongodb/mongodb-atlas-local:latest")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/mongodb/atlaslocal
+      ```
 description: |
   MongoDB Atlas Local offers features like Atlas Search and Atlas Vector Search.
 ---

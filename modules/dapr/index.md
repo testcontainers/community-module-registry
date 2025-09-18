@@ -11,7 +11,7 @@ docs:
     maintainer: official
     example: |
       ```java
-      var dapr = new DaprContainer("daprio/daprd:1.14.4");
+      var dapr = new DaprContainer("daprio/daprd:1.16.0");
       dapr.start();
       ```
     installation: |
@@ -19,7 +19,7 @@ docs:
       <dependency>
           <groupId>io.dapr</groupId>
           <artifactId>testcontainers-dapr</artifactId>
-          <version>0.13.3</version>
+          <version>1.16.0</version>
           <scope>test</scope>
       </dependency>
       ```
