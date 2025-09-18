@@ -67,6 +67,17 @@ docs:
       ```bash
       npm install @testcontainers/k3s --save-dev
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/k3s/struct.K3s.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::k3s::K3s::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F k3s --dev testcontainers-modules
+      ```
 description: |
   K3s is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.
 ---

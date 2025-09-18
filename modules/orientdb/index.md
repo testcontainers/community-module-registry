@@ -20,6 +20,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/orientdb/struct.OrientDb.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::orientdb::OrientDb::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F orientdb --dev testcontainers-modules
+      ```
 description: |
   OrientDB is an open source NoSQL database management system. It is a Multi-model database, supporting graph, document, key/value, and object models, but the relationships are managed as in graph databases with direct connections between records.
 ---

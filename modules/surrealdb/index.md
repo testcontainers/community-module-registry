@@ -15,12 +15,11 @@ docs:
       go get github.com/testcontainers/testcontainers-go/modules/surrealdb
       ```
   - id: rust
-    url: https://github.com/testcontainers/testcontainers-rs-modules-community/tree/main/src/surrealdb
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/surrealdb/struct.SurrealDb.html
     maintainer: community
     example: |
       ```rust
-      use testcontainers_modules::{surrealdb::SurrealDb, testcontainers::runners::AsyncRunner};
-      let surrealdb_container = SurrealDb::default().start().await.unwrap();
+      testcontainers_modules::surrealdb::SurrealDb::default().start()
       ```
     installation: |
       ```bash

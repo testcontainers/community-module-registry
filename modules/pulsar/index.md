@@ -53,6 +53,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.Pulsar
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/pulsar/struct.Pulsar.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::pulsar::Pulsar::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F pulsar --dev testcontainers-modules
+      ```
 description: |
   Apache Pulsar is an open-source, distributed messaging and streaming platform. Messages can be consumed and acknowledged individually or consumed as streams with less than 5ms of latency.
 ---

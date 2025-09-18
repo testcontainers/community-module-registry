@@ -68,6 +68,18 @@ docs:
       ```bash
       pip install testcontainers[kafka]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/kafka/index.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::kafka::confluent::Kafka::default().start()
+      // or also: testcontainers_modules::kafka::apache::Kafka::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F kafka --dev testcontainers-modules
+      ```
 description: |
   Kafka is an open-source distributed event streaming platform for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 ---

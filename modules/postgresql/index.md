@@ -74,6 +74,17 @@ docs:
       ```bash
       pip install testcontainers[postgres]
       ```
+  - id: rust
+    url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/postgres/struct.Postgres.html
+    maintainer: community
+    example: |
+      ```rust
+      testcontainers_modules::postgres::Postgres::default().start()
+      ```
+    installation: |
+      ```bash
+      cargo add -F postgres --dev testcontainers-modules
+      ```
 description: |
   PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 ---
