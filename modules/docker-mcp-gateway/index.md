@@ -41,7 +41,6 @@ docs:
     installation: |
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/dockermcpgateway
-
       ```
 description: |
     The MCP Gateway is Docker's open-source enterprise-ready solution for orchestrating and managing
