@@ -12,15 +12,15 @@ docs:
     maintainer: official
     example: |
       ```java
-      var neo4j = new Neo4jContainer<>(DockerImageName.parse("neo4j:4.4"));
+      var neo4j = new Neo4jContainer("neo4j:4.4");
       neo4j.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>neo4j</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-neo4j</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

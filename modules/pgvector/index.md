@@ -10,15 +10,15 @@ docs:
       ```java
       var image = DockerImageName.parse("pgvector/pgvector:pg16")
           .asCompatibleSubstituteFor("postgres");
-      var pgVector = new PostgreSQLContainer<>(image);
+      var pgVector = new PostgreSQLContainer(image);
       pgVector.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>postgresql</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-postgresql</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

@@ -15,8 +15,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>typesense</artifactId>
-          <version>1.20.3</version>
+          <artifactId>testcontainers-typesense</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

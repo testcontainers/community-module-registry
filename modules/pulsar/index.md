@@ -18,8 +18,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>pulsar</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-pulsar</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

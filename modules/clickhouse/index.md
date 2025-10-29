@@ -15,8 +15,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>clickhouse</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-clickhouse</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

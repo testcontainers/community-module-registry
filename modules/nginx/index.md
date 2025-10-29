@@ -8,15 +8,15 @@ docs:
     maintainer: core
     example: |
       ```java
-      var nginx = new NginxContainer<>(DockerImageName.parse("nginx:1.23.4-alpine"));
+      var nginx = new NginxContainer(DockerImageName.parse("nginx:1.23.4-alpine"));
       nginx.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>nginx</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-nginx</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

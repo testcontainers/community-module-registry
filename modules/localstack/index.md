@@ -18,8 +18,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>localstack</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-localstack</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

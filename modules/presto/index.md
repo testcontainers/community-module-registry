@@ -15,8 +15,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>presto</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-presto</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

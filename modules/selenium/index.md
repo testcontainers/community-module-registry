@@ -8,16 +8,15 @@ docs:
     maintainer: core
     example: |
       ```java
-      var chrome = new BrowserWebDriverContainer<>()
-        withCapabilities(new ChromeOptions())
+      var chrome = new BrowserWebDriverContainer("selenium/standalone-chrome:4.13.0")
       chrome.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>selenium</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-selenium</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

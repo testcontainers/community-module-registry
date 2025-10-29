@@ -17,7 +17,7 @@ docs:
       <dependency>
           <groupId>org.testcontainers</groupId>
           <artifactId>testcontainers</artifactId>
-          <version>1.21.0</version>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

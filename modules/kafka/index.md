@@ -15,8 +15,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>kafka</artifactId>
-          <version>1.20.1</version>
+          <artifactId>testcontainers-kafka</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```
