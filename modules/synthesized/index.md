@@ -13,11 +13,11 @@ docs:
     example: |
       ```java
       //Input JdbcDatabaseContainer: empty database with schema input
-      PostgreSQLContainer<?> input = new PostgreSQLContainer<>("postgres:15-alpine")
+      PostgreSQLContainer input = new PostgreSQLContainer("postgres:15-alpine")
           .withNetwork(network);
 
       //Output JdbcDatabaseContainer: output database with generated data output
-      PostgreSQLContainer<?> output = new PostgreSQLContainer<>("postgres:15-alpine")
+      PostgreSQLContainer output = new PostgreSQLContainer("postgres:15-alpine")
           .withNetwork(network);
 
       String config = """

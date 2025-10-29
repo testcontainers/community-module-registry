@@ -8,15 +8,15 @@ docs:
     maintainer: core
     example: |
       ```java
-      var mariaDB = new MariaDBContainer<>(DockerImageName.parse("mariadb:10.5.5"));
+      var mariaDB = new MariaDBContainer("mariadb:10.5.5");
       mariaDB.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>mariadb</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-mariadb</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

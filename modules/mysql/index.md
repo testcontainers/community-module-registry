@@ -8,15 +8,15 @@ docs:
     maintainer: core
     example: |
       ```java
-      var mysql = new MySQLContainer<>(DockerImageName.parse("mysql:5.7.34"));
+      var mysql = new MySQLContainer(DockerImageName.parse("mysql:5.7.34"));
       mysql.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>mysql</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-mysql</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

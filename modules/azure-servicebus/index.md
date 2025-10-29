@@ -10,7 +10,7 @@ docs:
       ```java
       Network network = Network.newNetwork();
 
-      MSSQLServerContainer<?> mssql = new MSSQLServerContainer<>("mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04")
+      MSSQLServerContainer<?> mssql = new MSSQLServerContainer("mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04")
           .acceptLicense()
           .withNetwork(network);
       mssql.start();
@@ -26,8 +26,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>azure</artifactId>
-          <version>1.20.5</version>
+          <artifactId>testcontainers-azure</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

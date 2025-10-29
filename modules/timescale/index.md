@@ -10,15 +10,15 @@ docs:
       ```java
       var image = DockerImageName.parse("timescale/timescaledb:2.1.0-pg11")
           .asCompatibleSubstituteFor("postgres");
-      var timescale = new PostgreSQLContainer<>(image);
+      var timescale = new PostgreSQLContainer(image);
       timescale.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>postgresql</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-postgresql</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

@@ -8,15 +8,15 @@ docs:
     maintainer: core
     example: |
       ```java
-      var cassandra = new CassandraContainer<>(DockerImageName.parse("cassandra:3.11.2"));
+      var cassandra = new CassandraContainer("cassandra:3.11.2");
       cassandra.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>cassandra</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-cassandra</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

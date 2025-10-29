@@ -15,8 +15,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>scylladb</artifactId>
-          <version>1.20.5</version>
+          <artifactId>testcontainers-scylladb</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

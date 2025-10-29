@@ -9,15 +9,15 @@ docs:
     maintainer: core
     example: |
       ```java
-      var postgres = new PostgreSQLContainer<>(DockerImageName.parse("postgres:16-alpine"));
+      var postgres = new PostgreSQLContainer(DockerImageName.parse("postgres:16-alpine"));
       postgres.start();
       ```
     installation: |
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>postgresql</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-postgresql</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

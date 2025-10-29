@@ -16,8 +16,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>db2</artifactId>
-          <version>1.20.0</version>
+          <artifactId>testcontainers-db2</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```

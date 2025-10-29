@@ -15,8 +15,8 @@ docs:
       ```xml
       <dependency>
           <groupId>org.testcontainers</groupId>
-          <artifactId>timeplus</artifactId>
-          <version>1.20.2</version>
+          <artifactId>testcontainers-timeplus</artifactId>
+          <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
       ```
