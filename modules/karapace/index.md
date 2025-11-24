@@ -8,7 +8,7 @@ docs:
     maintainer: community
     example: |
       ```java
-      var karapace = KarapaceContainer.builder().build();
+      var karapace = KarapaceContainer.builder().karapaceImageName(DockerImageName.parse("aiven-open/karapace:5.0.3")).build();
       karapace.start();
       ```
     installation: |
