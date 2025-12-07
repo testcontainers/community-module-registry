@@ -31,6 +31,20 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/toxiproxy
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Toxiproxy
+    maintainer: core
+    example: |
+      ```csharp
+      var toxiproxyContainer = new ToxiproxyBuilder()
+        .WithImage("ghcr.io/shopify/toxiproxy:2.12.0")
+        .Build();
+      await toxiproxyContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Toxiproxy
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/toxiproxy/
     maintainer: core

@@ -3,6 +3,20 @@ title: Mosquitto
 categories:
   - message-broker
 docs:
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Mosquitto
+    maintainer: core
+    example: |
+      ```csharp
+      var mosquittoContainer = new MosquittoBuilder()
+        .WithImage("eclipse-mosquitto:2.0")
+        .Build();
+      await mosquittoContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Mosquitto
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/mqtt/README.html
     maintainer: core
