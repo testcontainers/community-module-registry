@@ -38,5 +38,5 @@ docs:
       </dependency>
       ```
 description: |
-  VoltDB is a commercial in-memory relational database that is scalable and ACID-compliant. Designed to work with mainly OLTP queries. It is designed to be a distributed database with sharding and data replication. 
+  VoltDB is a commercial in-memory relational database that is scalable and ACID-compliant. Designed to work with mainly OLTP queries. It is designed to be a distributed database with sharding and data replication.
 ---
