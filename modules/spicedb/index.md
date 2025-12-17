@@ -15,7 +15,7 @@ docs:
       go get github.com/Mariscal6/testcontainers-spicedb-go
       ```
   - id: python
-    url: https://github.com/sohanmaheshwar/testcontainers-spicedb-py
+    url: https://pypi.org/project/testcontainers-spicedb/
     maintainer: community
     example: |
       ```python
