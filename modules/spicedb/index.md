@@ -30,7 +30,7 @@ docs:
       ```
     installation: |
       ```bash
-      pip install -e .
+      pip install testcontainers-spicedb
       ```    
 description: |
   SpiceDB is an Open Source, Google Zanzibar-inspired database for scalably storing and querying fine-grained authorization data. 
