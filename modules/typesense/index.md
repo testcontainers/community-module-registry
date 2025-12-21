@@ -25,8 +25,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var typesenseContainer = new TypesenseBuilder()
-        .WithImage("typesense/typesense:28.0")
+      var typesenseContainer = new TypesenseBuilder("typesense/typesense:28.0")
         .Build();
       await typesenseContainer.StartAsync();
       ```

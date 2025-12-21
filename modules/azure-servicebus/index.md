@@ -47,8 +47,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var serviceBusContainer = new ServiceBusBuilder()
-        .WithImage("mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
+      var serviceBusContainer = new ServiceBusBuilder("mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
         .Build();
       await serviceBusContainer.StartAsync();
       ```

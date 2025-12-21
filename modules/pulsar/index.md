@@ -44,8 +44,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var pulsarContainer = new PulsarBuilder()
-        .WithImage("apachepulsar/pulsar:2.10.0")
+      var pulsarContainer = new PulsarBuilder("apachepulsar/pulsar:2.10.0")
         .Build();
       await pulsarContainer.StartAsync();
       ```
