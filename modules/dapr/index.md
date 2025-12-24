@@ -23,6 +23,21 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://github.com/dapr/dotnet-sdk/tree/master/src/Dapr.TestContainers
+    maintainer: community
+    example: |
+      ```csharp
+      var harness = new DaprHarnessBuilder(new DaprRuntimeOptions()).BuildJobs(componentsDirectory);
+      await using var testApp = await DaprHarnessBuilder.ForHarness(harness)
+        .ConfigureServices(services => {})
+        .ConfigureApp(app => {})
+        .BuildAndStartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Dapr.TestContainers
+      ```
 description: |
   Dapr is a CNCF and open-source project that enables developers with consistent application-level APIs to develop secure, scalable, and resilient cloud-native applications.
 ---
