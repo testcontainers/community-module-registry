@@ -15,6 +15,25 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/valkey
       ```
+  - id: java
+    url: https://github.com/ss-bhatt/testcontainers-java-valkey
+    maintainer: community
+    example: |
+      ```java
+      try (ValkeyContainer valkey = new ValkeyContainer(DockerImageName.parse("valkey/valkey:8"))) {
+          valkey.start();
+          // use valkey.getConnectionString()
+      }
+      ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>io.github.ss-bhatt</groupId>
+          <artifactId>testcontainers-valkey</artifactId>
+          <version>1.0.0-SNAPSHOT</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/valkey/
     maintainer: core
