@@ -22,3 +22,17 @@ jobs:
 
       - name: Lint YAML files
         run: find . -name 'index.md' | xargs yamllint --no-warnings -d .yamllint
+
+  check-go-modules:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Check out modules
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332  # v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Check Go modules coverage
+        run: python3 .github/scripts/check_go_modules.py
