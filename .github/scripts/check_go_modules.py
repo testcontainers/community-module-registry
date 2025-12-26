@@ -6,6 +6,7 @@ have corresponding entries in the community-module-registry.
 import sys
 import subprocess
 import tempfile
+import shutil
 from pathlib import Path
 from typing import Dict, List
 
@@ -33,7 +34,8 @@ def get_go_modules(repo_path: Path) -> List[str]:
     
     modules = []
     for item in modules_dir.iterdir():
-        if item.is_dir():
+        # Skip hidden directories and files
+        if item.is_dir() and not item.name.startswith('.'):
             modules.append(item.name)
     
     return sorted(modules)
@@ -149,7 +151,6 @@ def main():
             sys.exit(0)
     finally:
         # Clean up temporary directory
-        import shutil
         if go_repo_path.exists():
             shutil.rmtree(go_repo_path)
 
