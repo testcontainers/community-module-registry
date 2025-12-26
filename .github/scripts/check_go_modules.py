@@ -6,6 +6,7 @@ have corresponding entries in the community-module-registry.
 import sys
 import os
 import subprocess
+import tempfile
 from pathlib import Path
 from typing import Dict, List, Set
 
@@ -33,7 +34,7 @@ def get_go_modules(repo_path: Path) -> List[str]:
     
     modules = []
     for item in modules_dir.iterdir():
-        if item.is_dir() and item.name != "Makefile":
+        if item.is_dir():
             modules.append(item.name)
     
     return sorted(modules)
@@ -100,13 +101,15 @@ def main():
     registry_path = script_dir.parent.parent  # Go up to repo root
     
     # Clone testcontainers-go if needed
-    go_repo_path = Path("/tmp/testcontainers-go")
+    # Use a temporary directory to avoid conflicts
+    go_repo_path = Path(tempfile.gettempdir()) / "testcontainers-go-check"
     if not go_repo_path.exists():
         print("Cloning testcontainers-go repository...")
         result = subprocess.run(
             ["git", "clone", "--depth", "1", "https://github.com/testcontainers/testcontainers-go.git", str(go_repo_path)],
             capture_output=True,
-            text=True
+            text=True,
+            timeout=300  # 5 minute timeout
         )
         if result.returncode != 0:
             print(f"Error cloning repository: {result.stderr}", file=sys.stderr)
