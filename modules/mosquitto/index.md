@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var mosquittoContainer = new MosquittoBuilder()
-        .WithImage("eclipse-mosquitto:2.0")
+      var mosquittoContainer = new MosquittoBuilder("eclipse-mosquitto:2.0")
         .Build();
       await mosquittoContainer.StartAsync();
       ```

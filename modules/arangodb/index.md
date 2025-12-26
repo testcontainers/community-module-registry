@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var arangodb = new ArangoDbBuilder()
-        .WithImage("arangodb:3.11.5")
+      var arangodb = new ArangoDbBuilder("arangodb:3.11.5")
         .Build();
       await arangodb.StartAsync();
       ```

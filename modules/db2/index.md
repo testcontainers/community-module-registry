@@ -26,8 +26,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var db2Container = new Db2Builder()
-        .WithImage("icr.io/db2_community/db2:12.1.0.0")
+      var db2Container = new Db2Builder("icr.io/db2_community/db2:12.1.0.0")
         .Build();
       await db2Container.StartAsync();
       ```

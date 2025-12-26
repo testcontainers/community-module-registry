@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var janusGraphContainer = new JanusGraphBuilder()
-        .WithImage("janusgraph/janusgraph:1.0.0")
+      var janusGraphContainer = new JanusGraphBuilder("janusgraph/janusgraph:1.0.0")
         .Build();
       await janusGraphContainer.StartAsync();
       ```

@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var rabbitMqContainer = new RabbitMqBuilder()
-        .WithImage("rabbitmq:3.11")
+      var rabbitMqContainer = new RabbitMqBuilder("rabbitmq:3.11")
         .Build();
       await rabbitMqContainer.StartAsync();
       ```

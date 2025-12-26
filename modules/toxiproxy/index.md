@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var toxiproxyContainer = new ToxiproxyBuilder()
-        .WithImage("ghcr.io/shopify/toxiproxy:2.12.0")
+      var toxiproxyContainer = new ToxiproxyBuilder("ghcr.io/shopify/toxiproxy:2.12.0")
         .Build();
       await toxiproxyContainer.StartAsync();
       ```

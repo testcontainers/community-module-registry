@@ -43,8 +43,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var timescaleContainer = new PostgreSqlBuilder()
-        .WithImage("timescale/timescaledb:2.1.0-pg11")
+      var timescaleContainer = new PostgreSqlBuilder("timescale/timescaledb:2.1.0-pg11")
         .Build();
       await timescaleContainer.StartAsync();
       ```

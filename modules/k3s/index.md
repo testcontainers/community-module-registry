@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var k3sConainter = new K3sBuilder()
-        .WithImage("rancher/k3s:v1.26.2-k3s1")
+      var k3sConainter = new K3sBuilder("rancher/k3s:v1.26.2-k3s1")
         .Build();
       await k3sConainter.StartAsync();
       ```

@@ -44,8 +44,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var neo4jContainer = new Neo4jBuilder()
-        .WithImage("neo4j:5.4")
+      var neo4jContainer = new Neo4jBuilder("neo4j:5.4")
         .Build();
       await neo4jContainer.StartAsync();
       ```

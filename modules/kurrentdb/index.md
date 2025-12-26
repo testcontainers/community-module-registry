@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var kurrentDbContainer = new KurrentDbBuilder()
-        .WithImage("kurrentplatform/kurrentdb:25.1")
+      var kurrentDbContainer = new KurrentDbBuilder("kurrentplatform/kurrentdb:25.1")
         .Build();
       await kurrentDbContainer.StartAsync();
       ```

@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var playwrightContainer = new PlaywrightBuilder()
-        .WithImage("mcr.microsoft.com/playwright:v1.55.1")
+      var playwrightContainer = new PlaywrightBuilder("mcr.microsoft.com/playwright:v1.55.1")
         .Build();
       await playwrightContainer.StartAsync();
       ```

@@ -19,8 +19,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var natsContainer = new NatsBuilder()
-        .WithImage("nats:2.9")
+      var natsContainer = new NatsBuilder("nats:2.9")
         .Build();
       await natsContainer.StartAsync();
       ```

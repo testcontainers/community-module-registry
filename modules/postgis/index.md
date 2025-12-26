@@ -43,8 +43,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var postgisContainer = new PostgreSqlBuilder()
-        .WithImage("postgis/postgis:12-3.0")
+      var postgisContainer = new PostgreSqlBuilder("postgis/postgis:12-3.0")
         .Build();
       await postgisContainer.StartAsync();
       ```

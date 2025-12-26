@@ -25,8 +25,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var oracleContainer = new OracleBuilder()
-        .WithImage("gvenzl/oracle-xe:21.3.0-slim-faststart")
+      var oracleContainer = new OracleBuilder("gvenzl/oracle-xe:21.3.0-slim-faststart")
         .Build();
       await oracleContainer.StartAsync();
       ```

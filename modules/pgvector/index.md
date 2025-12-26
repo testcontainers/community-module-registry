@@ -43,8 +43,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var pgVectorContainer = new PostgreSqlBuilder()
-        .WithImage("pgvector/pgvector:pg16")
+      var pgVectorContainer = new PostgreSqlBuilder("pgvector/pgvector:pg16")
         .Build();
       await pgVectorContainer.StartAsync();
       ```

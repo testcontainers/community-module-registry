@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var kafkaContainer = new KafkaBuilder()
-        .WithImage("confluentinc/cp-kafka:6.2.10")
+      var kafkaContainer = new KafkaBuilder("confluentinc/cp-kafka:6.2.10")
         .Build();
       await kafkaContainer.StartAsync();
       ```

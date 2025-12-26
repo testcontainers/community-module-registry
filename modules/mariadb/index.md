@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var mariaDbContainer = new MariaDbBuilder()
-        .WithImage("mariadb:10.10")
+      var mariaDbContainer = new MariaDbBuilder("mariadb:10.10")
         .Build();
       await mariaDbContainer.StartAsync();
       ```

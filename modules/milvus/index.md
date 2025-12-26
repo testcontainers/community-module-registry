@@ -35,8 +35,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var milvusContainer = new MilvusBuilder()
-        .WithImage("milvusdb/milvus:v2.3.10")
+      var milvusContainer = new MilvusBuilder("milvusdb/milvus:v2.3.10")
         .Build();
       await milvusContainer.StartAsync();
       ```

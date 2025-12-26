@@ -41,8 +41,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var couchbaseContainer = new CouchbaseBuilder()
-        .WithImage("couchbase:community-7.0.2")
+      var couchbaseContainer = new CouchbaseBuilder("couchbase:community-7.0.2")
         .Build();
       await couchbaseContainer.StartAsync();
       ```

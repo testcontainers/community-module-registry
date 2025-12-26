@@ -38,8 +38,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var weaviateContainer = new WeaviateBuilder()
-        .WithImage("semitechnologies/weaviate:1.26.14")
+      var weaviateContainer = new WeaviateBuilder("semitechnologies/weaviate:1.26.14")
         .Build();
       await weaviateContainer.StartAsync();
       ```

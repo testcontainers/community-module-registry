@@ -24,8 +24,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var fakeGcsServerContainer = new FakeGcsServerBuilder()
-        .WithImage("fsouza/fake-gcs-server:1.47")
+      var fakeGcsServerContainer = new FakeGcsServerBuilder("fsouza/fake-gcs-server:1.47")
         .Build();
       await fakeGcsServerContainer.StartAsync();
       ```

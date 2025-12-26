@@ -37,8 +37,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var elasticsearchContainer = new ElasticsearchBuilder()
-        .WithImage("elasticsearch:8.6.1")
+      var elasticsearchContainer = new ElasticsearchBuilder("elasticsearch:8.6.1")
         .Build();
       await elasticsearchContainer.StartAsync();
       ```

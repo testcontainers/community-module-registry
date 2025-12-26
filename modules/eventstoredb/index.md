@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var eventStoreDbContainer = new EventStoreDbBuilder()
-        .WithImage("eventstore/eventstore:22.10.1-buster-slim")
+      var eventStoreDbContainer = new EventStoreDbBuilder("eventstore/eventstore:22.10.1-buster-slim")
         .Build();
       await eventStoreDbContainer.StartAsync();
       ```

@@ -38,8 +38,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var qdrantContainer = new QdrantBuilder()
-        .WithImage("qdrant/qdrant:v1.13.4")
+      var qdrantContainer = new QdrantBuilder("qdrant/qdrant:v1.13.4")
         .Build();
       await qdrantContainer.StartAsync();
       ```

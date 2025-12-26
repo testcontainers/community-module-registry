@@ -37,8 +37,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var redisContainer = new RedisBuilder()
-        .WithImage("redis:7.0")
+      var redisContainer = new RedisBuilder("redis:7.0")
         .Build();
       await redisContainer.StartAsync();
       ```

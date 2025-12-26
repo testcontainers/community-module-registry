@@ -38,8 +38,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var cosmosDbContainer = new CosmosDbBuilder()
-        .WithImage("mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest")
+      var cosmosDbContainer = new CosmosDbBuilder("mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest")
         .Build();
       await cosmosDbContainer.StartAsync();
       ```

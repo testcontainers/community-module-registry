@@ -39,8 +39,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var cockroachDbContainer = new CockroachDbBuilder()
-        .WithImage("cockroachdb/cockroach:latest-v23.1")
+      var cockroachDbContainer = new CockroachDbBuilder("cockroachdb/cockroach:latest-v23.1")
         .Build();
       await cockroachDbContainer.StartAsync();
       ```

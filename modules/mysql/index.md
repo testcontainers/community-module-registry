@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var mySqlContainer = new MySqlBuilder()
-        .WithImage("mysql:8.0")
+      var mySqlContainer = new MySqlBuilder("mysql:8.0")
         .Build();
       await mySqlContainer.StartAsync();
       ```

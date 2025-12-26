@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var ravenDbContainer = new RavenDbBuilder()
-        .WithImage("ravendb/ravendb:5.4-ubuntu-latest")
+      var ravenDbContainer = new RavenDbBuilder("ravendb/ravendb:5.4-ubuntu-latest")
         .Build();
       await ravenDbContainer.StartAsync();
       ```
