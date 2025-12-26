@@ -4,11 +4,10 @@ This script validates that all Go modules from testcontainers-go repository
 have corresponding entries in the community-module-registry.
 """
 import sys
-import os
 import subprocess
 import tempfile
 from pathlib import Path
-from typing import Dict, List, Set
+from typing import Dict, List
 
 # Define known mappings where Go module names differ from registry names
 MODULE_MAPPINGS = {
@@ -52,7 +51,7 @@ def get_registry_modules_with_go(registry_path: Path) -> Dict[str, bool]:
         if module_dir.is_dir():
             index_file = module_dir / "index.md"
             if index_file.exists():
-                content = index_file.read_text()
+                content = index_file.read_text(encoding='utf-8')
                 has_go = "id: go" in content
                 modules[module_dir.name] = has_go
     
@@ -100,10 +99,9 @@ def main():
     script_dir = Path(__file__).parent
     registry_path = script_dir.parent.parent  # Go up to repo root
     
-    # Clone testcontainers-go if needed
-    # Use a temporary directory to avoid conflicts
-    go_repo_path = Path(tempfile.gettempdir()) / "testcontainers-go-check"
-    if not go_repo_path.exists():
+    # Clone testcontainers-go to a unique temporary directory
+    go_repo_path = Path(tempfile.mkdtemp(prefix="testcontainers-go-"))
+    try:
         print("Cloning testcontainers-go repository...")
         result = subprocess.run(
             ["git", "clone", "--depth", "1", "https://github.com/testcontainers/testcontainers-go.git", str(go_repo_path)],
@@ -115,40 +113,45 @@ def main():
             print(f"Error cloning repository: {result.stderr}", file=sys.stderr)
             sys.exit(1)
     
-    # Get modules
-    print("Checking Go modules coverage...")
-    go_modules = get_go_modules(go_repo_path)
-    registry_modules = get_registry_modules_with_go(registry_path)
-    
-    # Check coverage
-    missing_modules, missing_go_support = check_coverage(go_modules, registry_modules)
-    
-    # Report results
-    print(f"\n{'='*80}")
-    print(f"Go Modules Coverage Report")
-    print(f"{'='*80}")
-    print(f"Total Go modules: {len(go_modules)}")
-    print(f"Utility modules (skipped): {len(UTILITY_MODULES)} ({', '.join(UTILITY_MODULES)})")
-    print(f"Modules checked: {len(go_modules) - len(UTILITY_MODULES)}")
-    
-    if missing_modules or missing_go_support:
-        print(f"\n❌ VALIDATION FAILED")
+        # Get modules
+        print("Checking Go modules coverage...")
+        go_modules = get_go_modules(go_repo_path)
+        registry_modules = get_registry_modules_with_go(registry_path)
         
-        if missing_modules:
-            print(f"\nMissing {len(missing_modules)} module(s) in registry:")
-            for mod in missing_modules:
-                print(f"  - {mod}")
+        # Check coverage
+        missing_modules, missing_go_support = check_coverage(go_modules, registry_modules)
         
-        if missing_go_support:
-            print(f"\nMissing Go support in {len(missing_go_support)} existing module(s):")
-            for mod in missing_go_support:
-                print(f"  - {mod}")
+        # Report results
+        print(f"\n{'='*80}")
+        print(f"Go Modules Coverage Report")
+        print(f"{'='*80}")
+        print(f"Total Go modules: {len(go_modules)}")
+        print(f"Utility modules (skipped): {len(UTILITY_MODULES)} ({', '.join(UTILITY_MODULES)})")
+        print(f"Modules checked: {len(go_modules) - len(UTILITY_MODULES)}")
         
-        sys.exit(1)
-    else:
-        print(f"\n✅ VALIDATION PASSED")
-        print(f"All Go modules from testcontainers-go are covered in the community-module-registry!")
-        sys.exit(0)
+        if missing_modules or missing_go_support:
+            print(f"\n❌ VALIDATION FAILED")
+            
+            if missing_modules:
+                print(f"\nMissing {len(missing_modules)} module(s) in registry:")
+                for mod in missing_modules:
+                    print(f"  - {mod}")
+            
+            if missing_go_support:
+                print(f"\nMissing Go support in {len(missing_go_support)} existing module(s):")
+                for mod in missing_go_support:
+                    print(f"  - {mod}")
+            
+            sys.exit(1)
+        else:
+            print(f"\n✅ VALIDATION PASSED")
+            print(f"All Go modules from testcontainers-go are covered in the community-module-registry!")
+            sys.exit(0)
+    finally:
+        # Clean up temporary directory
+        import shutil
+        if go_repo_path.exists():
+            shutil.rmtree(go_repo_path)
 
 
 if __name__ == "__main__":
