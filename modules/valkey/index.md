@@ -30,7 +30,7 @@ docs:
       <dependency>
           <groupId>io.github.ss-bhatt</groupId>
           <artifactId>testcontainers-valkey</artifactId>
-          <version>1.0.0-SNAPSHOT</version>
+          <version>1.0.0</version>
           <scope>test</scope>
       </dependency>
       ```
