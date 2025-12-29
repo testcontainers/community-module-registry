@@ -3,6 +3,23 @@ title: NATS
 categories:
   - message-broker
 docs:
+  - id: java
+    url: https://github.com/AmadeusITGroup/nats-testcontainers-java
+    maintainer: community
+    example: |
+      ```java
+      var nats = new NatsContainer("nats:2.9");
+      nats.start();
+      ```
+    installation: |
+      ```xml
+      <dependency>
+          <groupId>io.github.amadeusitgroup.testcontainers</groupId>
+          <artifactId>nats</artifactId>
+          <version>1.0.9</version>
+          <scope>test</scope>
+      </dependency>
+      ```
   - id: go
     url: https://golang.testcontainers.org/modules/nats/
     maintainer: core
