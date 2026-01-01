@@ -22,6 +22,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/azure/#cosmosdb
+    maintainer: core
+    example: |
+      ```go
+      cosmosContainer, err := cosmosdb.Run(context.Background(), "mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/azure
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.CosmosDb
     maintainer: core
