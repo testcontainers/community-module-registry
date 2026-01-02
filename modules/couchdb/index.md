@@ -5,7 +5,6 @@ categories:
 docs:
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.CouchDb
-    maintainer: core
     example: |
       ```csharp
       var couchDbContainer = new CouchDbBuilder("couchdb:3.3")
