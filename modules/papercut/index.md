@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var papercutContainer = new PapercutBuilder("changemakerstudiosus/papercut-smtp:latest")
+      var papercutContainer = new PapercutBuilder("changemakerstudiosus/papercut-smtp:7.0")
         .Build();
       await papercutContainer.StartAsync();
       ```
