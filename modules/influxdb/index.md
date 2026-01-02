@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var influxDbContainer = new InfluxDbBuilder()
-        .WithImage("influxdb:2.7")
+      var influxDbContainer = new InfluxDbBuilder("influxdb:2.7")
         .Build();
       await influxDbContainer.StartAsync();
       ```

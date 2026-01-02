@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var cassandraContainer = new CassandraBuilder()
-        .WithImage("cassandra:5.0")
+      var cassandraContainer = new CassandraBuilder("cassandra:5.0")
         .Build();
       await cassandraContainer.StartAsync();
       ```

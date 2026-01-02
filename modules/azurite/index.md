@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var AzuriteContainer = new AzuriteBuilder()
-        .WithImage("mcr.microsoft.com/azure-storage/azurite:3.23.0")
+      var AzuriteContainer = new AzuriteBuilder("mcr.microsoft.com/azure-storage/azurite:3.23.0")
         .Build();
       await AzuriteContainer.StartAsync();
       ```

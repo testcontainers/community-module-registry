@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var artemisContainer = new ArtemisBuilder()
-        .WithImage("apache/activemq-artemis:2.31.2")
+      var artemisContainer = new ArtemisBuilder("apache/activemq-artemis:2.31.2")
         .Build();
         await artemisContainer.StartAsync();
       ```

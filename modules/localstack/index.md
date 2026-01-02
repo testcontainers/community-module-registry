@@ -39,8 +39,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var localStackContainer = new LocalStackBuilder()
-        .WithImage("localstack/localstack:2.0")
+      var localStackContainer = new LocalStackBuilder("localstack/localstack:2.0")
         .Build();
       await localStackContainer.StartAsync();
       ```
