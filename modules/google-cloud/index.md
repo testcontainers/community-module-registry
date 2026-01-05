@@ -47,8 +47,7 @@ docs:
       // The services follow the naming convention:
       // FirestoreBuilder, FirestoreContainer, etc.
 
-      var firestoreContainer = new FirestoreBuilder()
-        .WithImage("gcr.io/google.com/cloudsdktool/google-cloud-cli:446.0.1-emulators")
+      var firestoreContainer = new FirestoreBuilder("gcr.io/google.com/cloudsdktool/google-cloud-cli:446.0.1-emulators")
         .Build();
       await firestoreContainer.StartAsync();
       ```

@@ -40,8 +40,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var msSqlContainer = new MsSqlBuilder()
-        .WithImage("mcr.microsoft.com/mssql/server:2022-CU10-ubuntu-22.04")
+      var msSqlContainer = new MsSqlBuilder("mcr.microsoft.com/mssql/server:2022-CU10-ubuntu-22.04")
         .Build();
       await msSqlContainer.StartAsync();
       ```

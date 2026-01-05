@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var consulContainer = new ConsulBuilder()
-        .WithImage("consul:1.15")
+      var consulContainer = new ConsulBuilder("consul:1.15")
         .Build();
       await consulContainer.StartAsync();
       ```
