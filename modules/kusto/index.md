@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var kustoContainer = new KustoBuilder()
-        .WithImage("mcr.microsoft.com/azuredataexplorer/kustainer-linux:latest")
+      var kustoContainer = new KustoBuilder("mcr.microsoft.com/azuredataexplorer/kustainer-linux:latest")
         .Build();
       await kustoContainer.StartAsync();
       ```

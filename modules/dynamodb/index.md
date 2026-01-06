@@ -19,8 +19,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var dynamoDbContainer = new DynamoDbBuilder()
-        .WithImage("amazon/dynamodb-local:1.21.0")
+      var dynamoDbContainer = new DynamoDbBuilder("amazon/dynamodb-local:1.21.0")
         .Build();
       await dynamoDbContainer.StartAsync();
       ```
