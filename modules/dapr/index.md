@@ -29,7 +29,7 @@ docs:
     example: |
       ```csharp
       var options = new DaprRuntimeOptions("1.16.0");
-      var componentsDirectory = Path.Combine(Directory.GetCurrentDirectory(),
+      var componentsDirectory = Path.Combine(Directory.GetCurrentDirectory());
       var harness = new DaprHarnessBuilder(options).BuildJobs(componentsDirectory);
       await using var testApp = await DaprHarnessBuilder.ForHarness(harness)
         .ConfigureServices(services => {})
