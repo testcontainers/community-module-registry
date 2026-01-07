@@ -39,8 +39,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var redpandaContainer = new RedpandaBuilder()
-        .WithImage("docker.redpanda.com/redpandadata/redpanda:v22.2.1")
+      var redpandaContainer = new RedpandaBuilder("docker.redpanda.com/redpandadata/redpanda:v22.2.1")
         .Build();
       await redpandaContainer.StartAsync();
       ```

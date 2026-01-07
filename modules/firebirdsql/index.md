@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var firebirdContainer = new FirebirdSqlBuilder()
-        .WithImage("jacobalberty/firebird:v4.0")
+      var firebirdContainer = new FirebirdSqlBuilder("jacobalberty/firebird:v4.0")
         .Build();
       await firebirdContainer.StartAsync();
       ```

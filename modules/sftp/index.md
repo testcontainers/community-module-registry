@@ -8,8 +8,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var sftpContainer = new SftpBuilder()
-        .WithImage("atmoz/sftp:alpine")
+      var sftpContainer = new SftpBuilder("atmoz/sftp:alpine")
         .Build();
       await sftpContainer.StartAsync();
       ```

@@ -37,8 +37,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var openSearchContainer = new OpenSearchBuilder()
-        .WithImage("opensearchproject/opensearch:2.12.0")
+      var openSearchContainer = new OpenSearchBuilder("opensearchproject/opensearch:2.12.0")
         .Build();
       await openSearchContainer.StartAsync();
       ```
