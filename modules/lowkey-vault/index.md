@@ -27,8 +27,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var lowkeyVaultContainer = new LowkeyVaultBuilder()
-        .WithImage("nagyesta/lowkey-vault:4.0.0-ubi9-minimal")
+      var lowkeyVaultContainer = new LowkeyVaultBuilder("nagyesta/lowkey-vault:4.0.0-ubi9-minimal")
         .Build();
       await lowkeyVaultContainer.StartAsync();
       ```

@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var minioContainer = new MinioBuilder()
-        .WithImage("minio/minio:RELEASE.2023-01-31T02-24-19Z")
+      var minioContainer = new MinioBuilder("minio/minio:RELEASE.2023-01-31T02-24-19Z")
         .Build();
       await minioContainer.StartAsync();
       ```

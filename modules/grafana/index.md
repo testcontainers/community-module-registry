@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var grafanaContainer = new GrafanaBuilder()
-        .WithImage("grafana/grafana:12.2")
+      var grafanaContainer = new GrafanaBuilder("grafana/grafana:12.2")
         .Build();
       await grafanaContainer.StartAsync();
       ```
