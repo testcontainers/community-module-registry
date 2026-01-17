@@ -43,8 +43,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var keycloakContainer = new KeycloakBuilder()
-        .WithImage("quay.io/keycloak/keycloak:21.1")
+      var keycloakContainer = new KeycloakBuilder("quay.io/keycloak/keycloak:21.1")
         .Build();
       await keycloakContainer.StartAsync();
       ```

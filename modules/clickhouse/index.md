@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var clickHouseContainer = new ClickHouseBuilder()
-        .WithImage("clickhouse/clickhouse-server:23.6-alpine")
+      var clickHouseContainer = new ClickHouseBuilder("clickhouse/clickhouse-server:23.6-alpine")
         .Build();
       await clickHouseContainer.StartAsync();
       ```

@@ -42,8 +42,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var postgreSqlContainer = new PostgreSqlBuilder()
-        .WithImage("postgres:16")
+      var postgreSqlContainer = new PostgreSqlBuilder("postgres:16")
         .Build();
       await postgreSqlContainer.StartAsync();
       ```

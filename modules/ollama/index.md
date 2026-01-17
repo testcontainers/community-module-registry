@@ -41,8 +41,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var ollamaContainer = new OllamaBuilder()
-        .WithImage("ollama/ollama:0.6.6")
+      var ollamaContainer = new OllamaBuilder("ollama/ollama:0.6.6")
         .Build();
       await ollamaContainer.StartAsync();
       ```
