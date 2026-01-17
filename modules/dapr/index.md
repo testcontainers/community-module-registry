@@ -19,7 +19,7 @@ docs:
       <dependency>
           <groupId>io.dapr</groupId>
           <artifactId>testcontainers-dapr</artifactId>
-          <version>1.16.4</version>
+          <version>1.16.0</version>
           <scope>test</scope>
       </dependency>
       ```
