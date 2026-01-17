@@ -24,11 +24,11 @@ docs:
       </dependency>
       ```
   - id: dotnet
-    url: https://github.com/dapr/dotnet-sdk/tree/master/src/Dapr.TestContainers
+    url: https://github.com/dapr/dotnet-sdk/tree/master/src/Dapr.Testcontainers
     maintainer: community
     example: |
       ```csharp
-      var options = new DaprRuntimeOptions("1.16.0");
+      var options = new DaprRuntimeOptions(); // Defaults to the latest version, or provide a specific version to use
       var componentsDirectory = Path.Combine(Directory.GetCurrentDirectory());
       var harness = new DaprHarnessBuilder(options).BuildJobs(componentsDirectory);
       await using var testApp = await DaprHarnessBuilder.ForHarness(harness)
@@ -38,7 +38,7 @@ docs:
       ```
     installation: |
       ```bash
-      dotnet add package Dapr.TestContainers
+      dotnet add package Dapr.Testcontainers
       ```
 description: |
   Dapr is a CNCF and open-source project that enables developers with consistent application-level APIs to develop secure, scalable, and resilient cloud-native applications.
