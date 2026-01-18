@@ -21,6 +21,14 @@ docs:
       ```bash
       pip install testcontainers[mailpit]
       ```
+  - id: java
+    url: https://github.com/martinellich/testcontainers-mailpit
+    maintainer: community
+    example: |
+      ```java
+      var mailpit = new MailpitContainer();
+      mailpit.start();
+      ```
 description: |
   Mailpit is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers.
 ---
