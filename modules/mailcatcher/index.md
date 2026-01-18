@@ -10,8 +10,7 @@ docs:
       ```java
       var mailCatcher = new MailCatcherContainer();
       mailCatcher.start();
-      ```      
+      ```
 description: |
   MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface.
 ---
-

@@ -28,7 +28,7 @@ docs:
       ```java
       var mailpit = new MailpitContainer();
       mailpit.start();
-      ```      
+      ```
 description: |
   Mailpit is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers.
 ---
