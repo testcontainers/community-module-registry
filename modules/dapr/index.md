@@ -11,7 +11,7 @@ docs:
     maintainer: official
     example: |
       ```java
-      var dapr = new DaprContainer("daprio/daprd:1.16.0");
+      var dapr = new DaprContainer("daprio/daprd:1.16.4");
       dapr.start();
       ```
     installation: |
@@ -23,6 +23,16 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: nodejs
+    url: https://github.com/dapr/testcontainer-node
+    maintainer: official
+    example: |
+      ```javascript
+      const dapr = await new DaprContainer("daprio/daprd:1.16.4").start();
+      ```
+    installation: |
+      ```bash
+      npm install @dapr/testcontainer-node --save-dev
   - id: dotnet
     url: https://github.com/dapr/dotnet-sdk/tree/master/src/Dapr.Testcontainers
     maintainer: community
