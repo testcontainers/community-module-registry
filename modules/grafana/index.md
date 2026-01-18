@@ -31,6 +31,19 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/grafanalgtm
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Grafana
+    maintainer: core
+    example: |
+      ```csharp
+      var grafanaContainer = new GrafanaBuilder("grafana/grafana:12.2")
+        .Build();
+      await grafanaContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Grafana
+      ```
 description: |
   Grafana is the open source analytics & monitoring solution for every database.
 ---

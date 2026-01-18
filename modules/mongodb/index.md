@@ -36,8 +36,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var mongoDbContainer = new MongoDbBuilder()
-        .WithImage("mongo:6.0")
+      var mongoDbContainer = new MongoDbBuilder("mongo:6.0")
         .Build();
       await mongoDbContainer.StartAsync();
       ```

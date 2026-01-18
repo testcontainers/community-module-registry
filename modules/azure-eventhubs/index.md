@@ -44,8 +44,7 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var eventHubsContainer = new EventHubsBuilder()
-        .WithImage("mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest")
+      var eventHubsContainer = new EventHubsBuilder("mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest")
         .Build();
       await eventHubsContainer.StartAsync();
       ```
