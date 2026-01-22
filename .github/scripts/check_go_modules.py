@@ -12,6 +12,9 @@ import tempfile
 import shutil
 import os
 import json
+import urllib.request
+import urllib.error
+import urllib.parse
 from pathlib import Path
 from typing import Dict, List
 
@@ -28,6 +31,9 @@ MODULE_MAPPINGS = {
 # Utility modules that don't represent standalone services
 # These are infrastructure/utility modules and don't need catalog entries
 UTILITY_MODULES = ["compose", "socat"]
+
+# GitHub API timeout in seconds
+GITHUB_API_TIMEOUT = 30
 
 
 def get_go_modules(repo_path: Path) -> List[str]:
@@ -109,6 +115,37 @@ def check_coverage(go_modules: List[str], registry_modules: Dict[str, bool]) -> 
             })
     
     return missing_modules, missing_go_support
+
+
+def check_existing_issue(token: str, module_name: str) -> bool:
+    """Check if an issue already exists for the missing module.
+    
+    Args:
+        token: GitHub API token
+        module_name: Name of the module to check
+        
+    Returns:
+        True if an issue already exists, False otherwise
+    """
+    # Search for existing issues
+    search_query = f"repo:testcontainers/testcontainers-go is:issue is:open \"Add {module_name} module to community module registry\" in:title"
+    url = f"https://api.github.com/search/issues?q={urllib.parse.quote(search_query)}"
+    
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=GITHUB_API_TIMEOUT) as response:
+            result = json.loads(response.read().decode('utf-8'))
+            return result.get('total_count', 0) > 0
+    except Exception as e:
+        # If we can't check, assume no issue exists to avoid blocking
+        print(f"  ! Could not check for existing issue for {module_name}: {str(e)}", file=sys.stderr)
+        return False
 
 
 def create_github_issue(token: str, module_info: dict) -> bool:
@@ -199,9 +236,9 @@ def create_github_issue(token: str, module_info: dict) -> bool:
     url = "https://api.github.com/repos/testcontainers/testcontainers-go/issues"
     
     headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
-        "Content-Type": "application/json",
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
     }
     
     data = json.dumps({
@@ -212,7 +249,7 @@ def create_github_issue(token: str, module_info: dict) -> bool:
     
     try:
         req = urllib.request.Request(url, data=data, headers=headers, method='POST')
-        with urllib.request.urlopen(req, timeout=30) as response:
+        with urllib.request.urlopen(req, timeout=GITHUB_API_TIMEOUT) as response:
             result = json.loads(response.read().decode('utf-8'))
             issue_url = result.get('html_url', '')
             print(f"  ✓ Created issue for {module_name}: {issue_url}")
@@ -277,12 +314,18 @@ def main():
                 
                 # Create GitHub issues if token is available
                 if github_token:
-                    print(f"\nCreating GitHub issues for missing modules...")
+                    print(f"\nChecking for existing issues and creating new ones for missing modules...")
                     success_count = 0
+                    skipped_count = 0
                     for mod in missing_modules:
-                        if create_github_issue(github_token, mod):
+                        # Check if issue already exists
+                        if check_existing_issue(github_token, mod['name']):
+                            print(f"  ⊘ Issue already exists for {mod['name']}, skipping")
+                            skipped_count += 1
+                        elif create_github_issue(github_token, mod):
                             success_count += 1
-                    print(f"\nCreated {success_count} of {len(missing_modules)} issues successfully.")
+                    
+                    print(f"\nCreated {success_count} new issue(s), skipped {skipped_count} existing issue(s) out of {len(missing_modules)} total.")
                 else:
                     print(f"\nNote: Set GITHUB_TOKEN environment variable to automatically create issues for missing modules.")
             
