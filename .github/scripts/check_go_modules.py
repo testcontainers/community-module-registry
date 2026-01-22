@@ -127,8 +127,9 @@ def check_existing_issue(token: str, module_name: str) -> bool:
     Returns:
         True if an issue already exists, False otherwise
     """
-    # Search for existing issues
-    search_query = f"repo:testcontainers/testcontainers-go is:issue is:open \"Add {module_name} module to community module registry\" in:title"
+    # Search for existing issues - escape the module name in the search query
+    escaped_module = module_name.replace('"', '\\"')
+    search_query = f"repo:testcontainers/testcontainers-go is:issue is:open \"Add {escaped_module} module to community module registry\" in:title"
     url = f"https://api.github.com/search/issues?q={urllib.parse.quote(search_query)}"
     
     headers = {
@@ -177,7 +178,7 @@ def create_github_issue(token: str, module_info: dict) -> bool:
         "2. Create a new module directory:",
     ]
     
-    if mapped_to:
+    if mapped_to and len(mapped_to) > 0:
         body_parts.extend([
             f"   - The module should be named `{mapped_to[0]}` (or one of: {', '.join(mapped_to)})",
             f"   - Create directory: `modules/{mapped_to[0]}/`",
@@ -230,9 +231,6 @@ def create_github_issue(token: str, module_info: dict) -> bool:
     body = "\n".join(body_parts)
     
     # Create the issue using GitHub API
-    import urllib.request
-    import urllib.error
-    
     url = "https://api.github.com/repos/testcontainers/testcontainers-go/issues"
     
     headers = {
