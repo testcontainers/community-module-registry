@@ -2,11 +2,16 @@
 """
 This script validates that all Go modules from testcontainers-go repository
 have corresponding entries in the community-module-registry.
+
+When missing modules are detected and a GitHub token is provided, it will
+create issues in the testcontainers-go repository to track the missing modules.
 """
 import sys
 import subprocess
 import tempfile
 import shutil
+import os
+import json
 from pathlib import Path
 from typing import Dict, List
 
@@ -61,7 +66,11 @@ def get_registry_modules_with_go(registry_path: Path) -> Dict[str, bool]:
 
 
 def check_coverage(go_modules: List[str], registry_modules: Dict[str, bool]) -> tuple:
-    """Check if all Go modules are covered in the registry."""
+    """Check if all Go modules are covered in the registry.
+    
+    Returns a tuple of (missing_modules_info, missing_go_support) where
+    missing_modules_info is a list of dicts with 'name' and 'mapped_to' keys.
+    """
     missing_modules = []
     missing_go_support = []
     
@@ -87,19 +96,143 @@ def check_coverage(go_modules: List[str], registry_modules: Dict[str, bool]) -> 
                     found = True
                     break
             if not found:
-                missing_modules.append(f"{go_mod} (maps to {', '.join(mapped_names)})")
+                missing_modules.append({
+                    'name': go_mod,
+                    'mapped_to': mapped_names
+                })
                 continue
         else:
             # Not found anywhere
-            missing_modules.append(go_mod)
+            missing_modules.append({
+                'name': go_mod,
+                'mapped_to': None
+            })
     
     return missing_modules, missing_go_support
+
+
+def create_github_issue(token: str, module_info: dict) -> bool:
+    """Create a GitHub issue in testcontainers-go repository for a missing module.
+    
+    Args:
+        token: GitHub API token
+        module_info: Dict with 'name' and 'mapped_to' keys
+        
+    Returns:
+        True if issue was created successfully, False otherwise
+    """
+    module_name = module_info['name']
+    mapped_to = module_info['mapped_to']
+    
+    # Construct issue title
+    title = f"Add {module_name} module to community module registry"
+    
+    # Construct issue body
+    body_parts = [
+        f"## Missing Module in Community Registry",
+        "",
+        f"The `{module_name}` module exists in testcontainers-go but is not listed in the [community module registry](https://github.com/testcontainers/community-module-registry).",
+        "",
+        "### Instructions to Add Module to Website",
+        "",
+        "1. Fork and clone the [community-module-registry](https://github.com/testcontainers/community-module-registry) repository",
+        "",
+        "2. Create a new module directory:",
+    ]
+    
+    if mapped_to:
+        body_parts.extend([
+            f"   - The module should be named `{mapped_to[0]}` (or one of: {', '.join(mapped_to)})",
+            f"   - Create directory: `modules/{mapped_to[0]}/`",
+        ])
+    else:
+        body_parts.extend([
+            f"   - Create directory: `modules/{module_name}/`",
+        ])
+    
+    body_parts.extend([
+        "",
+        "3. Create `index.md` file with the module information:",
+        "   ```yaml",
+        "   ---",
+        "   title: <Module Title>",
+        "   categories:",
+        "     - <category>  # e.g., relational-database, nosql-database, message-broker, etc.",
+        "   docs:",
+        "     - id: go",
+        f"       url: https://golang.testcontainers.org/modules/{module_name}/",
+        "       maintainer: core",
+        "       example: |",
+        "         ```go",
+        "         // Add example code here",
+        "         ```",
+        "       installation: |",
+        "         ```bash",
+        f"         go get github.com/testcontainers/testcontainers-go/modules/{module_name}",
+        "         ```",
+        "   description: |",
+        "     <Add module description here>",
+        "   ---",
+        "   ```",
+        "",
+        "4. Optionally add a `logo.svg` file (60x60, square SVG)",
+        "",
+        "5. Run the validation:",
+        "   ```bash",
+        "   python3 .github/scripts/check_go_modules.py",
+        "   ```",
+        "",
+        "6. Submit a pull request to the community-module-registry repository",
+        "",
+        "For more details, see the [README](https://github.com/testcontainers/community-module-registry#readme).",
+        "",
+        "---",
+        f"*This issue was automatically created by the Go modules coverage validation script.*"
+    ])
+    
+    body = "\n".join(body_parts)
+    
+    # Create the issue using GitHub API
+    import urllib.request
+    import urllib.error
+    
+    url = "https://api.github.com/repos/testcontainers/testcontainers-go/issues"
+    
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json",
+        "Content-Type": "application/json",
+    }
+    
+    data = json.dumps({
+        "title": title,
+        "body": body,
+        "labels": ["documentation", "help wanted"]
+    }).encode('utf-8')
+    
+    try:
+        req = urllib.request.Request(url, data=data, headers=headers, method='POST')
+        with urllib.request.urlopen(req, timeout=30) as response:
+            result = json.loads(response.read().decode('utf-8'))
+            issue_url = result.get('html_url', '')
+            print(f"  ✓ Created issue for {module_name}: {issue_url}")
+            return True
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode('utf-8')
+        print(f"  ✗ Failed to create issue for {module_name}: {e.code} - {error_body}", file=sys.stderr)
+        return False
+    except Exception as e:
+        print(f"  ✗ Failed to create issue for {module_name}: {str(e)}", file=sys.stderr)
+        return False
 
 
 def main():
     # Determine paths
     script_dir = Path(__file__).parent
     registry_path = script_dir.parent.parent  # Go up to repo root
+    
+    # Check if GitHub token is available for creating issues
+    github_token = os.environ.get('GITHUB_TOKEN', '')
     
     # Clone testcontainers-go to a unique temporary directory
     go_repo_path = Path(tempfile.mkdtemp(prefix="testcontainers-go-"))
@@ -137,7 +270,21 @@ def main():
             if missing_modules:
                 print(f"\nMissing {len(missing_modules)} module(s) in registry:")
                 for mod in missing_modules:
-                    print(f"  - {mod}")
+                    if mod['mapped_to']:
+                        print(f"  - {mod['name']} (maps to {', '.join(mod['mapped_to'])})")
+                    else:
+                        print(f"  - {mod['name']}")
+                
+                # Create GitHub issues if token is available
+                if github_token:
+                    print(f"\nCreating GitHub issues for missing modules...")
+                    success_count = 0
+                    for mod in missing_modules:
+                        if create_github_issue(github_token, mod):
+                            success_count += 1
+                    print(f"\nCreated {success_count} of {len(missing_modules)} issues successfully.")
+                else:
+                    print(f"\nNote: Set GITHUB_TOKEN environment variable to automatically create issues for missing modules.")
             
             if missing_go_support:
                 print(f"\nMissing Go support in {len(missing_go_support)} existing module(s):")

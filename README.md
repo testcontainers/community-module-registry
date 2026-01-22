@@ -91,3 +91,13 @@ python3 .github/scripts/check_go_modules.py
 ```
 
 This check runs automatically in CI for all pull requests. If a new Go module is added to testcontainers-go, it should be added to this registry as well (unless it's a utility module like `compose` or `socat`).
+
+#### Automated Issue Creation
+
+When the validation script detects missing modules in CI (with `GITHUB_TOKEN` available), it will automatically create GitHub issues in the testcontainers-go repository. Each issue includes:
+- The missing module name
+- Step-by-step instructions for adding the module to the community registry
+- Example `index.md` template
+- Links to documentation
+
+This helps track and coordinate efforts to keep the registry up-to-date with all Go modules.
