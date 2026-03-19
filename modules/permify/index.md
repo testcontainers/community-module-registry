@@ -1,7 +1,7 @@
 ---
 title: Permify
 categories:
-  - other
+  - authorization
 docs:
   - id: go
     url: https://github.com/theoriginalstove/testcontainers-permify

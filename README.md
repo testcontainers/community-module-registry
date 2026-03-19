@@ -53,7 +53,7 @@ docker run --rm -t -v $(pwd):/data cytopia/yamllint:latest --no-warnings -d .yam
 
 - Current categories: 
 
-  `cloud`, `message-broker`, `nosql-database`, `other`, `relational-database`, `vector-database`, `web`
+  `authentication`, `authorization`, `cloud`, `inference-engine`, `message-broker`, `nosql-database`, `other`, `relational-database`, `vector-database`, `web`
 
 - Current maintainer values:
 

@@ -1,7 +1,7 @@
 ---
 title: OpenFGA
 categories:
-  - other
+  - authorization
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/openfga/

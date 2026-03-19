@@ -1,7 +1,7 @@
 ---
 title: SpiceDB
 categories:
-  - other
+  - authorization
 docs:
   - id: go
     url: https://github.com/Mariscal6/testcontainers-spicedb-go

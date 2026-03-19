@@ -1,7 +1,7 @@
 ---
 title: Docker Model Runner
 categories:
-  - other
+  - inference-engine
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/docker_model_runner/
