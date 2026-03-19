@@ -1,7 +1,7 @@
 ---
 title: OpenLDAP
 categories:
-  - other
+  - authentication
 docs:
   - id: go
     url: https://golang.testcontainers.org/modules/openldap/

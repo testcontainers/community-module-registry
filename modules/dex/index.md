@@ -1,7 +1,7 @@
 ---
 title: Dex
 categories:
-  - other
+  - authentication
 docs:
   - id: java
     url: https://github.com/Kehrlann/testcontainers-dex

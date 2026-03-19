@@ -1,7 +1,7 @@
 ---
 title: Ollama
 categories:
-  - other
+  - inference-engine
 docs:
   - id: java
     url: https://java.testcontainers.org/modules/ollama/

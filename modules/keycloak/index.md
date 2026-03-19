@@ -1,7 +1,8 @@
 ---
 title: Keycloak
 categories:
-  - other
+  - authentication
+  - authorization
 docs:
   - id: java
     url: https://github.com/dasniko/testcontainers-keycloak
