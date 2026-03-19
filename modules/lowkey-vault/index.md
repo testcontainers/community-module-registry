@@ -35,6 +35,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.LowkeyVault
       ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/azure/#lowkeyvault
+    maintainer: core
+    example: |
+      ```go
+      lowkeyVaultContainer, err := lowkeyvault.Run(ctx, "nagyesta/lowkey-vault:7.0.9-ubi10-minimal")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/azure
+      ```
 description: |
   Lowkey Vault is a test double (fake object) aspiring to be compatible with Azure Key Vault REST APIs.
 ---
