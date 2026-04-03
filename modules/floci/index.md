@@ -2,9 +2,6 @@
 title: Floci
 categories:
   - cloud
-officialPartner:
-  name: Floci
-  url: https://floci.io/
 docs:
   - id: java
     url: https://github.com/floci-io/testcontainers-floci
