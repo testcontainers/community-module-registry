@@ -14,9 +14,9 @@ docs:
     installation: |
       ```xml
       <dependency>
-          <groupId>com.github.jarlah</groupId>
+          <groupId>io.github.jarlah</groupId>
           <artifactId>testcontainers-ceph</artifactId>
-          <version>2.0.7</version>
+          <version>2.0.9</version>
           <scope>test</scope>
       </dependency>
       ```
