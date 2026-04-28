@@ -75,3 +75,29 @@ This optional file will be displayed next to the module's name in the catalogue.
 If no logo is provided a default image will be used instead:
 
 <img src="https://testcontainers.com/images/modules/none.svg">
+
+---
+
+## Validation
+
+### Go Modules Coverage Check
+
+The project includes a validation script to ensure all Go modules from the [testcontainers-go](https://github.com/testcontainers/testcontainers-go) repository have corresponding entries in this registry.
+
+To run the check locally:
+
+```bash
+python3 .github/scripts/check_go_modules.py
+```
+
+This check runs automatically in CI for all pull requests. If a new Go module is added to testcontainers-go, it should be added to this registry as well (unless it's a utility module like `compose` or `socat`).
+
+#### Automated Issue Creation
+
+When the validation script detects missing modules in CI (with `GITHUB_TOKEN` available), it will automatically create GitHub issues in the testcontainers-go repository. Each issue includes:
+- The missing module name
+- Step-by-step instructions for adding the module to the community registry
+- Example `index.md` template
+- Links to documentation
+
+This helps track and coordinate efforts to keep the registry up-to-date with all Go modules.
