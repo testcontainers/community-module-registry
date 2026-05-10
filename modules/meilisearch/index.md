@@ -17,7 +17,7 @@ docs:
       <dependency>
           <groupId>io.vanslog</groupId>
           <artifactId>testcontainers-meilisearch</artifactId>
-          <version>1.0.5</version>
+          <version>2.0.0</version>
           <scope>test</scope>
       </dependency>
       ```
