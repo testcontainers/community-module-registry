@@ -3,6 +3,17 @@ title: Papercut SMTP
 categories:
   - other
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/papercutsmtp/
+    maintainer: core
+    example: |
+      ```go
+      papercutContainer, err := papercutsmtp.Run(context.Background(), "jijiechen/papercut:latest")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/papercutsmtp
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Papercut
     maintainer: core
