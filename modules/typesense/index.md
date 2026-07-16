@@ -3,17 +3,6 @@ title: Typesense
 categories:
   - vector-database
 docs:
-  - id: go
-    url: https://golang.testcontainers.org/modules/typesense/
-    maintainer: core
-    example: |
-      ```go
-      typesenseContainer, err := typesense.Run(context.Background(), "typesense/typesense:0.25.1")
-      ```
-    installation: |
-      ```bash
-      go get github.com/testcontainers/testcontainers-go/modules/typesense
-      ```
   - id: java
     url: https://java.testcontainers.org/modules/databases/typesense/
     maintainer: core
@@ -30,6 +19,17 @@ docs:
           <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
+      ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/typesense/
+    maintainer: core
+    example: |
+      ```go
+      typesenseContainer, err := typesense.Run(context.Background(), "typesense/typesense:0.25.1")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/typesense
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Typesense

@@ -3,17 +3,6 @@ title: fake-gcs-server
 categories:
   - other
 docs:
-  - id: go
-    url: https://golang.testcontainers.org/modules/fakegcsserver/
-    maintainer: core
-    example: |
-      ```go
-      gcsContainer, err := fakegcsserver.Run(context.Background(), "fsouza/fake-gcs-server:1.47.0")
-      ```
-    installation: |
-      ```bash
-      go get github.com/testcontainers/testcontainers-go/modules/fakegcsserver
-      ```
   - id: java
     url: https://github.com/Aiven-Open/testcontainers-fake-gcs-server
     maintainer: community
@@ -29,6 +18,17 @@ docs:
           <artifactId>testcontainers-fake-gcs-server</artifactId>
           <version>0.1.0</version>
       </dependency>
+      ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/fakegcsserver/
+    maintainer: core
+    example: |
+      ```go
+      gcsContainer, err := fakegcsserver.Run(context.Background(), "fsouza/fake-gcs-server:1.47.0")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/fakegcsserver
       ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.FakeGcsServer

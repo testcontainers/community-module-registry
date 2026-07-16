@@ -3,17 +3,6 @@ title: Solr
 categories:
   - nosql-database
 docs:
-  - id: go
-    url: https://golang.testcontainers.org/modules/solr/
-    maintainer: core
-    example: |
-      ```go
-      solrContainer, err := solr.Run(context.Background(), "solr:9.4.1")
-      ```
-    installation: |
-      ```bash
-      go get github.com/testcontainers/testcontainers-go/modules/solr
-      ```
   - id: java
     url: https://java.testcontainers.org/modules/solr/
     maintainer: core
@@ -30,6 +19,17 @@ docs:
           <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
+      ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/solr/
+    maintainer: core
+    example: |
+      ```go
+      solrContainer, err := solr.Run(context.Background(), "solr:9.4.1")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/solr
       ```
   - id: rust
     url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/solr/struct.Solr.html

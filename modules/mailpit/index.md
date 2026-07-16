@@ -3,7 +3,14 @@ title: Mailpit
 categories:
   - other
 docs:
-  - id: go
+  - id: java
+    url: https://github.com/martinellich/testcontainers-mailpit
+    maintainer: community
+    example: |
+      ```java
+      var mailpit = new MailpitContainer();
+      mailpit.start();
+      ```  - id: go
     url: https://golang.testcontainers.org/modules/mailpit/
     maintainer: core
     example: |
@@ -32,14 +39,7 @@ docs:
       ```bash
       pip install testcontainers[mailpit]
       ```
-  - id: java
-    url: https://github.com/martinellich/testcontainers-mailpit
-    maintainer: community
-    example: |
-      ```java
-      var mailpit = new MailpitContainer();
-      mailpit.start();
-      ```
+
 description: |
   Mailpit is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers.
 ---

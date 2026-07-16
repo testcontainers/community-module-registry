@@ -3,17 +3,6 @@ title: OrientDB
 categories:
   - nosql-database
 docs:
-  - id: go
-    url: https://golang.testcontainers.org/modules/orientdb/
-    maintainer: core
-    example: |
-      ```go
-      orientdbContainer, err := orientdb.Run(context.Background(), "orientdb:3.2")
-      ```
-    installation: |
-      ```bash
-      go get github.com/testcontainers/testcontainers-go/modules/orientdb
-      ```
   - id: java
     url: https://java.testcontainers.org/modules/databases/orientdb/
     maintainer: core
@@ -30,6 +19,17 @@ docs:
           <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
+      ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/orientdb/
+    maintainer: core
+    example: |
+      ```go
+      orientdbContainer, err := orientdb.Run(context.Background(), "orientdb:3.2")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/orientdb
       ```
   - id: rust
     url: https://docs.rs/testcontainers-modules/latest/testcontainers_modules/orientdb/struct.OrientDb.html

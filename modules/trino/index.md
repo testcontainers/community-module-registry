@@ -3,17 +3,6 @@ title: Trino
 categories:
   - relational-database
 docs:
-  - id: go
-    url: https://golang.testcontainers.org/modules/trino/
-    maintainer: core
-    example: |
-      ```go
-      trinoContainer, err := trino.Run(context.Background(), "trinodb/trino:418")
-      ```
-    installation: |
-      ```bash
-      go get github.com/testcontainers/testcontainers-go/modules/trino
-      ```
   - id: java
     url: https://java.testcontainers.org/modules/databases/trino/
     maintainer: core
@@ -30,6 +19,17 @@ docs:
           <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
+      ```
+  - id: go
+    url: https://golang.testcontainers.org/modules/trino/
+    maintainer: core
+    example: |
+      ```go
+      trinoContainer, err := trino.Run(context.Background(), "trinodb/trino:418")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/trino
       ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/trino/README.html
