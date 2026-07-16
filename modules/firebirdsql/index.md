@@ -3,6 +3,17 @@ title: Firebird
 categories:
   - relational-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/firebird/
+    maintainer: core
+    example: |
+      ```go
+      firebirdContainer, err := firebird.Run(context.Background(), "jacobalberty/firebird:v3.0")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/firebird
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.FirebirdSql
     maintainer: core
