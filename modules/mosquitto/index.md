@@ -3,6 +3,17 @@ title: Mosquitto
 categories:
   - message-broker
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/mosquitto/
+    maintainer: core
+    example: |
+      ```go
+      mosquittoContainer, err := mosquitto.Run(context.Background(), "eclipse-mosquitto:2")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/mosquitto
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Mosquitto
     maintainer: core
