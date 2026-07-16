@@ -3,6 +3,17 @@ title: SFTP
 categories:
   - other
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/sftp/
+    maintainer: core
+    example: |
+      ```go
+      sftpContainer, err := sftp.Run(context.Background(), "atmoz/sftp:latest")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/sftp
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.Sftp
     maintainer: core
