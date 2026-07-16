@@ -3,6 +3,17 @@ title: KurrentDB
 categories:
   - nosql-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/kurrentdb/
+    maintainer: core
+    example: |
+      ```go
+      kurrentdbContainer, err := kurrentdb.Run(context.Background(), "kurrentplatform/kurrentdb:26.1.1")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/kurrentdb
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.KurrentDb
     maintainer: core
