@@ -3,6 +3,17 @@ title: Mailpit
 categories:
   - other
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/mailpit/
+    maintainer: core
+    example: |
+      ```go
+      mailpitContainer, err := mailpit.Run(context.Background(), "axllent/mailpit:v1.21")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/mailpit
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/mailpit/README.html
     maintainer: core
