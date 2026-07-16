@@ -3,6 +3,17 @@ title: Presto
 categories:
   - relational-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/presto/
+    maintainer: core
+    example: |
+      ```go
+      prestoContainer, err := presto.Run(context.Background(), "prestodb/presto:0.289")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/presto
+      ```
   - id: java
     url: https://java.testcontainers.org/modules/databases/presto/
     maintainer: core
