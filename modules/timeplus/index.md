@@ -3,6 +3,17 @@ title: Timeplus
 categories:
   - relational-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/timeplus/
+    maintainer: core
+    example: |
+      ```go
+      timeplusContainer, err := timeplus.Run(context.Background(), "timeplus/timeplusd:2.3.28")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/timeplus
+      ```
   - id: java
     url: https://java.testcontainers.org/modules/databases/timeplus/
     maintainer: core
