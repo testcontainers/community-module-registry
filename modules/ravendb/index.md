@@ -3,6 +3,17 @@ title: RavenDB
 categories:
   - nosql-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/ravendb/
+    maintainer: core
+    example: |
+      ```go
+      ravendbContainer, err := ravendb.Run(context.Background(), "ravendb/ravendb:6.0-ubuntu-latest")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/ravendb
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.RavenDb
     maintainer: core
