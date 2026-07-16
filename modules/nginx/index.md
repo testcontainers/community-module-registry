@@ -3,6 +3,17 @@ title: Nginx
 categories:
   - web
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/nginx/
+    maintainer: core
+    example: |
+      ```go
+      nginxContainer, err := nginx.Run(context.Background(), "nginx:1.25.3")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/nginx
+      ```
   - id: java
     url: https://java.testcontainers.org/modules/nginx/
     maintainer: core
