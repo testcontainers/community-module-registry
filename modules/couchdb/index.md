@@ -3,6 +3,17 @@ title: CouchDB
 categories:
   - nosql-database
 docs:
+  - id: go
+    url: https://golang.testcontainers.org/modules/couchdb/
+    maintainer: core
+    example: |
+      ```go
+      couchdbContainer, err := couchdb.Run(context.Background(), "couchdb:3.3.3")
+      ```
+    installation: |
+      ```bash
+      go get github.com/testcontainers/testcontainers-go/modules/couchdb
+      ```
   - id: dotnet
     url: https://www.nuget.org/packages/Testcontainers.CouchDb
     example: |
