@@ -20,7 +20,8 @@ docs:
           <version>4.5.0</version>
           <scope>test</scope>
       </dependency>
-      ```  - id: go
+      ```
+  - id: go
     url: https://golang.testcontainers.org/modules/s3mock/
     maintainer: core
     example: |

@@ -19,7 +19,8 @@ docs:
           <version>2.0.1</version>
           <scope>test</scope>
       </dependency>
-      ```  - id: go
+      ```
+  - id: go
     url: https://golang.testcontainers.org/modules/timeplus/
     maintainer: core
     example: |

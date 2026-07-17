@@ -10,7 +10,8 @@ docs:
       ```java
       var mailpit = new MailpitContainer();
       mailpit.start();
-      ```  - id: go
+      ```
+  - id: go
     url: https://golang.testcontainers.org/modules/mailpit/
     maintainer: core
     example: |
