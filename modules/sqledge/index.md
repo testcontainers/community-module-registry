@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      sqledgeContainer, err := sqledge.Run(context.Background(), "mcr.microsoft.com/azure-sql-edge:1.0.7")
+      sqledgeContainer, err := sqledge.Run(context.Background(), "mcr.microsoft.com/azure-sql-edge:1.0.7", sqledge.WithAcceptEULA())
       ```
     installation: |
       ```bash

@@ -8,7 +8,7 @@ docs:
     maintainer: core
     example: |
       ```go
-      papercutContainer, err := papercutsmtp.Run(context.Background(), "jijiechen/papercut:latest")
+      papercutContainer, err := papercutsmtp.Run(context.Background(), "changemakerstudiosus/papercut-smtp:latest")
       ```
     installation: |
       ```bash
