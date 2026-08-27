@@ -25,11 +25,11 @@ docs:
 
       // 2. Use container in a custom task
       tasks.register("printDbInfo") {
-          dependsOn("startDbContainer")
+          dependsOn("startPostgresContainer")
           usesService(testcontainers.service)
-    
-          val dbProvider = testcontainers.getContainer<JdbcDatabaseContainer<*>>("db")
-    
+
+          val dbProvider = testcontainers.getContainer<JdbcDatabaseContainer<*>>("postgres")
+
           doFirst {
               val db = dbProvider.get()
               logger.warn(
@@ -47,7 +47,7 @@ docs:
       plugins {
           id("io.github.regulskimichal.testcontainers") version "0.2.0"
       }
-      
+
       // additional configuration, add modules you want to use in the build process
       dependencies {
           "testcontainersClasspath"("org.testcontainers:testcontainers-postgresql:2.0.5")
