@@ -1,0 +1,32 @@
+name: ngauth
+displayName: ngauth OAuth Server
+description: Lightweight OAuth 2.0 and OpenID Connect server for integration testing. Fast startup (2-3s), minimal resources (~50MB), zero configuration needed.
+categories:
+  - other
+languages:
+  - nodejs
+  - java
+  - python
+  - go
+  - dotnet
+repository: https://github.com/ngauth/server
+documentation: https://github.com/ngauth/server#readme
+homepage: https://github.com/ngauth/server
+license: MIT
+maintainers:
+  - github: yaodintsov
+    name: Iaroslav Odintsov
+dockerImage: ngauth/server
+defaultVersion: "1.0.0"
+keywords:
+  - oauth2
+  - oauth
+  - openid-connect
+  - oidc
+  - jwt
+  - authentication
+  - authorization
+  - testing
+  - integration-testing
+  - testcontainers
+icon: https://raw.githubusercontent.com/ngauth/server/main/docs/logo.png
