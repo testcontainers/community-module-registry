@@ -21,6 +21,17 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/oraclefree/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new OracleDbContainer("gvenzl/oracle-free:23.26.2-slim-faststart").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/oraclefree --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/oracle-free/README.html
     maintainer: core

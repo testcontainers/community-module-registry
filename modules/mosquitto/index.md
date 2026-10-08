@@ -56,6 +56,17 @@ docs:
       ```bash
       cargo add -F mosquitto --dev testcontainers-modules
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/mosquitto/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new MosquittoContainer("eclipse-mosquitto:2.0.22").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/mosquitto --save-dev
+      ```
 description: |
   Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1.
 ---

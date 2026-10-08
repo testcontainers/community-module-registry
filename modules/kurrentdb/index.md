@@ -27,6 +27,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.KurrentDb
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/kurrentdb/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new KurrentDbContainer("kurrentplatform/kurrentdb:26.1").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/kurrentdb --save-dev
+      ```
 description: |
   KurrentDB is an event-native database designed specifically to store, process, and deliver application state changes, known as events.
 ---
