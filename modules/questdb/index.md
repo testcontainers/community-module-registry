@@ -31,6 +31,19 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/questdb
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.QuestDb
+    maintainer: core
+    example: |
+      ```csharp
+      var questDbContainer = new QuestDbBuilder("questdb/questdb:10.0.1")
+        .Build();
+      await questDbContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.QuestDb
+      ```
 
 description: |
   QuestDB is an open-source time-series database for high throughput ingestion and fast SQL queries with operational simplicity. It supports schema-agnostic ingestion using the InfluxDB line protocol, PostgreSQL wire protocol, and a REST API for bulk imports and exports.

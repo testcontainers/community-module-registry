@@ -46,6 +46,9 @@ docs:
       // Bigtable, Firestore (Datastore), and PubSub, into a single, unified dependency.
       // The services follow the naming convention:
       // FirestoreBuilder, FirestoreContainer, etc.
+      // Each service is also available as a separate package, e.g.:
+      // Testcontainers.BigQuery, Testcontainers.Bigtable, Testcontainers.Firestore,
+      // and Testcontainers.PubSub.
 
       var firestoreContainer = new FirestoreBuilder("gcr.io/google.com/cloudsdktool/google-cloud-cli:446.0.1-emulators")
         .Build();
