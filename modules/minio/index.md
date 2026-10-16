@@ -31,19 +31,6 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/minio
       ```
-  - id: dotnet
-    url: https://www.nuget.org/packages/Testcontainers.Minio
-    maintainer: core
-    example: |
-      ```csharp
-      var minioContainer = new MinioBuilder("minio/minio:RELEASE.2023-01-31T02-24-19Z")
-        .Build();
-      await minioContainer.StartAsync();
-      ```
-    installation: |
-      ```bash
-      dotnet add package Testcontainers.Minio
-      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/minio/README.html
     maintainer: core
