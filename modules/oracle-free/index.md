@@ -21,6 +21,19 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Oracle
+    maintainer: core
+    example: |
+      ```csharp
+      var oracleContainer = new OracleBuilder("gvenzl/oracle-free:23-slim-faststart")
+        .Build();
+      await oracleContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Oracle
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/oraclefree/
     maintainer: core

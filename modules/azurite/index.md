@@ -36,9 +36,9 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var AzuriteContainer = new AzuriteBuilder("mcr.microsoft.com/azure-storage/azurite:3.23.0")
+      var azuriteContainer = new AzuriteBuilder("mcr.microsoft.com/azure-storage/azurite:3.28.0")
         .Build();
-      await AzuriteContainer.StartAsync();
+      await azuriteContainer.StartAsync();
       ```
     installation: |
       ```bash
