@@ -4,20 +4,20 @@ categories:
   - web
 docs:
   - id: java
-    url: https://java.testcontainers.org/modules/mockserver/
-    maintainer: core
+    url: https://www.mock-server.com/mock_server/mockserver_testcontainers.html
+    maintainer: official
     example: |
       ```java
-      var mockServer = new MockServerContainer(DockerImageName
-        .parse("mockserver/mockserver:5.15.0"));
+      var mockServer = new MockServerContainer();
       mockServer.start();
+      MockServerClient client = mockServer.getClient();
       ```
     installation: |
       ```xml
       <dependency>
-          <groupId>org.testcontainers</groupId>
-          <artifactId>testcontainers-mockserver</artifactId>
-          <version>2.0.1</version>
+          <groupId>org.mock-server</groupId>
+          <artifactId>mockserver-testcontainers</artifactId>
+          <version>7.0.0</version>
           <scope>test</scope>
       </dependency>
       ```
