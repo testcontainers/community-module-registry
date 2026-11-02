@@ -44,6 +44,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.InfluxDb
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/influxdb/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new InfluxDB2Container("influxdb:2.9").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/influxdb --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/influxdb/README.html
     maintainer: core

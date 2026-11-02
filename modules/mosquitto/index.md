@@ -27,6 +27,17 @@ docs:
       ```bash
       dotnet add package Testcontainers.Mosquitto
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/mosquitto/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new MosquittoContainer("eclipse-mosquitto:2.0.22").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/mosquitto --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/mqtt/README.html
     maintainer: core

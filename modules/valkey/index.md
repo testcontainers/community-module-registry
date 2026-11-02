@@ -34,6 +34,19 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Redis
+    maintainer: core
+    example: |
+      ```csharp
+      var valkeyContainer = new RedisBuilder("valkey/valkey:9.0-alpine")
+        .Build();
+      await valkeyContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Redis
+      ```
   - id: nodejs
     url: https://node.testcontainers.org/modules/valkey/
     maintainer: core

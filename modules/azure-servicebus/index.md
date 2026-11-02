@@ -55,6 +55,19 @@ docs:
       ```bash
       dotnet add package Testcontainers.ServiceBus
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/azureservicebus/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new AzureServiceBusContainer("mcr.microsoft.com/azure-messaging/servicebus-emulator:2.0.1")
+        .acceptLicense()
+        .start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/azureservicebus --save-dev
+      ```
 description: |
   The Azure Service Bus emulator offers a local development experience for the Service bus service.
 ---

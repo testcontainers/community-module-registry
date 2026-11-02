@@ -60,6 +60,20 @@ docs:
       ```bash
       pip install testcontainers[vault]
       ```
+  - id: dotnet
+    url: https://github.com/ferhatblnk/drydock-testcontainers-vault
+    maintainer: community
+    example: |
+      ```csharp
+      var vault = new VaultBuilder("hashicorp/vault:2.1")
+          .WithInitCommand("secrets enable transit", "kv put secret/app user=demo")
+          .Build();
+      await vault.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Drydock.Testcontainers.Vault
+      ```
 description: |
   HashiCorp Vault is an identity-based secrets and encryption management system for storing API encryption keys, passwords, and certificates.
 ---

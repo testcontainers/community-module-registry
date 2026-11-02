@@ -32,6 +32,17 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/s3mock
       ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/s3mock/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new S3MockContainer("adobe/s3mock:5.2.3").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/s3mock --save-dev
+      ```
 
 description: |
     S3Mock is a popular open-source library that allows mock testing against many S3 APIs.

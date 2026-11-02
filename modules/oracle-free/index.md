@@ -21,6 +21,30 @@ docs:
           <scope>test</scope>
       </dependency>
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Oracle
+    maintainer: core
+    example: |
+      ```csharp
+      var oracleContainer = new OracleBuilder("gvenzl/oracle-free:23-slim-faststart")
+        .Build();
+      await oracleContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Oracle
+      ```
+  - id: nodejs
+    url: https://node.testcontainers.org/modules/oraclefree/
+    maintainer: core
+    example: |
+      ```javascript
+      const container = await new OracleDbContainer("gvenzl/oracle-free:23.26.3-slim-faststart").start();
+      ```
+    installation: |
+      ```bash
+      npm install @testcontainers/oraclefree --save-dev
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/oracle-free/README.html
     maintainer: core

@@ -25,9 +25,9 @@ docs:
     maintainer: core
     example: |
       ```csharp
-      var WebDriverContainer = new WebDriverBuilder("selenium/standalone-chrome:110.0")
+      var webDriverContainer = new WebDriverBuilder("selenium/standalone-chrome:110.0")
         .Build();
-      await WebDriverContainer.StartAsync();
+      await webDriverContainer.StartAsync();
       ```
     installation: |
       ```bash

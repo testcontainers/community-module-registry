@@ -9,16 +9,16 @@ docs:
     example: |
       ```csharp
       // Inherit from either the `ContainerTest` or `ContainerFixture` class, set up your
-      // container instance in `Configure(TContainerBuilder)`, and access the running
-      // container in your test method using the `Container` property. The module handles
-      // creating, starting, and disposing of the container instances in the background.
+      // container instance in `Configure()`, and access the running container in your
+      // test method using the `Container` property. The module handles creating,
+      // starting, and disposing of the container instances in the background.
 
       public sealed partial class RedisContainerTest(ITestOutputHelper testOutputHelper)
         : ContainerTest<RedisBuilder, RedisContainer>(testOutputHelper)
       {
-        protected override RedisBuilder Configure(RedisBuilder builder)
+        protected override RedisBuilder Configure()
         {
-          return builder.WithImage("redis:7.0");
+          return new RedisBuilder("redis:7.0");
         }
 
         [Fact]
@@ -30,10 +30,14 @@ docs:
       ```
     installation: |
       ```bash
+      # xUnit.net v3
+      dotnet add package Testcontainers.XunitV3
+
+      # xUnit.net v2
       dotnet add package Testcontainers.Xunit
       ```
 description: |
-  The Testcontainers.Xunit package simplifies writing tests with containers in xUnit.net. By leveraging xUnit.net's shared context, this package automates the setup and teardown of test resources, creating and disposing of containers as needed. This reduces repetitive code and avoids common patterns that developers would otherwise need to implement repeatedly.
+  The Testcontainers.Xunit and Testcontainers.XunitV3 packages simplify writing tests with containers in xUnit.net. By leveraging xUnit.net's shared context, these packages automate the setup and teardown of test resources, creating and disposing of containers as needed. This reduces repetitive code and avoids common patterns that developers would otherwise need to implement repeatedly.
 
   You can read full example and docs here: https://dotnet.testcontainers.org/test_frameworks/xunit_net/.
 ---

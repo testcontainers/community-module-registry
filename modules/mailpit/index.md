@@ -22,6 +22,19 @@ docs:
       ```bash
       go get github.com/testcontainers/testcontainers-go/modules/mailpit
       ```
+  - id: dotnet
+    url: https://www.nuget.org/packages/Testcontainers.Mailpit
+    maintainer: core
+    example: |
+      ```csharp
+      var mailpitContainer = new MailpitBuilder("axllent/mailpit:v1.30")
+        .Build();
+      await mailpitContainer.StartAsync();
+      ```
+    installation: |
+      ```bash
+      dotnet add package Testcontainers.Mailpit
+      ```
   - id: python
     url: https://testcontainers-python.readthedocs.io/en/latest/modules/mailpit/README.html
     maintainer: core

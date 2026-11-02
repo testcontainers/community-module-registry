@@ -32,13 +32,13 @@ docs:
       go get github.com/testcontainers/testcontainers-go/modules/artemis
       ```
   - id: dotnet
-    url: https://www.nuget.org/packages/Testcontainers.ActiveMQ
+    url: https://www.nuget.org/packages/Testcontainers.ActiveMq
     maintainer: core
     example: |
       ```csharp
       var artemisContainer = new ArtemisBuilder("apache/activemq-artemis:2.31.2")
         .Build();
-        await artemisContainer.StartAsync();
+      await artemisContainer.StartAsync();
       ```
     installation: |
       ```bash

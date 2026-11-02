@@ -22,7 +22,7 @@ docs:
       </dependency>
       ```
   - id: go
-    url: https://golang.testcontainers.org/modules/etcd/
+    url: https://golang.testcontainers.org/modules/meilisearch/
     maintainer: core
     example: |
       ```go
