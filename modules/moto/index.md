@@ -27,5 +27,5 @@ docs:
       </dependency>
       ```
 description: |
-  Moto serves every AWS service on a single port with no per-service opt-in, so `MotoContainer` gives you one container and one endpoint that any AWS SDK client can be pointed at — no AWS account, no network calls, no cost. A Spring Boot variant adds `@ServiceConnection` support for auto-configuring Spring Cloud AWS clients.
+  Moto serves all Moto-supported AWS services on a single port with no per-service opt-in, so `MotoContainer` gives you one container and one endpoint that any AWS SDK client can be pointed at — no AWS account, no network calls, no cost. A Spring Boot variant adds `@ServiceConnection` support for auto-configuring Spring Cloud AWS clients.
 ---
