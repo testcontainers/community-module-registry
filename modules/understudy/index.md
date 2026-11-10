@@ -19,6 +19,12 @@ docs:
     maintainer: official
     example: |
       ```python
+      import os
+      from unittest.mock import patch
+
+      import boto3
+      from testcontainers_understudy import UnderstudyContainer
+
       with UnderstudyContainer() as understudy, patch.dict(os.environ, understudy.get_env()):
           sqs = boto3.client("sqs")
       ```
