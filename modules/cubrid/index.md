@@ -19,7 +19,7 @@ docs:
       <dependency>
           <groupId>org.cubrid</groupId>
           <artifactId>testcontainers-cubrid</artifactId>
-          <version>0.1.0</version>
+          <version>0.2.0</version>
           <scope>test</scope>
       </dependency>
       ```
