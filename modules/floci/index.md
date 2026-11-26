@@ -1,5 +1,5 @@
 ---
-title: Floci
+title: Floci (AWS)
 categories:
   - cloud
 docs:
@@ -15,24 +15,23 @@ docs:
       ```xml
       <dependency>
           <groupId>io.floci</groupId>
-          <artifactId>testcontainers-floci</artifactId>
-          <version>2.0.0</version>
+          <artifactId>testcontainers-floci-aws</artifactId>
+          <version>2.17.0</version>
           <scope>test</scope>
       </dependency>
       ```
   - id: dotnet
-    url: https://www.nuget.org/packages/Testcontainers.Floci
+    url: https://www.nuget.org/packages/Floci.Testcontainers.Aws
     maintainer: core
     example: |
       ```csharp
-      var flociContainer = new FlociBuilder("floci/floci:1.5.13")
-        .Build();
-      await flociContainer.StartAsync();
+      await using var floci = new FlociBuilder("floci/floci:latest").Build();
+      await floci.StartAsync();
       ```
     installation: |
       ```bash
-      dotnet add package Testcontainers.Floci
+      dotnet add package Floci.Testcontainers.Aws
       ```
 description: |
-  Floci is a fast, free, open-source AWS emulator built with Quarkus Native. Starts in 24ms, uses 13 MiB at idle. Drop-in replacement for LocalStack — no auth token, no restrictions, ever.
+  A free, MIT-licensed AWS emulator and drop-in replacement for LocalStack. Give your coding agents a real AWS to build and test against: no auth token, no account, no bill.
 ---
