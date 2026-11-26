@@ -49,7 +49,7 @@ docker run --rm -t -v $(pwd):/data cytopia/yamllint:latest --no-warnings -d .yam
 
 - Current ID field values: 
   
-  `java`, `go`, `dotnet`, `nodejs`, `python`, `rust`, `haskell`, `ruby`
+  `java`, `go`, `dotnet`, `nodejs`, `python`, `rust`, `haskell`, `ruby`, `r`
 
 - Current categories: 
 
