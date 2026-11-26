@@ -11,7 +11,7 @@ docs:
     maintainer: official
     example: |
       ```java
-      var cockroach = new new CockroachContainer(DockerImageName.parse("cockroachdb/cockroach:v22.2.3"));
+      var cockroach = new CockroachContainer(DockerImageName.parse("cockroachdb/cockroach:v22.2.3"));
       cockroach.start();
       ```
     installation: |
@@ -82,7 +82,7 @@ docs:
       ```
     installation: |
       ```bash
-      cargo add -F clicockroach_db --dev testcontainers-modules
+      cargo add -F cockroach_db --dev testcontainers-modules
       ```
 description: |
   CockroachDB is an open-source, cloud-native, resilient, distributed SQL database.
